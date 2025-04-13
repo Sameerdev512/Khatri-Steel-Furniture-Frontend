@@ -1,0 +1,219 @@
+.admin-services {
+  padding: 2rem;
+}
+.admin-services .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.admin-services .header h1 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+.admin-services .header .add-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.admin-services .header .add-btn:hover {
+  background-color: #1d4ed8;
+}
+.admin-services .services-table {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.admin-services .services-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.admin-services .services-table table th, .admin-services .services-table table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+.admin-services .services-table table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+}
+.admin-services .services-table table td {
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+.admin-services .services-table table td .edit-btn, .admin-services .services-table table td .delete-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 0.5rem;
+}
+.admin-services .services-table table td .edit-btn {
+  background-color: #2563eb;
+  color: white;
+}
+.admin-services .services-table table td .edit-btn:hover {
+  background-color: #1d4ed8;
+}
+.admin-services .services-table table td .delete-btn {
+  background-color: #dc2626;
+  color: white;
+}
+.admin-services .services-table table td .delete-btn:hover {
+  background-color: #b91c1c;
+}
+.admin-services .services-table table tr:hover {
+  background-color: #f9fafb;
+}
+.admin-services .service-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.admin-services .service-modal .modal-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.admin-services .service-modal .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.admin-services .service-modal .modal-content .modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+.admin-services .service-modal .modal-content .modal-header .close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #4b5563;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+}
+.admin-services .service-modal .modal-content .modal-header .close-btn:hover {
+  color: #1f2937;
+}
+.admin-services .service-modal .modal-content .service-form .form-group {
+  margin-bottom: 1.5rem;
+}
+.admin-services .service-modal .modal-content .service-form .form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+.admin-services .service-modal .modal-content .service-form .form-group input, .admin-services .service-modal .modal-content .service-form .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+.admin-services .service-modal .modal-content .service-form .form-group input:focus, .admin-services .service-modal .modal-content .service-form .form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+.admin-services .service-modal .modal-content .service-form .form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.admin-services .service-modal .modal-content .service-form .form-group .file-input {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.admin-services .service-modal .modal-content .service-form .form-group .image-preview {
+  margin-top: 1rem;
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 0.375rem;
+}
+.admin-services .service-modal .modal-content .service-form .form-group .image-preview img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.admin-services .service-modal .modal-content .service-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.admin-services .service-modal .modal-content .service-form .form-actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.admin-services .service-modal .modal-content .service-form .form-actions .cancel-btn {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+.admin-services .service-modal .modal-content .service-form .form-actions .cancel-btn:hover {
+  background-color: #d1d5db;
+}
+.admin-services .service-modal .modal-content .service-form .form-actions .save-btn {
+  background-color: #2563eb;
+  color: white;
+}
+.admin-services .service-modal .modal-content .service-form .form-actions .save-btn:hover {
+  background-color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .admin-services {
+    padding: 1rem;
+  }
+  .admin-services .header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .admin-services .services-table {
+    overflow-x: auto;
+  }
+  .admin-services .services-table table {
+    min-width: 800px;
+  }
+  .admin-services .service-modal .modal-content {
+    margin: 1rem;
+    max-height: calc(100vh - 2rem);
+  }
+}/*# sourceMappingURL=Services.css.map */

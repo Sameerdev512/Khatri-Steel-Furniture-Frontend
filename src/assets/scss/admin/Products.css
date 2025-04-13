@@ -1,0 +1,232 @@
+.admin-products {
+  padding: 2rem;
+}
+.admin-products .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.admin-products .header h1 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+.admin-products .header .add-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.admin-products .header .add-btn:hover {
+  background-color: #1d4ed8;
+}
+.admin-products .products-table {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.admin-products .products-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.admin-products .products-table table th, .admin-products .products-table table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+.admin-products .products-table table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+}
+.admin-products .products-table table td {
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+.admin-products .products-table table td.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.admin-products .products-table table td.actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.admin-products .products-table table td.actions button.edit-btn {
+  background-color: #2563eb;
+  color: white;
+}
+.admin-products .products-table table td.actions button.edit-btn:hover {
+  background-color: #1d4ed8;
+}
+.admin-products .products-table table td.actions button.delete-btn {
+  background-color: #dc2626;
+  color: white;
+}
+.admin-products .products-table table td.actions button.delete-btn:hover {
+  background-color: #b91c1c;
+}
+.admin-products .product-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.admin-products .product-modal .modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.admin-products .product-modal .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.admin-products .product-modal .modal-content .modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+.admin-products .product-modal .modal-content .modal-header .close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #4b5563;
+  cursor: pointer;
+}
+.admin-products .product-modal .modal-content .modal-header .close-btn:hover {
+  color: #1f2937;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid .form-group {
+  width: 100%;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid .form-group label {
+  display: block;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid .form-group input, .admin-products .product-modal .modal-content .product-form .form-grid .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid .form-group input:focus, .admin-products .product-modal .modal-content .product-form .form-grid .form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+.admin-products .product-modal .modal-content .product-form .form-grid .form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid .form-group .image-preview {
+  margin-top: 1rem;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid .form-group .image-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 0.375rem;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid .form-group .file-input {
+  padding: 0.5rem 0;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  background-color: white;
+  cursor: pointer;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+.admin-products .product-modal .modal-content .product-form .form-grid .form-group {
+  transition: all 0.3s ease;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid .form-group input::-moz-placeholder {
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
+.admin-products .product-modal .modal-content .product-form .form-grid .form-group input::placeholder {
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
+.admin-products .product-modal .modal-content .product-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.admin-products .product-modal .modal-content .product-form .form-actions button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.admin-products .product-modal .modal-content .product-form .form-actions button.cancel-btn {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+.admin-products .product-modal .modal-content .product-form .form-actions button.cancel-btn:hover {
+  background-color: #e5e7eb;
+}
+.admin-products .product-modal .modal-content .product-form .form-actions button.save-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+.admin-products .product-modal .modal-content .product-form .form-actions button.save-btn:hover {
+  background-color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .admin-products {
+    padding: 1rem;
+  }
+  .admin-products .header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .admin-products .products-table {
+    overflow-x: auto;
+  }
+  .admin-products .products-table table {
+    min-width: 800px;
+  }
+}/*# sourceMappingURL=Products.css.map */

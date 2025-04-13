@@ -1,0 +1,41 @@
+.admin-dashboard {
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    .stat-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        margin: 0;
+        color: #4b5563;
+        font-size: 1rem;
+      }
+
+      .stat-number {
+        margin: 0.5rem 0 0;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #1f2937;
+      }
+    }
+  }
+
+  .recent-activity {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      margin: 0 0 1rem;
+      font-size: 1.25rem;
+      color: #1f2937;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+.about-page {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 2rem;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 4rem 0;
+
+      p {
+        font-size: 1.25rem;
+        color: #4b5563;
+      }
+    }
+
+    .story-section {
+      p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #4b5563;
+      }
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+
+      .value-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #1f2937;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          color: #4b5563;
+          line-height: 1.6;
+        }
+      }
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+
+      .team-member {
+        .member-image {
+          width: 200px;
+          height: 200px;
+          margin: 0 auto 1rem;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        h3 {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #1f2937;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          color: #4b5563;
+        }
+      }
+    }
+
+    .stats-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+
+      .stat-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          font-size: 2rem;
+          font-weight: 700;
+          color: #1f2937;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          color: #4b5563;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 1rem;
+
+      .hero-section {
+        padding: 2rem 0;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

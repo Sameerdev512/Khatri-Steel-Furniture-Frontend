@@ -1,0 +1,275 @@
+@charset "UTF-8";
+.free-energy-page {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+}
+.free-energy-page .hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.free-energy-page .hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+.free-energy-page .hero-section p {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.free-energy-page .products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.free-energy-page .products-container .products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+.free-energy-page .products-container .products-grid .product-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.free-energy-page .products-container .products-grid .product-card:hover {
+  transform: translateY(-5px);
+}
+.free-energy-page .products-container .products-grid .product-card .product-image {
+  height: 250px;
+  overflow: hidden;
+}
+.free-energy-page .products-container .products-grid .product-card .product-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.free-energy-page .products-container .products-grid .product-card .product-info {
+  padding: 1.5rem;
+}
+.free-energy-page .products-container .products-grid .product-card .product-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+.free-energy-page .products-container .products-grid .product-card .product-info .price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+.free-energy-page .products-container .products-grid .product-card .product-info .view-details-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #1f2937;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.free-energy-page .products-container .products-grid .product-card .product-info .view-details-btn:hover {
+  background: #374151;
+}
+.free-energy-page .products-container .decorative-description {
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+}
+.free-energy-page .products-container .decorative-description .description-content {
+  text-align: center;
+}
+.free-energy-page .products-container .decorative-description .description-content h2 {
+  font-size: 2.25rem;
+  color: #1f2937;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(120deg, #2563eb, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.free-energy-page .products-container .decorative-description .description-content .feature-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.free-energy-page .products-container .decorative-description .description-content .feature-blocks .feature {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+.free-energy-page .products-container .decorative-description .description-content .feature-blocks .feature:hover {
+  transform: translateY(-4px);
+}
+.free-energy-page .products-container .decorative-description .description-content .feature-blocks .feature h3 {
+  font-size: 1.25rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+.free-energy-page .products-container .decorative-description .description-content .feature-blocks .feature ul {
+  list-style: none;
+  padding: 0;
+}
+.free-energy-page .products-container .decorative-description .description-content .feature-blocks .feature ul li {
+  color: #4b5563;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  position: relative;
+}
+.free-energy-page .products-container .decorative-description .description-content .feature-blocks .feature ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.free-energy-page .products-container .decorative-description .description-content .highlight-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-top: 2px solid rgba(59, 130, 246, 0.1);
+}
+.free-energy-page .products-container .decorative-description .description-content .highlight-text p {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #2563eb;
+  line-height: 1.6;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.free-energy-page .product-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+.free-energy-page .product-modal .modal-content {
+  background: white;
+  border-radius: 1rem;
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+}
+.free-energy-page .product-modal .modal-content .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.free-energy-page .product-modal .modal-content .modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .free-energy-page .product-modal .modal-content .modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .description {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .features, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications {
+  margin-bottom: 1.5rem;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .features h3, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .features ul, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications ul {
+  list-style: none;
+  padding: 0;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .features ul li, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .features ul li:before, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #1f2937;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .features table, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .features table td, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .features table td:first-child, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications table td:first-child {
+  font-weight: 500;
+  color: #4b5563;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .enquire-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #1f2937;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.free-energy-page .product-modal .modal-content .modal-grid .modal-info .enquire-btn:hover {
+  background: #374151;
+}
+
+@media (max-width: 1024px) {
+  .free-energy-page .products-container .decorative-description .description-content .feature-blocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .free-energy-page .products-container .decorative-description .description-content .feature-blocks {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=FreeEnergyProducts.css.map */
