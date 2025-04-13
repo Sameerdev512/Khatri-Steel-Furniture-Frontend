@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           Khatri Steel Furniture
-        </Link>
+        </Link>  
 
         <button className="mobile-menu-btn" onClick={toggleMenu}>
           <span className={`hamburger ${isMenuOpen ? "active" : ""}`}></span>
@@ -79,5 +79,6 @@ const Navbar = () => {
   );
 };
 
+//export
 export default Navbar;
 
