@@ -10,6 +10,7 @@ import FreeEnergyProducts from './pages/FreeEnergyProducts';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import MyEnquiries from './pages/MyEnquiries';
+import Profile from './pages/Profile';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/Dashboard';
@@ -18,7 +19,6 @@ import AdminServices from './pages/admin/Services';
 import AdminOrders from './pages/admin/Orders';
 import AdminUsers from './pages/admin/Users';
 import AdminEnquiries from './pages/admin/Enquiries';
-import Profile from "../../../Frontend/src/pages/Profile.jsx";
 
 function App() {
   const role = localStorage.getItem("role");
