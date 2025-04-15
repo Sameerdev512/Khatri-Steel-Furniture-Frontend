@@ -18,7 +18,7 @@ import AdminServices from './pages/admin/Services';
 import AdminOrders from './pages/admin/Orders';
 import AdminUsers from './pages/admin/Users';
 import AdminEnquiries from './pages/admin/Enquiries';
-import Profile from "../../../Frontend/src/pages/Profile";
+import Profile from "../../../Frontend/src/pages/Profile.jsx";
 
 function App() {
   const role = localStorage.getItem("role");
