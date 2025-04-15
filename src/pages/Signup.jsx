@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "../assets/scss/Auth.scss";
 import Navbar from "../components/Navbar";
+import config from '../config/config';
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -73,7 +74,7 @@ const Signup = () => {
       // Clean phone number before sending to backend
       const cleanPhone = formData.phone.replace(/[^\d+]/g, '');
       
-      const response = await fetch(`http://localhost:8080/auth/register`, {
+      const response = await fetch(`${config.apiUrl}/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -196,4 +197,5 @@ const Signup = () => {
 };
 
 export default Signup;
+
 

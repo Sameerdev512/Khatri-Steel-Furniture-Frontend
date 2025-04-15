@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "../assets/scss/Auth.scss";
 import Navbar from "../components/Navbar";
+import config from '../config/config';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const Login = () => {
     setError('');
     
     try {
-      const response = await fetch(`http://localhost:8080/auth/login`, {
+      const response = await fetch(`${config.apiUrl}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +43,7 @@ const Login = () => {
         localStorage.setItem('token', result.token);
         localStorage.setItem('role', result.role);
         localStorage.setItem('name', result.name);
-        alert("Login Successfull");
+        alert("Login Successful");
 
         if(localStorage.getItem("role") === "ADMIN"){
           navigate('/admin/dashboard');

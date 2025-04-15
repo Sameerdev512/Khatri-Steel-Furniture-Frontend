@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ProfileDropdown from './ProfileDropdown';
 import '../assets/scss/Navbar.scss';
+import config from '../config/config';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          Khatri Steel Furniture
+          {config.appName}
         </Link>  
 
         <button className="mobile-menu-btn" onClick={toggleMenu}>
@@ -81,4 +82,5 @@ const Navbar = () => {
 
 //export
 export default Navbar;
+
 
