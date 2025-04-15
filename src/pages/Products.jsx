@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import "../assets/scss/Products.scss";
 import Navbar from "../components/Navbar";
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useNavigate } from 'react-router-dom';
 
 const products = [
   {
@@ -20,12 +23,27 @@ const products = [
     ],
   },
   {
+    id: 11,
+    name: "Modern Steel Almirah",
+    category: "Almirah",
+    price: 15999,
+    image: "../src/assets/images/al2.png",
+    description:
+      "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
+    features: [
+      "3 Door Design",
+      "Built-in Mirror",
+      "Adjustable Shelves",
+      "Premium Lock System",
+      "Anti-rust Coating",
+    ],
+  },
+  {
     id: 2,
     name: "Desert Air Cooler",
     category: "Coolers",
     price: 8999,
-    image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "../src/assets/images/palang2.png",
     description:
       "High-capacity desert cooler with 85L water tank. Equipped with honeycomb cooling pads, powerful motor, and castor wheels for easy mobility.",
     features: [
@@ -102,6 +120,7 @@ const Products = () => {
     phone: '',
     message: ''
   });
+  const navigate = useNavigate();
 
   // Handle form input changes
   const handleInputChange = (e) => {
@@ -144,7 +163,7 @@ const Products = () => {
     <>
       <Navbar />
       <div className="products-page">
-      <center><h1>Explore Products</h1></center>
+      {/* <center><h1>Explore Products</h1></center> */}
         <div className="products-container">
           <div className="filters-section">
             <div className="search-bar">
@@ -179,10 +198,10 @@ const Products = () => {
                 <div className="product-info">
                   <h3>{product.name}</h3>
                   <span className="category">{product.category}</span>
-                  <p className="price">{product.price.toLocaleString()}</p>
+                  <p className="price">₹{product.price.toLocaleString()}</p>
                   <button
                     className="view-details-btn"
-                    onClick={() => setSelectedProduct(product)}
+                    onClick={() => navigate(`/product/${product.id}`)}
                   >
                     View Details
                   </button>
@@ -240,10 +259,24 @@ const Products = () => {
                 </button>
                 <div className="modal-grid">
                   <div className="modal-image">
-                    <img
-                      src={selectedProduct.image}
-                      alt={selectedProduct.name}
-                    />
+                    <Carousel
+                      showArrows={true}
+                      showStatus={false}
+                      showThumbs={true}
+                      infiniteLoop={true}
+                      autoPlay={true}
+                      interval={3000}
+                    >
+                      {/* Repeat the same image 4 times */}
+                      {[1, 2, 3, 4].map((_, index) => (
+                        <div key={index}>
+                          <img
+                            src={selectedProduct.image}
+                            alt={`${selectedProduct.name} - View ${index + 1}`}
+                          />
+                        </div>
+                      ))}
+                    </Carousel>
                   </div>
                   <div className="modal-info">
                     <h2>{selectedProduct.name}</h2>
@@ -265,8 +298,6 @@ const Products = () => {
                       onClick={() => {
                         if (!localStorage.getItem("role")) {
                           alert("Please login to enquire about products");
-                          // Optionally, you can redirect to login page
-                          // window.location.href = '/login';
                         } else {
                           setShowEnquiryForm(true);
                         }
@@ -349,6 +380,9 @@ const Products = () => {
 };
 
 export default Products;
+
+
+
 
 
 

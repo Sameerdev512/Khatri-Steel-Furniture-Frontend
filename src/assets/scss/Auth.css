@@ -1,4 +1,5 @@
 .auth-container {
+  font-family: sans-serif;
   min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
@@ -13,6 +14,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 450px;
+  margin-top: 5rem;
 }
 .auth-container .auth-box h2 {
   font-size: 1.875rem;

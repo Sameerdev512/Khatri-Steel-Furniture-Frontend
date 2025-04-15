@@ -67,7 +67,7 @@ const About = () => {
                   alt="Team Member"
                 />
               </div>
-              <h3>Rajesh Khatri</h3>
+              <h3>Virendra Khatri</h3>
               <p>Founder & CEO</p>
             </div>
             <div className="team-member">
@@ -77,7 +77,7 @@ const About = () => {
                   alt="Team Member"
                 />
               </div>
-              <h3>Amit Khatri</h3>
+              <h3>Narendra Khatri</h3>
               <p>Associate Partner</p>
             </div>
             {/* <div className="team-member">
@@ -104,12 +104,9 @@ const About = () => {
           </div>
           <div className="stat-card">
             <h3>1000+</h3>
-            <p>Projects Completed</p>
+            <p>Products Maded</p>
           </div>
-          <div className="stat-card">
-            <h3>20+</h3>
-            <p>Expert Craftsmen</p>
-          </div>
+          
         </section>
       </div>
     </div>

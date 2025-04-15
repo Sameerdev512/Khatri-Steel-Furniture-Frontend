@@ -17,16 +17,25 @@ const ProfileDropdown = ({ onLogout, userName }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const toggleDropdown = () => {
+    console.log('Toggle clicked, current state:', isOpen); // Debug log
+    setIsOpen(prevState => !prevState);
+  };
+
   const role = localStorage.getItem("role");
 
   return (
     <div className="profile-dropdown" ref={dropdownRef}>
-      <button className="profile-icon" onClick={() => setIsOpen(!isOpen)}>
+      <button 
+        type="button"
+        className="profile-icon" 
+        onClick={toggleDropdown}
+      >
         <i className="fas fa-user-circle"></i>
         <span className="user-name">Profile</span>
       </button>
 
-      {role == "USER" && isOpen && (
+      {isOpen && role === "USER" && (
         <div className="dropdown-menu">
           <div className="dropdown-header">
             <span>Welcome, {userName || "User"}!</span>
@@ -45,8 +54,8 @@ const ProfileDropdown = ({ onLogout, userName }) => {
         </div>
       )}
 
-      {role == "ADMIN" && isOpen && (
-        <div className="dropdown-menu ">
+      {isOpen && role === "ADMIN" && (
+        <div className="dropdown-menu">
           <div className="dropdown-header">
             <span>Welcome, Admin!</span>
           </div>

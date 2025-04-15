@@ -41,10 +41,9 @@ const services = [
     description:
       "Professional welding services for all types of metal work and fabrication needs.",
     features: [
-      "MIG/TIG welding",
-      "Arc welding",
-      "Spot welding",
-      "Metal fabrication",
+      "Gas welding",
+      "Electric Welding",
+      "On-shop welding",
       "On-site welding",
     ],
     image:
@@ -109,11 +108,11 @@ const Services = () => {
                 <img src={service.image} alt={service.title} />
               </div>
               <div className="service-content">
-                <h2>{service.title}</h2>
+                <center><h2>{service.title}</h2></center>
                 <p>{service.description}</p>
-                <ul className="features-list">
+                <ul className="features-list ">
                   {service.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
+                    <li key={index} className="list-style-none">{feature}</li>
                   ))}
                 </ul>
               </div>

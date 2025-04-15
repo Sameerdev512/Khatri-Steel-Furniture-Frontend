@@ -4,7 +4,7 @@
 
   .contact-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 4rem auto;
     padding: 2rem 1rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -35,9 +35,9 @@
         .info-item {
           display: flex;
           gap: 1rem;
-          align-items: flex-start;
+          align-items:flex-start;
 
-          i {
+          i {margin-top:18px;
             font-size: 1.5rem;
             color: #1f2937;
             width: 24px;

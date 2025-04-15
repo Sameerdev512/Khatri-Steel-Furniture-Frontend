@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import MyEnquiries from './pages/MyEnquiries';
 import Profile from './pages/Profile';
+import ProductDetails from './pages/ProductDetails';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/Dashboard';
@@ -37,6 +38,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/my-enquiries" element={<MyEnquiries />} />
         <Route path="/profile" element={<Profile />}  />
+        <Route path="/product/:id" element={<ProductDetails />} />
 
         {/* Admin Routes */}
         <Route path="/admin/dashboard" element={role === "ADMIN" ? <AdminDashboard /> : <Home />} />
@@ -51,6 +53,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 

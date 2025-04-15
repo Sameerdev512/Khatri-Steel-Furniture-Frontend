@@ -1,5 +1,6 @@
 @charset "UTF-8";
 .free-energy-page {
+  font-family: sans-serif;
   min-height: 100vh;
   background-color: #f3f4f6;
   padding: 2rem 1rem;
@@ -7,6 +8,7 @@
 .free-energy-page .hero-section {
   text-align: center;
   margin-bottom: 3rem;
+  margin-top: 8rem;
 }
 .free-energy-page .hero-section h1 {
   font-size: 2.5rem;

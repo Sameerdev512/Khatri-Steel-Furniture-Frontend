@@ -156,7 +156,7 @@ const Home = () => {
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
                   <Link to="/products">
-                    <Button variant="primary">View Details</Button>
+                    <Button variant="primary">View More</Button>
                   </Link>
                 </div>
               </div>
