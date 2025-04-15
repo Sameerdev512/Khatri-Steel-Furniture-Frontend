@@ -18,6 +18,7 @@ import AdminServices from './pages/admin/Services';
 import AdminOrders from './pages/admin/Orders';
 import AdminUsers from './pages/admin/Users';
 import AdminEnquiries from './pages/admin/Enquiries';
+import Profile from "../../../Frontend/src/pages/Profile";
 
 function App() {
   const role = localStorage.getItem("role");
@@ -35,6 +36,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/my-enquiries" element={<MyEnquiries />} />
+        <Route path="/profile" element={<Profile />}  />
 
         {/* Admin Routes */}
         <Route path="/admin/dashboard" element={role === "ADMIN" ? <AdminDashboard /> : <Home />} />

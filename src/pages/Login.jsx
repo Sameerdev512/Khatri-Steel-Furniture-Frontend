@@ -50,7 +50,7 @@ const Login = () => {
           navigate('/home');
         }
       }else{
-        alert("Bad Credentials.")
+        setError("Invalid email or password");
       }
     } catch (err) {
       setError('Invalid email or password');

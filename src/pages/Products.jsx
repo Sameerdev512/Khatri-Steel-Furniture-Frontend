@@ -8,76 +8,85 @@ const products = [
     name: "Modern Steel Almirah",
     category: "Almirah",
     price: 15999,
-    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description: "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
+    image: "../src/assets/images/al2.png",
+    description:
+      "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
     features: [
       "3 Door Design",
       "Built-in Mirror",
       "Adjustable Shelves",
       "Premium Lock System",
-      "Anti-rust Coating"
-    ]
+      "Anti-rust Coating",
+    ],
   },
   {
     id: 2,
     name: "Desert Air Cooler",
     category: "Coolers",
     price: 8999,
-    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description: "High-capacity desert cooler with 85L water tank. Equipped with honeycomb cooling pads, powerful motor, and castor wheels for easy mobility.",
+    image:
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "High-capacity desert cooler with 85L water tank. Equipped with honeycomb cooling pads, powerful motor, and castor wheels for easy mobility.",
     features: [
       "85L Capacity",
       "Honeycomb Pads",
       "Powerful Motor",
       "Mobile Design",
-      "Low Power Consumption"
-    ]
+      "Low Power Consumption",
+    ],
   },
   {
     id: 3,
     name: "Metal Double Bed",
     category: "Beds",
     price: 12999,
-    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description: "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
+    image:
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
     features: [
       "Elegant Design",
       "Powder Coating",
       "400kg Capacity",
       "Anti-rust Treatment",
-      "Easy Assembly"
-    ]
+      "Easy Assembly",
+    ],
   },
   {
     id: 4,
     name: "Steel Kitchen Rack",
     category: "Kitchen",
     price: 3999,
-    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description: "Multi-tier stainless steel kitchen rack with adjustable shelves. Perfect for organizing utensils and appliances, with anti-slip feet and wall-mounting option.",
+    image:
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "Multi-tier stainless steel kitchen rack with adjustable shelves. Perfect for organizing utensils and appliances, with anti-slip feet and wall-mounting option.",
     features: [
       "Adjustable Shelves",
       "Wall Mounting",
       "Anti-slip Feet",
       "Stainless Steel",
-      "Easy Clean"
-    ]
+      "Easy Clean",
+    ],
   },
   {
     id: 5,
     name: "Wardrobe Almirah",
     category: "Almirah",
     price: 18999,
-    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description: "Spacious wardrobe almirah with 4 doors and dedicated sections for clothes, accessories, and shoes. Features full-length mirror and premium finish.",
+    image:
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "Spacious wardrobe almirah with 4 doors and dedicated sections for clothes, accessories, and shoes. Features full-length mirror and premium finish.",
     features: [
       "4 Door Design",
       "Full Mirror",
       "Organized Sections",
       "Premium Finish",
-      "Durable Hardware"
-    ]
-  }
+      "Durable Hardware",
+    ],
+  },
 ];
 
 const categories = ["All", ...new Set(products.map(product => product.category))];
@@ -135,6 +144,7 @@ const Products = () => {
     <>
       <Navbar />
       <div className="products-page">
+      <center><h1>Explore Products</h1></center>
         <div className="products-container">
           <div className="filters-section">
             <div className="search-bar">
@@ -146,10 +156,12 @@ const Products = () => {
               />
             </div>
             <div className="categories">
-              {categories.map(category => (
+              {categories.map((category) => (
                 <button
                   key={category}
-                  className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
+                  className={`category-btn ${
+                    selectedCategory === category ? "active" : ""
+                  }`}
                   onClick={() => setSelectedCategory(category)}
                 >
                   {category}
@@ -159,16 +171,16 @@ const Products = () => {
           </div>
 
           <div className="products-grid">
-            {filteredProducts.map(product => (
+            {filteredProducts.map((product) => (
               <div key={product.id} className="product-card">
                 <div className="product-image">
                   <img src={product.image} alt={product.name} />
                 </div>
                 <div className="product-info">
                   <h3>{product.name}</h3>
-                  <p className="category">{product.category}</p>
-                  <p className="price">₹{product.price.toLocaleString()}</p>
-                  <button 
+                  <span className="category">{product.category}</span>
+                  <p className="price">{product.price.toLocaleString()}</p>
+                  <button
                     className="view-details-btn"
                     onClick={() => setSelectedProduct(product)}
                   >
@@ -179,57 +191,39 @@ const Products = () => {
             ))}
           </div>
 
-          {/* New sections below the products grid */}
           <div className="product-info-section">
-            <div className="quality-assurance">
-              <h2>Why Choose Our Products</h2>
-              <div className="features-grid">
-                <div className="feature-card">
-                  <div className="icon">🛠️</div>
-                  <h3>Custom Manufacturing</h3>
-                  <p>All products can be customized to your specific requirements</p>
-                </div>
-                <div className="feature-card">
-                  <div className="icon">⭐</div>
-                  <h3>Premium Quality</h3>
-                  <p>Built with high-grade materials for long-lasting durability</p>
-                </div>
-                <div className="feature-card">
-                  <div className="icon">🔒</div>
-                  <h3>Quality Assured</h3>
-                  <p>Rigorous quality checks for every product</p>
-                </div>
-                <div className="feature-card">
-                  <div className="icon">🚚</div>
-                  <h3>Delivery Available</h3>
-                  <p>Safe and timely delivery to your doorstep</p>
-                </div>
+            <h2>Why Choose Our Products</h2>
+            <div className="features-grid">
+              <div className="feature-card">
+                <div className="icon">🛠️</div>
+                <h3>Custom Manufacturing</h3>
+                <p>
+                  Tailored solutions to match your exact specifications and
+                  requirements
+                </p>
               </div>
-            </div>
-            
-            <div className="ordering-info">
-              <h2>How to Order</h2>
-              <div className="steps-container">
-                <div className="step">
-                  <div className="step-number">1</div>
-                  <h3>Browse & Select</h3>
-                  <p>Choose from our wide range of products</p>
-                </div>
-                <div className="step">
-                  <div className="step-number">2</div>
-                  <h3>Customize</h3>
-                  <p>Specify your size and design requirements</p>
-                </div>
-                <div className="step">
-                  <div className="step-number">3</div>
-                  <h3>Enquire</h3>
-                  <p>Get detailed pricing and delivery information</p>
-                </div>
-                <div className="step">
-                  <div className="step-number">4</div>
-                  <h3>Confirm Order</h3>
-                  <p>Place your order and track manufacturing progress</p>
-                </div>
+              <div className="feature-card">
+                <div className="icon">⭐</div>
+                <h3>Premium Quality</h3>
+                <p>
+                  Built with high-grade materials ensuring long-lasting
+                  durability
+                </p>
+              </div>
+              <div className="feature-card">
+                <div className="icon">🔒</div>
+                <h3>Quality Assured</h3>
+                <p>
+                  Every product undergoes rigorous quality checks and testing
+                </p>
+              </div>
+              <div className="feature-card">
+                <div className="icon">🚚</div>
+                <h3>Fast Delivery</h3>
+                <p>
+                  Quick and reliable delivery to your doorstep with careful
+                  handling
+                </p>
               </div>
             </div>
           </div>
@@ -238,15 +232,25 @@ const Products = () => {
           {selectedProduct && (
             <div className="product-modal">
               <div className="modal-content">
-                <button className="close-btn" onClick={() => setSelectedProduct(null)}>×</button>
+                <button
+                  className="close-btn"
+                  onClick={() => setSelectedProduct(null)}
+                >
+                  ×
+                </button>
                 <div className="modal-grid">
                   <div className="modal-image">
-                    <img src={selectedProduct.image} alt={selectedProduct.name} />
+                    <img
+                      src={selectedProduct.image}
+                      alt={selectedProduct.name}
+                    />
                   </div>
                   <div className="modal-info">
                     <h2>{selectedProduct.name}</h2>
                     <p className="category">{selectedProduct.category}</p>
-                    <p className="price">₹{selectedProduct.price.toLocaleString()}</p>
+                    <p className="price">
+                      ₹{selectedProduct.price.toLocaleString()}
+                    </p>
                     <p className="description">{selectedProduct.description}</p>
                     <div className="features">
                       <h3>Key Features:</h3>
@@ -256,7 +260,7 @@ const Products = () => {
                         ))}
                       </ul>
                     </div>
-                    <button 
+                    <button
                       className="enquire-btn"
                       onClick={() => {
                         if (!localStorage.getItem("role")) {
@@ -280,7 +284,7 @@ const Products = () => {
           {showEnquiryForm && (
             <div className="enquiry-modal">
               <div className="enquiry-content">
-                <button 
+                <button
                   className="close-btn"
                   onClick={() => setShowEnquiryForm(false)}
                 >
@@ -345,6 +349,7 @@ const Products = () => {
 };
 
 export default Products;
+
 
 
 

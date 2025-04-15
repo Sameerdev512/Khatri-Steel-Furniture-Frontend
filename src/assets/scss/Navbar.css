@@ -1,6 +1,6 @@
 .navbar {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 0px;
   z-index: 1000;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -9,7 +9,7 @@
 .navbar .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,4 +136,21 @@
     color: #2563eb;
     font-weight: 600;
   }
+}
+.auth-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+}
+.auth-link:hover {
+  color: #your-hover-color;
+}
+
+button.auth-link:hover {
+  color: #ff4444;
 }/*# sourceMappingURL=Navbar.css.map */

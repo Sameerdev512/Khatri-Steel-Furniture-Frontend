@@ -14,6 +14,7 @@
   gap: 0.5rem;
   font-size: 1rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-top: 4rem;
 }
 .home-container .announcement-bar .highlight-link {
   color: #1f2937;
@@ -71,7 +72,7 @@
 }
 .home-container .hero-section {
   background-color: white;
-  padding: 3rem 1rem;
+  padding: 5rem 1rem;
   text-align: center;
 }
 .home-container .hero-section h1 {
@@ -150,7 +151,7 @@
 .home-container .products-section .products-grid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   max-width: 400px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -159,7 +160,7 @@
 .home-container .products-section .products-grid .product-card {
   background-color: transparent;
   width: 100%;
-  height: 400px;
+  height: 420px;
   perspective: 1500px;
   transform-style: preserve-3d;
   position: relative;
@@ -181,7 +182,7 @@
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 .home-container .products-section .products-grid .product-card .card-inner .card-front {
   display: flex;
@@ -189,13 +190,15 @@
 }
 .home-container .products-section .products-grid .product-card .card-inner .card-front img {
   width: 100%;
-  height: 70%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 75%;
+  padding: 20px 0;
+  -o-object-fit: contain;
+     object-fit: contain;
   -o-object-position: center;
      object-position: center;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  background: smokeWhite;
 }
 .home-container .products-section .products-grid .product-card .card-inner .card-front .product-title {
   padding: 1rem;

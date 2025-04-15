@@ -16,32 +16,28 @@ const products = [
   {
     id: 1,
     name: "Modern Steel Almirah",
-    image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "../src/assets/images/almari.png",
     description:
       "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
   },
   {
     id: 2,
     name: "Desert Air Cooler",
-    image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "../src/assets/images/almari.png",
     description:
       "High-capacity desert cooler with 85L water tank. Equipped with honeycomb cooling pads, powerful motor, and castor wheels for easy mobility.",
   },
   {
     id: 3,
     name: "Metal Double Bed",
-    image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "../src/assets/images/al2.png",
     description:
       "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
   },
   {
     id: 4,
     name: "Steel Kitchen Rack",
-    image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "../src/assets/images/almari.png",
     description:
       "Multi-tier stainless steel kitchen rack with adjustable shelves. Perfect for organizing utensils and appliances, with anti-slip feet and wall-mounting option.",
   },
@@ -51,23 +47,30 @@ const transformations = [
   {
     id: 1,
     title: "Steel Almirah Restoration",
-    description: "Complete restoration of a vintage steel almirah with modern finishing",
-    beforeImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    afterImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "Complete restoration of a vintage steel almirah with modern finishing",
+    beforeImage: "../src/assets/images/almari.png",
+    afterImage: "../src/assets/images/almari.png",
   },
   {
     id: 2,
     title: "Steel Bed Frame Upgrade",
-    description: "Complete overhaul of an old steel bed frame with contemporary design elements",
-    beforeImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    afterImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "Complete overhaul of an old steel bed frame with contemporary design elements",
+    beforeImage:
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    afterImage:
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 3,
     title: "Metal Cabinet Makeover",
-    description: "Transforming a worn-out metal cabinet into a modern storage solution",
-    beforeImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    afterImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "Transforming a worn-out metal cabinet into a modern storage solution",
+    beforeImage:
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    afterImage:
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -95,12 +98,16 @@ const Home = () => {
       <section className="hero-section mt-5">
         <h1>Custom Furniture, Repairs & Welding Services</h1>
         <p>We craft almirahs, coolers, beds & more — tailored to your needs.</p>
-        <div className="button-group">
+        <div className="button-group" >
+          <span>
           <Link to="/products">
-            <Button>View Products</Button>
+            <Button >View Products</Button>
           </Link>
+          </span>
           <Link to="/contact">
-            <Button variant="outline">Contact Us</Button>
+            <Button  variant="outline">
+              Contact Us
+            </Button>
           </Link>
         </div>
         {/* <div className="gallery-cta">
@@ -112,7 +119,11 @@ const Home = () => {
         </div> */}
         <div className="auth-links">
           {localStorage.getItem("token") ? (
-            <span onClick={handleLogout} >
+            <span
+              style={{ cursor: "pointer" }}
+              className="auth-link"
+              onClick={handleLogout}
+            >
               Logout
             </span>
           ) : (
@@ -144,7 +155,9 @@ const Home = () => {
                 <div className="card-back">
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
-                  <Link to="/products"><Button variant="primary">View Details</Button></Link>
+                  <Link to="/products">
+                    <Button variant="primary">View Details</Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -258,7 +271,11 @@ const Home = () => {
       <section className="contact-section">
         <h2>Want to place an order or need a repair?</h2>
         <p>Reach out to us directly for quick support and expert advice.</p>
-        <Button>Contact Us</Button>
+        <span style={{ cursor: "pointer" }}>
+          <Link to="/contact">
+            <Button>Contact Us</Button>
+          </Link>
+        </span>
       </section>
     </div>
   );
