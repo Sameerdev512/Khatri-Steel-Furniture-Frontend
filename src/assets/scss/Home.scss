@@ -311,7 +311,7 @@
         
         @media (max-width: 768px) {
           height: auto;
-          min-height: 220px;
+          min-height: 280px; // Increased from 220px
 
           &:hover {
             transform: scale(1.02); // Smaller scale on mobile
@@ -360,7 +360,7 @@
               transition: transform 0.3s ease;
               
               @media (max-width: 768px) {
-                height: 160px;
+                height: 220px; // Increased from 160px
                 padding: 0.75rem;
               }
             }
@@ -630,7 +630,7 @@
           object-fit: cover;
           
           @media (max-width: 768px) {
-            height: 140px;
+            height: 180px; // Increased from 140px
           }
         }
 
@@ -849,7 +849,7 @@
               background-color: #f8fafc;
               
               @media (max-width: 768px) {
-                height: 150px; // Slightly smaller height on mobile
+                height: 180px; // Increased from 150px
               }
             }
           }
