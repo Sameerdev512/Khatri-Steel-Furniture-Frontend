@@ -3,6 +3,7 @@ import "../assets/scss/Home.scss";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Button = ({ children, variant = "primary" }) => {
   return (
@@ -16,28 +17,32 @@ const products = [
   {
     id: 1,
     name: "Modern Steel Almirah",
-    image: "../src/assets/images/almari.png",
+    image:
+      "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
     description:
       "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
   },
   {
     id: 2,
     name: "Desert Air Cooler",
-    image: "../src/assets/images/almari.png",
+    image:
+      "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
     description:
       "High-capacity desert cooler with 85L water tank. Equipped with honeycomb cooling pads, powerful motor, and castor wheels for easy mobility.",
   },
   {
     id: 3,
     name: "Metal Double Bed",
-    image: "../src/assets/images/al2.png",
+    image:
+      "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
     description:
       "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
   },
   {
     id: 4,
-    name: "Steel Kitchen Rack",
-    image: "../src/assets/images/almari.png",
+    name: "Stylish Double Bed",
+    image:
+      "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
     description:
       "Multi-tier stainless steel kitchen rack with adjustable shelves. Perfect for organizing utensils and appliances, with anti-slip feet and wall-mounting option.",
   },
@@ -49,8 +54,10 @@ const transformations = [
     title: "Steel Almirah Restoration",
     description:
       "Complete restoration of a vintage steel almirah with modern finishing",
-    beforeImage: "../src/assets/images/almari.png",
-    afterImage: "../src/assets/images/almari.png",
+    beforeImage:
+      "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+    afterImage:
+      "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
   },
   {
     id: 2,
@@ -58,9 +65,9 @@ const transformations = [
     description:
       "Complete overhaul of an old steel bed frame with contemporary design elements",
     beforeImage:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
     afterImage:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
   },
   {
     id: 3,
@@ -68,9 +75,9 @@ const transformations = [
     description:
       "Transforming a worn-out metal cabinet into a modern storage solution",
     beforeImage:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
     afterImage:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
   },
 ];
 
@@ -191,6 +198,11 @@ const Home = () => {
             </div>
           ))}
         </div>
+        <div className="view-all-transformations">
+          <Link to="/transformations" className="view-all-button">
+            View All Transformations <span className="arrow">→</span>
+          </Link>
+        </div>
       </section>
 
       {/* Services Section */}
@@ -277,6 +289,9 @@ const Home = () => {
           </Link>
         </span>
       </section>
+
+      {/* Add Footer here */}
+      <Footer />
     </div>
   );
 };

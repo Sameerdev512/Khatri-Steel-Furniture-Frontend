@@ -24,7 +24,8 @@ const ProductDetails = () => {
       name: "Modern Steel Almirah",
       category: "Almirah",
       price: 15999,
-      image: "../src/assets/images/al2.png",
+      image:
+        "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
       description:
         "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
       features: [
@@ -40,14 +41,14 @@ const ProductDetails = () => {
       name: "Desert Air Cooler",
       category: "Coolers",
       price: 8999,
-      image: "../src/assets/images/palang2.png",
+      image:
+        "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
       description:
         "High-capacity desert cooler with 85L water tank. Equipped with honeycomb cooling pads, powerful motor, and castor wheels for easy mobility.",
       features: [
         "85L Capacity",
         "Honeycomb Pads",
         "Powerful Motor",
-        "Mobile Design",
         "Low Power Consumption",
       ],
     },
@@ -57,7 +58,7 @@ const ProductDetails = () => {
       category: "Beds",
       price: 12999,
       image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
       description:
         "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
       features: [
@@ -129,6 +130,13 @@ const ProductDetails = () => {
       phone: '',
       message: ''
     });
+  };
+
+  const handleShare = () => {
+    const productUrl = window.location.href;
+    const message = `Check out ${product.name} - ₹${product.price.toLocaleString()}\n\n${productUrl}`;
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   if (!product) {
@@ -220,8 +228,8 @@ const ProductDetails = () => {
                 >
                   <i className="fas fa-envelope"></i> Enquire Now
                 </button>
-                <button className="share-button">
-                  <i className="fas fa-share-alt"></i> Share
+                <button className="share-button" onClick={handleShare}>
+                  <i className="fab fa-whatsapp fa-lg"></i> Share
                 </button>
               </div>
             </div>
@@ -332,5 +340,6 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
+
 
 

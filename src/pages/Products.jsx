@@ -11,7 +11,8 @@ const products = [
     name: "Modern Steel Almirah",
     category: "Almirah",
     price: 15999,
-    image: "../src/assets/images/al2.png",
+    image:
+      "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
     description:
       "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
     features: [
@@ -27,7 +28,8 @@ const products = [
     name: "Modern Steel Almirah",
     category: "Almirah",
     price: 15999,
-    image: "../src/assets/images/al2.png",
+    image:
+      "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
     description:
       "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
     features: [
@@ -43,7 +45,8 @@ const products = [
     name: "Desert Air Cooler",
     category: "Coolers",
     price: 8999,
-    image: "../src/assets/images/palang2.png",
+    image:
+      "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
     description:
       "High-capacity desert cooler with 85L water tank. Equipped with honeycomb cooling pads, powerful motor, and castor wheels for easy mobility.",
     features: [
@@ -60,7 +63,7 @@ const products = [
     category: "Beds",
     price: 12999,
     image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
     description:
       "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
     features: [

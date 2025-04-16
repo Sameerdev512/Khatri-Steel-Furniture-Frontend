@@ -1,0 +1,229 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import '../assets/scss/TransformationGallery.scss';
+import { FaArrowLeft } from 'react-icons/fa';
+
+const TransformationGallery = () => {
+  const navigate = useNavigate();
+  
+  const categories = [
+    {
+      id: 1,
+      category: "Furniture Restoration",
+      transformations: [
+        {
+          id: "f1",
+          title: "Steel Almirah Restoration",
+          description:
+            "Complete restoration of a vintage steel almirah, including rust removal, structural repairs, and a modern finish.",
+          repairInfo: {
+            title: "Restoration Process",
+            description:
+              "Our comprehensive restoration process brings new life to old furniture.",
+            steps: [
+              "Complete disassembly and inspection",
+              "Rust removal and treatment",
+              "Structural reinforcement",
+              "Premium coating application",
+              "Hardware replacement and upgrades",
+            ],
+          },
+          images: [
+            {
+              type: "before",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+            },
+            {
+              type: "before",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+            },
+            {
+              type: "after",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 2,
+      category: "Gate & Security",
+      transformations: [
+        {
+          id: "g1",
+          title: "Steel Gate Transformation",
+          description:
+            "Complete overhaul of a weathered steel gate with reinforced hinges, rust protection, and elegant black finish.",
+          repairInfo: {
+            title: "Gate Restoration Process",
+            description:
+              "Professional gate restoration for enhanced security and aesthetics.",
+            steps: [
+              "Structural assessment",
+              "Hinge reinforcement",
+              "Rust treatment",
+              "Premium coating application",
+              "Hardware upgrade",
+            ],
+          },
+          images: [
+            {
+              type: "before",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
+            },
+            {
+              type: "after",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 3,
+      category: "Industrial Equipment",
+      transformations: [
+        {
+          id: "i1",
+          title: "Metal Cabinet Refinishing",
+          description:
+            "Professional refinishing of an industrial metal cabinet with anti-rust treatment and premium coating.",
+          repairInfo: {
+            title: "Cabinet Refinishing Process",
+            description:
+              "Expert metal cabinet restoration for lasting durability.",
+            steps: [
+              "Surface preparation",
+              "Rust removal",
+              "Primer application",
+              "Premium finish coating",
+              "Quality inspection",
+            ],
+          },
+          images: [
+            {
+              type: "before",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
+            },
+            {
+              type: "after",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 4,
+      category: "Storage Solutions",
+      transformations: [
+        {
+          id: "s1",
+          title: "Industrial Shelf Restoration",
+          description:
+            "Restoration of vintage industrial shelving unit with structural reinforcement and modern finish.",
+          repairInfo: {
+            title: "Shelf Restoration Process",
+            description:
+              "Complete restoration process for industrial storage solutions.",
+            steps: [
+              "Structural analysis",
+              "Support reinforcement",
+              "Surface preparation",
+              "Industrial-grade coating",
+              "Load testing",
+            ],
+          },
+          images: [
+            {
+              type: "before",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
+            },
+            {
+              type: "after",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
+            },
+          ],
+        },
+      ],
+    },
+  ];
+
+  return (
+    <>
+      <Navbar />
+      <div className="transformation-gallery-page">
+        <div className="container">
+          <button 
+            className="back-button"
+            onClick={() => navigate(-1)}
+          >
+            <FaArrowLeft /> Back
+          </button>
+          
+          <h1>Transformation Gallery</h1>
+          <p className="gallery-description">
+            Explore our metal restoration projects across different categories
+          </p>
+          
+          <div className="gallery-grid">
+            {categories.map((category) => (
+              category.transformations.map((item) => (
+                <div key={item.id} className="gallery-row">
+                  <div className="category-card">
+                    {/* <div className="category-badge">{category.category}</div> */}
+                    <div className="transformation-content">
+                      <h3>{item.title}</h3>
+                      <Carousel
+                        showArrows={true}
+                        showStatus={false}
+                        showThumbs={false}
+                        infiniteLoop={true}
+                        autoPlay={true}
+                        interval={3000}
+                        className="carousel-container"
+                      >
+                        {item.images.map((image, index) => (
+                          <div key={index} className="carousel-slide">
+                            <div className="image-label">{image.type}</div>
+                            <img src={image.url} alt={`${item.title} - ${image.type}`} />
+                          </div>
+                        ))}
+                      </Carousel>
+                      {/* <p className="description">{item.description}</p> */}
+                    </div>
+                  </div>
+                  
+                  {item.repairInfo && (
+                    <div className="repair-info">
+                      <h3>{item.repairInfo.title}</h3>
+                      <p>{item.repairInfo.description}</p>
+                      <ul>
+                        {item.repairInfo.steps.map((step, index) => (
+                          <li key={index}>{step}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ))
+            ))}
+          </div>
+        </div>
+        <div className="transforming-line">
+          <div className="line-text">Transforming Metal, Creating Value</div>
+          <div className="animated-line"></div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default TransformationGallery;
+
+
+
+

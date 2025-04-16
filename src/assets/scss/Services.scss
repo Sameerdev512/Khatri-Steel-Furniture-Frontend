@@ -17,6 +17,7 @@
         font-size: 2.5rem;
         font-weight: 700;
         color: #1f2937;
+        margin-top: 2rem;
         margin-bottom: 1rem;
       }
 
@@ -45,7 +46,7 @@
         overflow: hidden;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s ease-in-out;
-        max-width: 400px; // Added max-width to card
+        max-width: 600px; // Added max-width to card
         margin: 0 auto; // Center the card
 
         &:hover {
@@ -54,6 +55,7 @@
         }
 
         .service-image {
+          padding-top: 1rem;
           height: 300px; // Reduced height from 250px to 200px
 
           img {
@@ -64,11 +66,11 @@
         }
 
         .service-content {
-          padding: 1.5rem; // Slightly reduced padding
+          padding: 2rem; // Slightly reduced padding
 
           h2 {
             font-size: 1.5rem; // Reduced from 1.75rem
-            margin-bottom: 1rem;
+            margin: 1rem 0;
           }
 
           p {
@@ -84,7 +86,7 @@
 
             li {
               list-style: none;
-              margin-left:-30px;
+              margin-left:0px;
               font-size: 0.95rem; // Reduced from 1.05rem
 
               &:before {

@@ -46,7 +46,7 @@ const Contact = () => {
               <i className="fas fa-map-marker-alt"></i>
               <div>
                 <h3>Address</h3>
-                <p>123 Steel Works Road, Industrial Area, City</p>
+                <p>59/3 Shiv bagh colony behinf velocity cinema,near agrawal home, Khajrana,Indore,M.P.</p>
               </div>
             </div>
             
@@ -54,8 +54,8 @@ const Contact = () => {
               <i className="fas fa-phone"></i>
               <div>
                 <h3>Phone</h3>
-                <p>+91 98765 43210</p>
-                <p>+91 98765 43211</p>
+                <p>+91 97548 45158</p>
+                <p>+91 88891 16156</p>
               </div>
             </div>
             
@@ -72,7 +72,7 @@ const Contact = () => {
               <i className="fas fa-clock"></i>
               <div>
                 <h3>Working Hours</h3>
-                <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
                 <p>Sunday: Closed</p>
               </div>
             </div>

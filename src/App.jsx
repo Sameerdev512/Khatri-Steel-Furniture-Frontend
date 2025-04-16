@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -12,6 +12,7 @@ import Signup from './pages/Signup';
 import MyEnquiries from './pages/MyEnquiries';
 import Profile from './pages/Profile';
 import ProductDetails from './pages/ProductDetails';
+import TransformationGallery from './pages/TransformationGallery';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/Dashboard';
@@ -24,7 +25,7 @@ import AdminEnquiries from './pages/admin/Enquiries';
 function App() {
   const role = localStorage.getItem("role");
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
@@ -39,6 +40,7 @@ function App() {
         <Route path="/my-enquiries" element={<MyEnquiries />} />
         <Route path="/profile" element={<Profile />}  />
         <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/transformations" element={<TransformationGallery />} />
 
         {/* Admin Routes */}
         <Route path="/admin/dashboard" element={role === "ADMIN" ? <AdminDashboard /> : <Home />} />
@@ -48,11 +50,14 @@ function App() {
         <Route path="/admin/users" element={<AdminUsers />} />
         <Route path="/admin/enquiries" element={<AdminEnquiries />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
 export default App;
+
+
+
 
 
 

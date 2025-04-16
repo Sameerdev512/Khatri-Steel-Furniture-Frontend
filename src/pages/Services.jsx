@@ -18,7 +18,7 @@ const services = [
       "On-time delivery",
     ],
     image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const services = [
       "Preventive maintenance",
     ],
     image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
   },
   {
     id: 3,
@@ -66,29 +66,7 @@ const services = [
   },
 ];
 
-const transformations = [
-  {
-    id: 1,
-    title: "Steel Almirah Restoration",
-    description: "Complete restoration of a vintage steel almirah with modern finishing",
-    beforeImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    afterImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 2,
-    title: "Industrial Cabinet Makeover",
-    description: "Transformation of a damaged industrial cabinet into a modern storage solution",
-    beforeImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    afterImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 3,
-    title: "Steel Bed Frame Upgrade",
-    description: "Complete overhaul of an old steel bed frame with contemporary design elements",
-    beforeImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    afterImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-];
+
 
 const Services = () => {
   return (
