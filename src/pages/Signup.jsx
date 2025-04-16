@@ -95,6 +95,7 @@ const Signup = () => {
         alert("Account created successfully!");
         navigate("/login");
       } else {
+        alert(result);
         setErrors(prev => ({
           ...prev,
           general: result
