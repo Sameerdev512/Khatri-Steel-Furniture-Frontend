@@ -52,7 +52,7 @@
 }
 @media (max-width: 768px) {
   .product-details-page .container {
-    width: 90%;
+    width: 100%;
     padding: 0.5rem;
   }
 }
@@ -433,7 +433,7 @@
 @media (max-width: 768px) {
   .product-details-page .container {
     max-width: 100%;
-    padding: 1rem 0.75rem;
+    padding: 1rem 0rem;
   }
   .product-details-page .container .back-button {
     font-size: 0.875rem;
