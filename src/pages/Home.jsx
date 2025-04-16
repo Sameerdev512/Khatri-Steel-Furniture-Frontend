@@ -93,7 +93,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <Navbar />
+      <Navbar   />
       <div className="announcement-bar">
         <span>🌟 Explore Our Special Collection</span>
         <Link to="/free-energy-products" className="highlight-link">
