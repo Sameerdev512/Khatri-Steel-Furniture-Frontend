@@ -63,7 +63,7 @@ const About = () => {
             <div className="team-member">
               <div className="member-image">
                 <img
-                  src="https://res.cloudinary.com/duyifa20j/image/upload/v1744281798/ulh7jqfzytjtia29ss3t.jpg"
+                  src="https://res.cloudinary.com/commonground/image/upload/v1744364266/pvsqjxugmksloqn36qiz.jpg"
                   alt="Team Member"
                 />
               </div>
@@ -73,7 +73,7 @@ const About = () => {
             <div className="team-member">
               <div className="member-image">
                 <img
-                  src="https://res.cloudinary.com/duyifa20j/image/upload/v1744281798/ulh7jqfzytjtia29ss3t.jpg"
+                  src="https://res.cloudinary.com/commonground/image/upload/v1744364266/pvsqjxugmksloqn36qiz.jpg"
                   alt="Team Member"
                 />
               </div>
@@ -106,7 +106,6 @@ const About = () => {
             <h3>1000+</h3>
             <p>Products Maded</p>
           </div>
-          
         </section>
       </div>
     </div>
