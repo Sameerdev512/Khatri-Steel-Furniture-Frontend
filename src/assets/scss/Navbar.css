@@ -22,6 +22,7 @@
   font-weight: 700;
   color: #1f2937;
   text-decoration: none;
+  z-index: 1001;
 }
 .navbar .navbar-logo:hover {
   color: #374151;
@@ -54,6 +55,7 @@
 }
 .navbar .navbar-menu .nav-link.contact-btn:hover {
   background-color: #0d3163;
+  opacity: 0.9;
 }
 .navbar .mobile-menu-btn {
   display: none;
@@ -61,6 +63,7 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  z-index: 1001;
 }
 .navbar .mobile-menu-btn .hamburger {
   display: block;
@@ -100,34 +103,60 @@
     display: block;
   }
   .navbar .navbar-menu {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     background-color: white;
     flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    transform: translateY(-100%);
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    transform: translateX(100%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100vh;
   }
   .navbar .navbar-menu.active {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
     visibility: visible;
   }
   .navbar .navbar-menu .nav-link {
+    font-size: 1.2rem;
     width: 100%;
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.75rem;
   }
   .navbar .navbar-menu .nav-link.contact-btn {
     width: auto;
     margin: 0.5rem auto;
+    padding: 0.75rem 2rem;
   }
+  .navbar .navbar-container {
+    padding: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .navbar .navbar-logo {
+    font-size: 1.25rem;
+  }
+  .navbar .navbar-menu {
+    padding: 1.5rem;
+  }
+  .navbar .navbar-menu .nav-link {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+  }
+  .navbar .navbar-menu .nav-link.contact-btn {
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {

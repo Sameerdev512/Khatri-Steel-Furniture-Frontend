@@ -46,6 +46,14 @@ const products = [
     description:
       "Multi-tier stainless steel kitchen rack with adjustable shelves. Perfect for organizing utensils and appliances, with anti-slip feet and wall-mounting option.",
   },
+  {
+    id: 4,
+    name: "Stylish Double Bed",
+    image:
+      "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
+    description:
+      "Multi-tier stainless steel kitchen rack with adjustable shelves. Perfect for organizing utensils and appliances, with anti-slip feet and wall-mounting option.",
+  },
 ];
 
 const transformations = [

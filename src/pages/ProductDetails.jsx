@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
-import Navbar from "../components/Navbar";
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
+import Navbar from '../components/Navbar';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../assets/scss/ProductDetails.scss";
 
 const ProductDetails = () => {
-  const { id } = useParams();
   const navigate = useNavigate();
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [showEnquiryForm, setShowEnquiryForm] = useState(false);
   const [enquiryForm, setEnquiryForm] = useState({
@@ -167,15 +168,18 @@ const ProductDetails = () => {
     <>
       <Navbar />
       <div className="product-details-page">
-        {/* Page Header */}
-        
-          {/* <center><h1>Product Details</h1></center> */}
+        <div className="back-nav">
+          <div className="container">
+            <button 
+              className="back-button"
+              onClick={() => navigate('/products')}
+            >
+              <FaArrowLeft /> Back to Products
+            </button>
+          </div>
+        </div>
 
         <div className="container">
-          <button className="back-button" onClick={() => navigate('/products')}>
-            <i className="fas fa-arrow-left"></i> Back to Products
-          </button>
-
           <div className="product-details-grid">
             <div className="product-images">
               <Carousel
@@ -340,6 +344,8 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
+
+
 
 
 
