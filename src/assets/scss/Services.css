@@ -12,29 +12,30 @@
 }
 .services-page .services-container .hero-section {
   text-align: center;
-  padding: 2rem 0 1rem 0;
+  padding: 2.5rem 0 1rem 0;
 }
 .services-page .services-container .hero-section h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #1f2937;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 @media (max-width: 768px) {
   .services-page .services-container .hero-section h1 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    margin-top: 0.75rem;
   }
 }
 .services-page .services-container .hero-section p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #4b5563;
-  max-width: 550px;
+  max-width: 600px;
   margin: 0 auto;
 }
 @media (max-width: 768px) {
   .services-page .services-container .hero-section p {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     line-height: 1.4;
   }
 }
@@ -94,7 +95,7 @@
   }
 }
 .services-page .services-container .services-grid .service-card .service-content h2 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #1f2937;
   margin: 0.5rem 0;
@@ -102,19 +103,19 @@
 }
 @media (max-width: 768px) {
   .services-page .services-container .services-grid .service-card .service-content h2 {
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin: 0.25rem 0;
   }
 }
 .services-page .services-container .services-grid .service-card .service-content p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   color: #4b5563;
   margin-bottom: 0.75rem;
 }
 @media (max-width: 768px) {
   .services-page .services-container .services-grid .service-card .service-content p {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
   }
@@ -203,17 +204,17 @@
   }
 }
 .services-page .services-container .free-energy-section h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 @media (max-width: 768px) {
   .services-page .services-container .free-energy-section h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
 .services-page .services-container .free-energy-section .description {
   color: #4b5563;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.7;
   margin-bottom: 2rem;
 }
 .services-page .services-container .free-energy-section .benefits {
@@ -230,22 +231,22 @@
 }
 .services-page .services-container .free-energy-section .benefits .benefit h3 {
   color: #2563eb;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.75rem;
 }
 .services-page .services-container .free-energy-section .benefits .benefit p {
   color: #6b7280;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 .services-page .services-container .process-section {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   text-align: center;
 }
 .services-page .services-container .process-section h2 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #1f2937;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 @media (max-width: 768px) {
   .services-page .services-container .process-section h2 {
@@ -255,55 +256,74 @@
 }
 .services-page .services-container .process-section .process-steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .services-page .services-container .process-section .process-steps {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
 .services-page .services-container .process-section .process-steps .step {
-  padding: 1.25rem;
-  background: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+  padding: 1.5rem;
 }
-.services-page .services-container .process-section .process-steps .step:hover {
-  transform: translateY(-2px);
+@media (max-width: 768px) {
+  .services-page .services-container .process-section .process-steps .step {
+    padding: 1.25rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+  .services-page .services-container .process-section .process-steps .step:hover {
+    transform: translateY(-2px);
+  }
 }
 .services-page .services-container .process-section .process-steps .step .step-number {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   background: #2563eb;
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 0.75rem;
+  margin: 0 auto 1rem;
   font-weight: 600;
-  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .services-page .services-container .process-section .process-steps .step .step-number {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+    margin: 0 auto 0.75rem;
+  }
 }
 .services-page .services-container .process-section .process-steps .step h3 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #1f2937;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 @media (max-width: 768px) {
   .services-page .services-container .process-section .process-steps .step h3 {
     font-size: 1rem;
+    margin-bottom: 0.4rem;
   }
 }
 .services-page .services-container .process-section .process-steps .step p {
   color: #4b5563;
-  font-size: 0.85rem;
-  line-height: 1.4;
-  color: #6b7280;
-  margin: 0;
+  font-size: 1rem;
 }
 @media (max-width: 768px) {
   .services-page .services-container .process-section .process-steps .step p {
     font-size: 0.8rem;
+    line-height: 1.4;
+    color: #6b7280;
+    margin: 0;
   }
 }
 .services-page .services-container .cta-section {
@@ -311,30 +331,20 @@
   padding: 0rem 0;
 }
 .services-page .services-container .cta-section h2 {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #1f2937;
-  margin-bottom: 1rem;
-}
-@media (max-width: 768px) {
-  .services-page .services-container .cta-section h2 {
-    font-size: 1.3rem;
-  }
+  margin-bottom: 0.75rem;
 }
 .services-page .services-container .cta-section p {
   color: #4b5563;
   margin-bottom: 2rem;
-  font-size: 0.95rem;
-}
-@media (max-width: 768px) {
-  .services-page .services-container .cta-section p {
-    font-size: 0.85rem;
-  }
+  font-size: 1rem;
 }
 .services-page .services-container .cta-section .cta-button {
   background: #2563eb;
   color: white;
-  padding: 0.7rem 1.8rem;
+  padding: 0.75rem 2rem;
   border-radius: 0.375rem;
   font-weight: 600;
   border: none;
@@ -433,7 +443,7 @@
 @keyframes cardEntrance {
   from {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;

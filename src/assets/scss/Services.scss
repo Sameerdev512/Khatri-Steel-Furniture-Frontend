@@ -11,28 +11,29 @@
 
     .hero-section {
       text-align: center;
-      padding: 2rem 0 1rem 0; // Reduced padding
+      padding: 2.5rem 0 1rem 0;
       
       h1 {
-        font-size: 1.8rem; // Reduced from 2rem
+        font-size: 2rem;
         font-weight: 700;
         color: #1f2937;
-        margin-top: 1.25rem;
+        margin-top: 1rem;
         margin-bottom: 0.5rem;
         
         @media (max-width: 768px) {
-          font-size: 1.4rem;
+          font-size: 1.5rem;
+          margin-top: 0.75rem;
         }
       }
 
       p {
-        font-size: 0.95rem; // Reduced from 1rem
+        font-size: 1rem;
         color: #4b5563;
-        max-width: 550px;
+        max-width: 600px;
         margin: 0 auto;
 
         @media (max-width: 768px) {
-          font-size: 0.85rem;
+          font-size: 0.875rem;
           line-height: 1.4;
         }
       }
@@ -94,26 +95,26 @@
           }
 
           h2 {
-            font-size: 1.1rem; // Reduced from 1.2rem
+            font-size: 1.2rem;
             font-weight: 600;
             color: #1f2937;
             margin: 0.5rem 0;
             line-height: 1.3;
 
             @media (max-width: 768px) {
-              font-size: 0.95rem;
+              font-size: 1rem;
               margin: 0.25rem 0;
             }
           }
 
           p {
-            font-size: 0.85rem; // Reduced from 0.9rem
+            font-size: 0.9rem;
             line-height: 1.5;
             color: #4b5563;
             margin-bottom: 0.75rem;
 
             @media (max-width: 768px) {
-              font-size: 0.75rem;
+              font-size: 0.8rem;
               line-height: 1.4;
               margin-bottom: 0.5rem;
             }
@@ -208,17 +209,17 @@
       }
 
       h2 {
-        font-size: 1.6rem; // Reduced from 1.8rem
+        font-size: 1.8rem; // Reduced from 2rem
 
         @media (max-width: 768px) {
-          font-size: 1.3rem;
+          font-size: 1.4rem;
         }
       }
 
       .description {
         color: #4b5563;
-        font-size: 1rem; // Reduced from 1.1rem
-        line-height: 1.6;
+        font-size: 1.1rem;
+        line-height: 1.7;
         margin-bottom: 2rem;
       }
 
@@ -236,28 +237,28 @@
 
           h3 {
             color: #2563eb;
-            font-size: 1.1rem; // Reduced from 1.2rem
+            font-size: 1.2rem;
             margin-bottom: 0.75rem;
           }
 
           p {
             color: #6b7280;
-            font-size: 0.9rem; // Reduced from 0.95rem
+            font-size: 0.95rem;
           }
         }
       }
     }
 
     .process-section {
-      margin-bottom: 3rem; // Reduced from 4rem
+      margin-bottom: 4rem; // Restored original margin
       text-align: center;
 
       h2 {
-        font-size: 1.6rem; // Reduced from 2rem
+        font-size: 2rem; // Restored original size
         font-weight: 600;
         color: #1f2937;
-        margin-bottom: 1.5rem; // Reduced from 2rem
-        
+        margin-bottom: 2rem; // Restored original margin
+
         @media (max-width: 768px) {
           font-size: 1.3rem;
           margin-bottom: 1rem;
@@ -266,56 +267,72 @@
 
       .process-steps {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); // Reduced from 200px
-        gap: 1.5rem; // Added specific gap
-        max-width: 1000px; // Added max-width for better control
-        margin: 0 auto;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Restored original size
+        gap: 2rem; // Restored original gap
+
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          gap: 1.5rem;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
 
         .step {
-          padding: 1.25rem; // Reduced from 1.5rem
-          background: white; // Added background
-          border-radius: 0.5rem; // Added border radius
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); // Added subtle shadow
-          transition: transform 0.2s ease; // Added transition
+          padding: 1.5rem; // Restored original padding
 
-          &:hover {
-            transform: translateY(-2px); // Added hover effect
+          @media (max-width: 768px) {
+            padding: 1.25rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+
+            &:hover {
+              transform: translateY(-2px);
+            }
           }
 
           .step-number {
-            width: 35px; // Reduced from 40px
-            height: 35px; // Reduced from 40px
+            width: 40px; // Restored original size
+            height: 40px; // Restored original size
             background: #2563eb;
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 0.75rem; // Reduced margin
+            margin: 0 auto 1rem;
             font-weight: 600;
-            font-size: 0.9rem; // Added specific font size
+
+            @media (max-width: 768px) {
+              width: 35px;
+              height: 35px;
+              font-size: 0.9rem;
+              margin: 0 auto 0.75rem;
+            }
           }
 
           h3 {
-            font-size: 1.1rem; // Reduced from 1.25rem
+            font-size: 1.25rem; // Restored original size
             font-weight: 600;
             color: #1f2937;
-            margin-bottom: 0.4rem; // Reduced from 0.5rem
-            
+            margin-bottom: 0.5rem; // Restored original margin
+
             @media (max-width: 768px) {
               font-size: 1rem;
+              margin-bottom: 0.4rem;
             }
           }
 
           p {
             color: #4b5563;
-            font-size: 0.85rem; // Added specific font size
-            line-height: 1.4;
-            color: #6b7280; // Slightly lighter color
-            margin: 0; // Remove default margin
-            
+            font-size: 1rem; // Restored original size
+
             @media (max-width: 768px) {
               font-size: 0.8rem;
+              line-height: 1.4;
+              color: #6b7280;
+              margin: 0;
             }
           }
         }
@@ -327,30 +344,22 @@
       padding: 0rem 0;
 
       h2 {
-        font-size: 1.6rem; // Reduced from 2rem
+        font-size: 1.2rem;
         font-weight: 600;
         color: #1f2937;
-        margin-bottom: 1rem;
-        
-        @media (max-width: 768px) {
-          font-size: 1.3rem;
-        }
+        margin-bottom: 0.75rem;
       }
 
       p {
         color: #4b5563;
         margin-bottom: 2rem;
-        font-size: 0.95rem; // Added specific font size
-        
-        @media (max-width: 768px) {
-          font-size: 0.85rem;
-        }
+        font-size: 1rem;
       }
 
       .cta-button {
         background: #2563eb;
         color: white;
-        padding: 0.7rem 1.8rem; // Slightly reduced padding
+        padding: 0.75rem 2rem;
         border-radius: 0.375rem;
         font-weight: 600;
         border: none;
@@ -470,7 +479,7 @@
 @keyframes cardEntrance {
   from {
     opacity: 0;
-    transform: translateY(15px); // Reduced from 20px
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -481,12 +490,5 @@
 .service-card {
   animation: cardEntrance 0.3s ease-out forwards;
 }
-
-
-
-
-
-
-
 
 

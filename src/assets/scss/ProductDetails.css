@@ -15,7 +15,7 @@
 }
 .product-details-page .back-button {
   margin: 4rem 0 0 0;
-  display: inline-flex;
+  display: none;
   align-items: center;
   gap: 0.5rem;
   background: none;
@@ -433,7 +433,7 @@
 @media (max-width: 768px) {
   .product-details-page .container {
     max-width: 100%;
-    padding: 0 0.75rem;
+    padding: 1rem 0.75rem;
   }
   .product-details-page .container .back-button {
     font-size: 0.875rem;
