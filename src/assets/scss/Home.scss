@@ -585,7 +585,7 @@
 
   .free-energy-section {
     padding: 3rem 1rem;
-    background-color: rgba(22, 206, 22, 0.014);
+    background-color: rgba(22, 197, 206, 0.353);
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     // background-color: #f8e3e8;;
 
@@ -625,7 +625,7 @@
       margin: 0 auto 2rem;
       padding: 0 1rem;
       
-      @media (max-width: 768px) {
+      @media (max-width: 400px) {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 1rem;
         padding: 0 0.5rem;
@@ -730,7 +730,7 @@
 
   .contact-section {
     padding: 3.75rem 0rem;
-    background-color: rgba(130, 206, 247, 0.3960784314);
+    background-color: white;
     text-align: center;
     margin-bottom: 0rem;
 
@@ -766,7 +766,7 @@
   .transformation-gallery {
     padding: 2rem 1rem;
     // background-color: #f8e3e8;
-    background-color: rgba(22, 206, 22, 0.014);
+    background-color: rgba(22, 197, 206, 0.353);
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     h2 {
       text-align: center;

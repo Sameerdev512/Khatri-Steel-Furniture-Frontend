@@ -1,14 +1,17 @@
 .contact-page {
   min-height: 100vh;
-  background-color: white;
+  font-family: sans-serif;
 }
 .contact-page .contact-container {
   max-width: 1200px;
-  margin: 4rem auto;
-  padding: 2rem 1rem;
+  margin: 5rem auto;
+  padding: 1rem 1rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  background-color: rgba(130, 206, 247, 0.132);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 768px) {
   .contact-page .contact-container {
@@ -19,11 +22,11 @@
 .contact-page .contact-container .contact-info h1 {
   font-size: 2rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #2B6CB0;
   margin-bottom: 1rem;
 }
 .contact-page .contact-container .contact-info p {
-  color: #4b5563;
+  color: #1a1f25;
   margin-bottom: 2rem;
 }
 .contact-page .contact-container .contact-info .info-items {
@@ -34,49 +37,72 @@
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(130, 206, 247, 0.1);
+  transition: transform 0.3s ease;
+}
+.contact-page .contact-container .contact-info .info-items .info-item:hover {
+  transform: translateY(-2px);
+  background-color: rgba(130, 206, 247, 0.2);
 }
 .contact-page .contact-container .contact-info .info-items .info-item i {
   margin-top: 0px;
   font-size: 1.5rem;
-  color: #1f2937;
+  color: #2B6CB0;
   width: 24px;
 }
 .contact-page .contact-container .contact-info .info-items .info-item div h3 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #2B6CB0;
   margin-bottom: 0.5rem;
 }
 .contact-page .contact-container .contact-info .info-items .info-item div p {
-  color: #4b5563;
+  color: #1a202a;
   margin-bottom: 0.25rem;
 }
+@media (max-width: 768px) {
+  .contact-page .contact-container .contact-info {
+    margin-top: 1.5rem;
+  }
+}
 .contact-page .contact-container .contact-form {
-  background-color: white;
+  background-color: rgb(246, 237, 237);
   padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 .contact-page .contact-container .contact-form h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #2B6CB0;
   margin-bottom: 1.5rem;
 }
 .contact-page .contact-container .contact-form .form-group {
   margin-bottom: 1.5rem;
 }
-.contact-page .contact-container .contact-form .form-group input, .contact-page .contact-container .contact-form .form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
+.contact-page .contact-container .contact-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #10151b;
+  font-weight: 500;
 }
-.contact-page .contact-container .contact-form .form-group input:focus, .contact-page .contact-container .contact-form .form-group textarea:focus {
+.contact-page .contact-container .contact-form .form-group input,
+.contact-page .contact-container .contact-form .form-group textarea {
+  width: 95%;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+}
+.contact-page .contact-container .contact-form .form-group input:focus,
+.contact-page .contact-container .contact-form .form-group textarea:focus {
   outline: none;
-  border-color: #1f2937;
+  border-color: #2B6CB0;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.1);
 }
 .contact-page .contact-container .contact-form .form-group textarea {
   min-height: 150px;
@@ -85,15 +111,32 @@
 .contact-page .contact-container .contact-form button {
   width: 100%;
   padding: 0.75rem;
-  background-color: #1f2937;
+  background-color: #2B6CB0;
   color: white;
   border: none;
   border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 .contact-page .contact-container .contact-form button:hover {
-  background-color: #374151;
+  background-color: #1e4976;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.contact-page .contact-container .contact-form button:active {
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .contact-page .contact-container {
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+  .contact-page .contact-container .contact-info h1 {
+    font-size: 1.75rem;
+  }
+  .contact-page .contact-container .contact-form {
+    padding: 1.5rem;
+  }
 }/*# sourceMappingURL=Contact.css.map */

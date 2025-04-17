@@ -15,7 +15,7 @@ const Footer = () => {
               <button className="contact-btn">
                 <Link to="/contact">Contact Us Now</Link>
               </button>
-              <a href="tel:+919876543210" className="phone-link">
+              <a href="tel:+919754845158" className="phone-link">
                 <i className="fas fa-phone"></i> +91 9754845158
               </a>
             </div>
@@ -27,12 +27,12 @@ const Footer = () => {
             <div className="contact-details">
               <div className="contact-item">
                 <i className="fas fa-map-marker-alt"></i>
-                <p>59/3 Shiv Bagh Colony behinf velocity cinema,<br></br>near agrawal home, Khajrana,Indore,M.P.</p>
+                <p>59/3 Shiv Bagh Colony behind velocity cinema,<br />near agrawal home, Khajrana, Indore, M.P.</p>
               </div>
               <div className="contact-item">
                 <i className="fas fa-envelope"></i>
                 <div className="email-list">
-                  <a href="mailto:info@khatristeel.com">info@khatristeel.com</a><br></br>
+                  <a href="mailto:info@khatristeel.com">info@khatristeel.com</a>
                   <a href="mailto:support@khatristeel.com">support@khatristeel.com</a>
                 </div>
               </div>
@@ -56,23 +56,7 @@ const Footer = () => {
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
-
-          {/* Social Media */}
-          {/* <div className="footer-section social-media">
-            <h4>Connect With Us</h4>
-            <div className="social-links">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-facebook"></i>
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-whatsapp"></i>
-              </a>
-            </div>
-          </div>*/}
-        </div> 
+        </div>
 
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Khatri Steel Furniture. All rights reserved.</p>

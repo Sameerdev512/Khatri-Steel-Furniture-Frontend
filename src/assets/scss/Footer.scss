@@ -1,7 +1,7 @@
 .footer {
   background: linear-gradient(to right, #1f2937, #111827);
   color: #fff;
-  padding: 2.5rem 0 1rem; // Reduced padding
+  padding: 2.5rem 0 1rem;
   position: relative;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
 
@@ -22,16 +22,20 @@
 
     .footer-content {
       display: flex;
+      // margin-left: 3.5rem;
+      flex-wrap: wrap;
       justify-content: space-between;
-      // grid-template-columns:300px; // Slightly smaller columns
-      gap: 2rem; // Reduced gap
+      gap: 2rem;
       margin-bottom: 2rem;
 
       .footer-section {
+        flex: 1;
+        min-width: 300px;
+        // margin-left: 3rem;
         animation: fadeIn 0.5s ease-in-out;
 
-        h3 {
-          font-size: 1.25rem; // Smaller heading
+        h3, h4 {
+          font-size: 1.25rem;
           margin-bottom: 1rem;
           color: #fff;
           font-weight: 600;
@@ -46,26 +50,6 @@
             width: 40px;
             height: 2px;
             background: #3b82f6;
-          }
-        }
-
-        h4 {
-          font-size: 1.3rem;
-          margin-bottom: 1.25rem;
-          color: #e5e7eb;
-          font-weight: 600;
-          position: relative;
-          padding-bottom: 0.5rem;
-
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background: #3b82f6;
-            border-radius: 2px;
           }
         }
 
@@ -88,14 +72,14 @@
             padding: 0.75rem 1.5rem;
             border-radius: 6px;
             transition: all 0.2s ease;
+            width: fit-content;
 
             a {
               color: #fff;
               text-decoration: none;
               font-weight: 500;
               font-size: 1rem;
-              display: block;
-              text-align: center;
+              white-space: nowrap;
             }
 
             &:hover {
@@ -110,67 +94,58 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            font-size: 1.2rem;
-            padding: 0.5rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-
-            i {
-              color: #e5e7eb;
-              transition: transform 0.3s ease;
-            }
 
             &:hover {
               color: #3b82f6;
               transform: translateX(5px);
-
-              i {
-                transform: rotate(15deg);
-              }
             }
           }
         }
 
         .contact-details {
-          // margin-right: 2rem;
           .contact-item {
             display: flex;
-            align-items: top;
+            align-items: flex-start;
             gap: 0.75rem;
             margin-bottom: 1rem;
-            font-size: 0.95rem;
 
             i {
               color: #3b82f6;
               font-size: 1.1rem;
+              margin-top: 0.25rem;
             }
 
-            a {
-              color: #e5e7eb;
-              text-decoration: none;
-              transition: color 0.2s ease;
+            .email-list {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
 
-              &:hover {
-                color: #3b82f6;
+              a {
+                color: #e5e7eb;
+                text-decoration: none;
+                transition: color 0.2s ease;
+
+                &:hover {
+                  color: #3b82f6;
+                }
               }
             }
           }
         }
 
-        .quick-links {
-          margin-left: 500px;
+        &.quick-links {
           ul {
             list-style: none;
-            // padding: 1rem; 
+            padding: 0;
 
             li {
-              margin-bottom: 0.5rem;
-              padding: 10px 0;
+              margin-bottom: 0.75rem;
 
               a {
-                padding: 1rem;
                 color: #e5e7eb;
                 text-decoration: none;
-                font-size: 0.95rem;
                 transition: all 0.2s ease;
                 display: inline-flex;
                 align-items: center;
@@ -181,23 +156,6 @@
                   transform: translateX(5px);
                 }
               }
-            }
-          }
-        }
-
-        .social-links {
-          display: flex;
-          gap: 1.5rem;
-          margin-top: 1rem;
-
-          a {
-            color: #fff;
-            font-size: 1.25rem;
-            transition: all 0.2s ease;
-
-            &:hover {
-              color: #3b82f6;
-              transform: translateY(-2px);
             }
           }
         }
@@ -216,32 +174,75 @@
       }
     }
   }
-}
 
-@media (max-width: 768px) {
-  .footer {
+  @media (max-width: 768px) {
     padding: 2rem 0 1rem;
 
     .footer-container {
       padding: 0 1rem;
 
       .footer-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        text-align: center;
+        flex-direction: column;
+        gap: 2rem;
 
         .footer-section {
-          h3::after {
-            left: 50%;
-            transform: translateX(-50%);
+          width: 100%;
+          text-align: center;
+
+          h3, h4 {
+            &::after {
+              left: 50%;
+              transform: translateX(-50%);
+            }
           }
 
-          .contact-details .contact-item {
-            justify-content: center;
+          .quick-contact {
+            align-items: center;
+
+            .contact-btn {
+              width: 100%;
+              max-width: 250px;
+            }
+
+            .phone-link {
+              justify-content: center;
+            }
           }
 
-          .social-links {
-            justify-content: center;
+          .contact-details {
+            .contact-item {
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+
+              i {
+                margin-bottom: 0.5rem;
+              }
+
+              .email-list {
+                align-items: center;
+              }
+
+              .working-hours {
+                text-align: center;
+              }
+            }
+          }
+
+          &.quick-links {
+            ul {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              li {
+                text-align: center;
+                
+                a {
+                  justify-content: center;
+                }
+              }
+            }
           }
         }
       }
@@ -259,4 +260,5 @@
     transform: translateY(0);
   }
 }
+
 

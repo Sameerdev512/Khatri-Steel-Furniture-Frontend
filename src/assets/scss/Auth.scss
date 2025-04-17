@@ -5,10 +5,10 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: #f3f4f6;
+  background-color: rgba(130, 206, 247, 0.312);
 
   .auth-box {
-    background: white;
+    background: rgba(255, 255, 255, 0.882);
     padding: 2.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -84,7 +84,7 @@
     .auth-button {
       width: 100%;
       padding: 0.75rem;
-      background-color: #1f2937;
+      background-color: #2B6CB0;
       color: white;
       border: none;
       border-radius: 0.375rem;
@@ -94,7 +94,7 @@
       transition: background-color 0.2s;
 
       &:hover {
-        background-color: #374151;
+        background-color: #052552e0;
       }
     }
 
