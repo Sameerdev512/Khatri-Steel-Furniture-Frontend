@@ -1,7 +1,7 @@
 .about-page {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
   min-height: 100vh;
-  background-color: #f3f4f6;
+  background-color: #f8fafc;
 }
 .about-page .about-container {
   max-width: 1200px;
@@ -10,26 +10,52 @@
 }
 .about-page .about-container section {
   margin-bottom: 4rem;
-}
-.about-page .about-container h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 1rem;
-}
-.about-page .about-container h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 .about-page .about-container .hero-section {
   text-align: center;
-  padding: 4rem 0;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: white;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+.about-page .about-container .hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #ffffff, #e2e8f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .about-page .about-container .hero-section p {
   font-size: 1.25rem;
-  color: #4b5563;
+  color: #e2e8f0;
+}
+.about-page .about-container .story-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.about-page .about-container .story-section h2 {
+  color: #1e40af;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.about-page .about-container .story-section h2:after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 2px;
 }
 .about-page .about-container .story-section p {
   font-size: 1.1rem;
@@ -39,23 +65,54 @@
 .about-page .about-container .values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .about-page .about-container .values-grid .value-card {
   background: white;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.about-page .about-container .values-grid .value-card:hover {
+  transform: translateY(-5px);
 }
 .about-page .about-container .values-grid .value-card h3 {
+  color: #1e40af;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1f2937;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .about-page .about-container .values-grid .value-card p {
   color: #4b5563;
   line-height: 1.6;
+}
+.about-page .about-container .team-section h2 {
+  color: #1e40af;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  margin: 2rem 2.5rem;
+}
+.about-page .about-container .team-section h2:after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 2px;
+}
+@media (max-width: 768px) {
+  .about-page .about-container .team-section h2 {
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+  }
 }
 .about-page .about-container .team-grid {
   display: grid;
@@ -64,11 +121,17 @@
   text-align: center;
 }
 .about-page .about-container .team-grid .team-member .member-image {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   margin: 0 auto 1rem;
   border-radius: 50%;
   overflow: hidden;
+  border: 1px solid rgb(251, 249, 249);
+  transition: transform 0.3s ease;
+  box-shadow: 0px 0px 8px grey;
+}
+.about-page .about-container .team-grid .team-member .member-image:hover {
+  transform: scale(1.05);
 }
 .about-page .about-container .team-grid .team-member .member-image img {
   width: 100%;
@@ -77,46 +140,144 @@
      object-fit: cover;
 }
 .about-page .about-container .team-grid .team-member h3 {
+  color: #1e40af;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1f2937;
   margin-bottom: 0.5rem;
 }
 .about-page .about-container .team-grid .team-member p {
   color: #4b5563;
+  font-size: 1rem;
 }
 .about-page .about-container .stats-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
   text-align: center;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  padding: 2rem;
+  border-radius: 1rem;
 }
 .about-page .about-container .stats-section .stat-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .about-page .about-container .stats-section .stat-card h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: white;
   margin-bottom: 0.5rem;
 }
 .about-page .about-container .stats-section .stat-card p {
-  color: #4b5563;
+  color: #e2e8f0;
+  font-size: 1rem;
 }
 @media (max-width: 768px) {
   .about-page .about-container {
     padding: 1rem;
   }
+  .about-page .about-container section {
+    margin-bottom: 2rem;
+  }
   .about-page .about-container .hero-section {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+    margin-top: 0.5rem;
   }
-  .about-page .about-container h1 {
-    font-size: 2rem;
+  .about-page .about-container .hero-section h1 {
+    font-size: 1.75rem;
   }
-  .about-page .about-container h2 {
+  .about-page .about-container .hero-section p {
+    font-size: 1rem;
+  }
+  .about-page .about-container .story-section {
+    padding: 1.5rem;
+  }
+  .about-page .about-container .story-section h2 {
     font-size: 1.5rem;
+  }
+  .about-page .about-container .story-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .about-page .about-container .values-section h2 {
+    color: #1e40af;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    margin: 2rem 2.5rem;
+  }
+  .about-page .about-container .values-section h2:after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #3b82f6;
+    border-radius: 2px;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .about-page .about-container .values-section h2 {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-page .about-container .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .about-page .about-container .values-grid .value-card {
+    padding: 1.25rem;
+  }
+  .about-page .about-container .values-grid .value-card h3 {
+    font-size: 1.1rem;
+  }
+  .about-page .about-container .values-grid .value-card p {
+    font-size: 0.9rem;
+  }
+  .about-page .about-container .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .about-page .about-container .team-grid .team-member .member-image {
+    width: 120px;
+    height: 120px;
+  }
+  .about-page .about-container .team-grid .team-member h3 {
+    font-size: 1rem;
+  }
+  .about-page .about-container .team-grid .team-member p {
+    font-size: 0.9rem;
+  }
+  .about-page .about-container .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  .about-page .about-container .stats-section .stat-card {
+    padding: 1rem;
+  }
+  .about-page .about-container .stats-section .stat-card h3 {
+    font-size: 1.75rem;
+  }
+  .about-page .about-container .stats-section .stat-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=About.css.map */
