@@ -243,9 +243,16 @@
 }
 @media (max-width: 768px) {
   .about-page .about-container .team-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+}
+@media (max-width: 768px) and (max-width: 400px) {
+  .about-page .about-container .team-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 768px) {
   .about-page .about-container .team-grid .team-member .member-image {
     width: 120px;
     height: 120px;
