@@ -66,6 +66,8 @@ const freeEnergyProducts = [
 ];
 
 const FreeEnergyProducts = () => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
   return (
     <>
       <Navbar />
@@ -95,6 +97,67 @@ const FreeEnergyProducts = () => {
               </div>
             ))}
           </div>
+
+          {/* Product Details Modal */}
+          {selectedProduct && (
+            <div className="product-modal">
+              <div className="modal-content">
+                <button
+                  className="close-btn"
+                  onClick={() => setSelectedProduct(null)}
+                >
+                  ×
+                </button>
+                <div className="modal-grid">
+                  <div className="modal-image">
+                    <img src={selectedProduct.image} alt={selectedProduct.name} />
+                  </div>
+                  <div className="modal-info">
+                    <h2>{selectedProduct.name}</h2>
+                    <p className="price">₹{selectedProduct.price.toLocaleString()}</p>
+                    <p className="description">{selectedProduct.description}</p>
+                    
+                    <div className="features">
+                      <h3>Key Features:</h3>
+                      <ul>
+                        {selectedProduct.features.map((feature, index) => (
+                          <li key={index}>{feature}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="specifications">
+                      <h3>Specifications:</h3>
+                      <table>
+                        <tbody>
+                          {Object.entries(selectedProduct.specifications).map(([key, value]) => (
+                            <tr key={key}>
+                              <td>{key.charAt(0).toUpperCase() + key.slice(1)}</td>
+                              <td>{value}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <button 
+                      className="enquire-btn"
+                      onClick={() => {
+                        if (!localStorage.getItem("role")) {
+                          alert("Please login to enquire about products");
+                        } else {
+                          // Handle enquiry logic here
+                          alert("Enquiry functionality will be implemented soon!");
+                        }
+                      }}
+                    >
+                      Enquire Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           <div className="decorative-description">
             <div className="description-content">
@@ -140,6 +203,7 @@ const FreeEnergyProducts = () => {
 };
 
 export default FreeEnergyProducts;
+
 
 
 

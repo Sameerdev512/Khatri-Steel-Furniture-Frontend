@@ -22,6 +22,17 @@
   max-width: 600px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .free-energy-page .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .free-energy-page .hero-section {
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+  }
+}
 .free-energy-page .products-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -162,8 +173,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
   z-index: 1000;
+  padding: 1rem;
 }
 .free-energy-page .product-modal .modal-content {
   background: white;
@@ -183,6 +194,10 @@
   background: none;
   border: none;
   cursor: pointer;
+  color: #4b5563;
+}
+.free-energy-page .product-modal .modal-content .close-btn:hover {
+  color: #1f2937;
 }
 .free-energy-page .product-modal .modal-content .modal-grid {
   display: grid;
@@ -198,11 +213,13 @@
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .free-energy-page .product-modal .modal-content .modal-grid .modal-info h2 {
   font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
 }
 .free-energy-page .product-modal .modal-content .modal-grid .modal-info .price {
   font-size: 1.25rem;
@@ -219,15 +236,16 @@
   margin-bottom: 1.5rem;
 }
 .free-energy-page .product-modal .modal-content .modal-grid .modal-info .features h3, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
 }
 .free-energy-page .product-modal .modal-content .modal-grid .modal-info .features ul, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications ul {
   list-style: none;
   padding: 0;
 }
 .free-energy-page .product-modal .modal-content .modal-grid .modal-info .features ul li, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications ul li {
+  color: #4b5563;
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   position: relative;
@@ -235,8 +253,8 @@
 .free-energy-page .product-modal .modal-content .modal-grid .modal-info .features ul li:before, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications ul li:before {
   content: "•";
   position: absolute;
-  left: 0;
-  color: #1f2937;
+  left: 0.5rem;
+  color: #2563eb;
 }
 .free-energy-page .product-modal .modal-content .modal-grid .modal-info .features table, .free-energy-page .product-modal .modal-content .modal-grid .modal-info .specifications table {
   width: 100%;

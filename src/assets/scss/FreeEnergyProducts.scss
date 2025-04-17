@@ -22,7 +22,20 @@
       max-width: 600px;
       margin: 0 auto;
     }
+        @media (max-width: 768px) {
+          h1 {
+            font-size: 2.0rem;
+          }
+        }
+
+        
   }
+    @media (max-width: 768px) {
+      .hero-section {
+        margin-top: 3rem;
+          margin-bottom: 0.5rem;
+      }
+    }
 
   .products-container {
     max-width: 1200px;
@@ -186,8 +199,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
     z-index: 1000;
+    padding: 1rem;
 
     .modal-content {
       background: white;
@@ -207,6 +220,11 @@
         background: none;
         border: none;
         cursor: pointer;
+        color: #4b5563;
+        
+        &:hover {
+          color: #1f2937;
+        }
       }
 
       .modal-grid {
@@ -223,14 +241,15 @@
             width: 100%;
             height: auto;
             border-radius: 0.5rem;
+            object-fit: cover;
           }
         }
 
         .modal-info {
           h2 {
             font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
           }
 
           .price {
@@ -250,9 +269,9 @@
             margin-bottom: 1.5rem;
 
             h3 {
-              font-size: 1.125rem;
-              font-weight: 600;
-              margin-bottom: 0.5rem;
+              font-size: 1.1rem;
+              color: #1f2937;
+              margin-bottom: 0.75rem;
             }
 
             ul {
@@ -260,6 +279,7 @@
               padding: 0;
 
               li {
+                color: #4b5563;
                 margin-bottom: 0.5rem;
                 padding-left: 1.5rem;
                 position: relative;
@@ -267,8 +287,8 @@
                 &:before {
                   content: "•";
                   position: absolute;
-                  left: 0;
-                  color: #1f2937;
+                  left: 0.5rem;
+                  color: #2563eb;
                 }
               }
             }
@@ -338,5 +358,6 @@
     }
   }
 }
+
 
 

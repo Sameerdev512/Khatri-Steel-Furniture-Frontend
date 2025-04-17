@@ -247,4 +247,9 @@
 }
 .back-button i, .back-button svg {
   font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .back-button {
+    display: none;
+  }
 }/*# sourceMappingURL=TransformationGallery.css.map */
