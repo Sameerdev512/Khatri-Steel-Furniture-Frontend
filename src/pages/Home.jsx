@@ -99,6 +99,10 @@ const Home = () => {
     navigate("/home");
   };
 
+  const handleProductClick = (productId) => {
+    navigate(`/product/${productId}`);
+  };
+
   return (
     <div className="home-container">
       <Navbar   />
@@ -159,7 +163,11 @@ const Home = () => {
         <h2>Our Products</h2>
         <div className="products-grid">
           {products.map((product) => (
-            <div key={product.id} className="product-card">
+            <div 
+              key={product.id} 
+              className="product-card"
+              onClick={() => handleProductClick(product.id)}
+            >
               <div className="card-inner">
                 <div className="card-front">
                   <img src={product.image} alt={product.name} loading="lazy" />
@@ -170,9 +178,9 @@ const Home = () => {
                 <div className="card-back">
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
-                  <Link to="/products">
-                    <Button variant="primary">View More</Button>
-                  </Link>
+                  <button className="view-details-btn">
+                    View Details
+                  </button>
                 </div>
               </div>
             </div>

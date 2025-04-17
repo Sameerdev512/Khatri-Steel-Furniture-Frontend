@@ -10,7 +10,7 @@
 
     .container {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 2rem auto;
       padding: 0 1rem;
     }
   }
@@ -79,9 +79,11 @@
 
     .product-images {
       width: 100%;
+      margin-top: 3rem;
       
       @media (max-width: 768px) {
         padding: 0.5rem;
+        margin-top:0;
       }
 
       .carousel {
