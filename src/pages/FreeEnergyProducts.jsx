@@ -110,12 +110,12 @@ const FreeEnergyProducts = () => {
       <div className="free-energy-page">
         <div className="hero-section">
           <h1>Free Energy & Decorative Items</h1>
-          <p>Self-balancing and perpetual motion decorative pieces</p>
+          <p>Experience the magic of physics with our unique collection</p>
         </div>
 
         <div className="products-container">
           <div className="products-grid">
-            {freeEnergyProducts.map(product => (
+            {freeEnergyProducts.map((product) => (
               <div key={product.id} className="product-card">
                 <div className="product-image">
                   <img src={product.image} alt={product.name} />
@@ -123,7 +123,7 @@ const FreeEnergyProducts = () => {
                 <div className="product-info">
                   <h3>{product.name}</h3>
                   <p className="price">₹{product.price.toLocaleString()}</p>
-                  <button 
+                  <button
                     className="view-details-btn"
                     onClick={() => navigate(`/product/${product.id}`)}
                   >
@@ -167,7 +167,10 @@ const FreeEnergyProducts = () => {
                 </div>
               </div>
               <div className="highlight-text">
-                <p>"Discover the beauty of perpetual motion and self-balancing artistry in every carefully crafted piece."</p>
+                <p>
+                  "Discover the beauty of perpetual motion and self-balancing
+                  artistry in every carefully crafted piece."
+                </p>
               </div>
             </div>
           </div>

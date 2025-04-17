@@ -12,16 +12,16 @@
     // Container wrapper for all sections
     > section,
     > div:not(.announcement-bar) {
-      width: 85%;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
     }
   }
 
   .announcement-bar {
-    background-color: #f3f4f6;
+    background-color: #82cef765;
     border: 1px solid #e5e7eb;
-    color: #1f2937;
+    color: #0c121a;
     padding: 0.75rem 1rem;
     text-align: center;
     display: flex;
@@ -42,7 +42,7 @@
     }
 
     .highlight-link {
-      color: #1f2937;
+      color: #121922;
       font-weight: 500;
       padding: 0.5rem 1.25rem;
       border-radius: 0.5rem;
@@ -61,7 +61,7 @@
       }
 
       &:hover {
-        background-color: #0d3163;
+        background-color: #2B6CB0;
         color: white;
         transform: translateY(-1px);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -84,7 +84,7 @@
     @media (max-width: 640px) {
       flex-direction: column;
       padding: 0.75rem 0.5rem;
-      margin-left: 0.5rem;
+      // margin-left: 0.5rem;
       margin-right: 0.5rem;
     }
   }
@@ -101,7 +101,7 @@
     }
 
     &.primary {
-      background-color: #0d3163;
+      background-color: #1d4ed8;
       color: white;
 
       &:hover {
@@ -113,21 +113,22 @@
       border: 1px solid #1f2937;
 
       &:hover {
-        background-color: #0d3163;
+        background-color: #2B6CB0;
         color: white;
       }
     }
   }
 
   .hero-section {
-    background-color: white;
-    padding: 4rem 1rem;
+    background-color: rgb(253, 253, 253);
+    padding: 6.5rem 1rem;
     text-align: center;
 
     h1 {
       font-size: 2.25rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      color:#0a264d;
       
       @media (max-width: 768px) {
         font-size: 1.6rem;
@@ -245,14 +246,15 @@
 
   .products-section {
     padding: 4rem 2rem;
-    background-color: #f8fafc;
+    background-color: #82cef765;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     
     h2 {
       font-size: 2.25rem;
       font-weight: 700;
       text-align: center;
       margin-bottom: 3rem;
-      color: #1E3D59;
+      color: #0a264d;
       position: relative;
       
       &:after {
@@ -311,6 +313,8 @@
         
         @media (max-width: 768px) {
           height: auto;
+          width:85%;
+          margin: 0 auto;
           min-height: 280px; // Increased from 220px
 
           &:hover {
@@ -490,7 +494,8 @@
     }
 
     @media (max-width: 640px) {
-      padding: 2rem 1rem;
+      padding: 2rem 0rem;
+      width:100%;
       
       .products-grid {
         grid-template-columns: 1fr;
@@ -504,7 +509,9 @@
   }
 
   .services-section {
-    padding: 2.5rem 1rem;
+    background-color: rgba(130, 206, 247, 0.3960784314);
+    padding: 2.5rem 0rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 
     h2 {
       font-size: 2.0rem;
@@ -529,10 +536,10 @@
       }
 
       .service-card {
-        background-color: white;
+        background-color: rgb(252, 252, 252);
         border-radius: 1rem;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        padding: 2rem;
+        padding: 3rem;
         text-align: center;
         
         @media (max-width: 768px) {
@@ -546,14 +553,23 @@
         }
 
         p {
+          padding:0.5rem;
           color: #4b5563;
           font-size: 0.95rem;
+        }
+      }
+      @media(max-width: 768px){
+        .service-card{
+          width: 80%;
+          margin: 0 auto;
         }
       }
     }
 
     @media (max-width: 768px) {
-      padding: 2rem 0.5rem; // Significantly reduce top padding
+      // margin-left: 1rem;
+        width: 100%;
+      padding: 1rem 0rem; // Significantly reduce top padding
       margin-top: 0; // Remove any margin
 
       h2 {
@@ -569,7 +585,9 @@
 
   .free-energy-section {
     padding: 3rem 1rem;
-    background-color: #f3f4f6;
+    background-color: rgba(22, 206, 22, 0.014);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    // background-color: #f8e3e8;;
 
     .section-header {
       text-align: center;
@@ -604,7 +622,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.8rem;
       max-width: 1200px;
-      margin: 0 auto 3rem;
+      margin: 0 auto 2rem;
       padding: 0 1rem;
       
       @media (max-width: 768px) {
@@ -631,6 +649,7 @@
           
           @media (max-width: 768px) {
             height: 220px; // Increased from 140px
+            height:180px;
           }
         }
 
@@ -658,12 +677,17 @@
             line-height: 1.4;
           }
         }
+                @media (max-width: 768px) {
+                  width: 85%;
+                  margin: 0 auto;
+                  height:310px;
+                }
       }
     }
 
     .cta-container {
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 0rem;
 
       p {
         font-size: 1.125rem;
@@ -679,7 +703,7 @@
 
       .cta-button {
         display: inline-block;
-        background-color: #0d3163fe;
+        background-color:#2B6CB0;
         color: white;
         padding: 1rem 2rem;
         border-radius: 0.5rem;
@@ -693,22 +717,22 @@
         }
 
         &:hover {
-          background-color: #0d3163;
+          background-color: #052552e0;
           box-shadow: 0px 0px 5px gray;
         }
       }
     }
 
     @media (max-width: 768px) {
-      padding: 2rem 0.5rem;
+      padding: 2rem 0rem;
     }
   }
 
   .contact-section {
-    padding: 2.5rem 1rem;
-    background-color: white;
+    padding: 3.75rem 0rem;
+    background-color: rgba(130, 206, 247, 0.3960784314);
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
 
     h2 {
       font-size: 1.5rem;
@@ -718,6 +742,7 @@
 
     p {
       margin-bottom: 1.5rem;
+      padding:0 1rem;
       font-size: 1.05rem;
       
       @media (max-width: 768px) {
@@ -734,28 +759,31 @@
     }
 
     @media (max-width: 768px) {
-      padding: 2rem 0.5rem;
+      padding: 2rem 0rem;
     }
   }
 
   .transformation-gallery {
     padding: 2rem 1rem;
-    background-color: #f9fafb;
-
+    // background-color: #f8e3e8;
+    background-color: rgba(22, 206, 22, 0.014);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     h2 {
       text-align: center;
       font-size: 2.5rem;
       color: #1f2937;
       margin-bottom: 1rem;
+      margin-top: 2rem;
       
       @media (max-width: 768px) {
         font-size: 1.5rem;
+        margin-top: 0;
       }
     }
 
     .section-description {
       text-align: center;
-      color: #6b7280;
+      color: #092866;
       max-width: 600px;
       margin: 0 auto 3rem;
       font-size: 1.05rem;
@@ -910,7 +938,7 @@
         align-items: center;
         gap: 0.5rem;
         padding: 0.75rem 1.5rem;
-        background: #0d3163;
+        background: #2B6CB0;
         color: white;
         text-decoration: none;
         border-radius: 0.5rem;
@@ -928,7 +956,7 @@
         }
 
         &:hover {
-          background: #1d4ed8;
+          background: #052552e0;
           transform: translateY(-2px);
 
           .arrow {

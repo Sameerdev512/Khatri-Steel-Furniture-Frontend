@@ -46,7 +46,7 @@
   background: #EBF8FF;
 }
 .products-page .products-container .filters-section .categories .category-btn.active {
-  background: #4299E1;
+  background: rgba(5, 37, 82, 0.8784313725);
   color: white;
   border-color: #4299E1;
 }
@@ -113,7 +113,7 @@
   width: 100%;
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
-  background: #4299E1;
+  background: #2B6CB0;
   color: white;
   border: none;
   border-radius: 6px;
@@ -121,7 +121,7 @@
   transition: background 0.3s ease;
 }
 .products-page .products-container .products-grid .product-card .product-info .view-details-btn:hover {
-  background: #2B6CB0;
+  background: rgba(5, 37, 82, 0.8784313725);
 }
 .products-page .products-container .products-grid .product-card.featured::before {
   content: "Featured";

@@ -364,7 +364,7 @@ const Home = () => {
         </div>
 
         <div className="cta-container">
-          <p>Experience the magic of physics with our unique collection</p>
+          {/* <p>Experience the magic of physics with our unique collection</p> */}
           <Link to="/free-energy-products" className="cta-button">
             Explore Free Energy Products
           </Link>

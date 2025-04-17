@@ -49,7 +49,7 @@
           }
 
           &.active {
-            background: #4299E1; // Medium blue for active state
+            background: #052552e0; // Medium blue for active state
             color: white;
             border-color: #4299E1;
           }
@@ -125,7 +125,7 @@
             width: 100%;
             padding: 0.5rem 0.75rem;
             font-size: 0.875rem;
-            background: #4299E1; // Medium blue for buttons
+            background: #2B6CB0; // Medium blue for buttons
             color: white;
             border: none;
             border-radius: 6px;
@@ -133,7 +133,7 @@
             transition: background 0.3s ease;
 
             &:hover {
-              background: #2B6CB0; // Darker blue on hover
+              background: #052552e0; // Darker blue on hover
             }
           }
         }

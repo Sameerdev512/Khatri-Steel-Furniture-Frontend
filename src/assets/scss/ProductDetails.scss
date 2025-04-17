@@ -12,6 +12,10 @@
       max-width: 1200px;
       margin: 0rem auto;
       padding: 0 1rem;
+
+      @media(max-width: 768px ){
+        margin-top: 1rem;
+      }
     }
   }
 
@@ -79,6 +83,7 @@
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
+      margin-top:1rem;
       border-radius: 8px;
       width: 90%; // Set to 90% of device width
       margin: 0.5rem auto; // Center the grid
@@ -231,12 +236,12 @@
           transition: all 0.3s ease;
 
           &.primary {
-            background: #0d3163;
+            background: #2B6CB0;
             color: white;
             width: 100%;
 
             &:hover {
-              background: #0a264d;
+              background: #052552e0;
             }
           }
 
@@ -327,7 +332,7 @@
         button {
           width: 100%;
           padding: 0.5rem;
-          background: #0d3163;
+          background: #2B6CB0;
           color: white;
           border: none;
           border-radius: 4px;
@@ -335,7 +340,7 @@
           cursor: pointer;
 
           &:hover {
-            background: #0a264d;
+            background: #052552e0;
           }
         }
       }
@@ -457,11 +462,11 @@
           cursor: pointer;
 
           &[type="submit"] {
-            background: #0d3163;
+            background: #2B6CB0;
             color: white;
 
             &:hover {
-              background: #0a264d;
+              background: #052552e0;
             }
           }
 
@@ -502,6 +507,7 @@
         grid-template-columns: 1fr;
         gap: 1.5rem;
         margin-bottom: 2rem;
+        border: 1px solid rgba(0, 0, 0, 0.4);
 
         .product-images {
           .carousel {
