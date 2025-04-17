@@ -104,6 +104,121 @@ const ProductDetails = () => {
         "Durable Hardware",
       ],
     },
+    {
+      id: 101,
+      name: "Self Balancing Bird",
+      price: 599,
+      category: "freeEnergy",
+      image:
+        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description:
+        "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal bird perfectly balances on any point.",
+      features: [
+        "Perfect Balance Point",
+        "Durable Metal Construction",
+        "Educational Tool",
+        "Desk Decoration",
+        "Hand-crafted Design",
+      ],
+      specifications: {
+        material: "High-quality Steel",
+        height: "15 cm",
+        weight: "150g",
+        finish: "Premium Paint Coating",
+      },
+    },
+    {
+      id: 102,
+      name: "Perpetual Motion Wheel",
+      price: 1299,
+      category: "freeEnergy",
+      image:
+        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description:
+        "An elegant demonstration of momentum and balance. This decorative wheel creates an illusion of perpetual motion.",
+      features: [
+        "Smooth Rotation",
+        "Precision Bearings",
+        "Artistic Design",
+        "Long-lasting Movement",
+        "Conversation Starter",
+      ],
+      specifications: {
+        material: "Steel and Brass",
+        diameter: "25 cm",
+        weight: "500g",
+        finish: "Polished Metal",
+      },
+    },
+    {
+      id: 103,
+      name: "Magnetic Levitation Display",
+      price: 2499,
+      category: "freeEnergy",
+      image:
+        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description:
+        "A stunning display piece featuring magnetic levitation. Perfect for showcasing small items in mid-air.",
+      features: [
+        "Magnetic Levitation",
+        "LED Lighting",
+        "Rotating Display",
+        "Strong Electromagnet",
+        "Safety Features",
+      ],
+      specifications: {
+        material: "Mixed Materials",
+        height: "20 cm",
+        weight: "800g",
+        powerSource: "AC Adapter",
+      },
+    },
+    {
+      id: 105,
+      name: "Self Balancing Car",
+      price: 599,
+      category: "freeEnergy",
+      image:
+        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description:
+        "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal bird perfectly balances on any point.",
+      features: [
+        "Perfect Balance Point",
+        "Durable Metal Construction",
+        "Educational Tool",
+        "Desk Decoration",
+        "Hand-crafted Design",
+      ],
+      specifications: {
+        material: "High-quality Steel",
+        height: "15 cm",
+        weight: "150g",
+        finish: "Premium Paint Coating",
+      },
+    },
+    {
+      id: 108,
+      name: "Self Balancing Car",
+      price: 599,
+      category: "freeEnergy",
+      image:
+        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description:
+        "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal bird perfectly balances on any point.",
+      features: [
+        "Perfect Balance Point",
+        "Durable Metal Construction",
+        "Educational Tool",
+        "Desk Decoration",
+        "Hand-crafted Design",
+      ],
+      specifications: {
+        material: "High-quality Steel",
+        height: "15 cm",
+        weight: "150g",
+        finish: "Premium Paint Coating",
+      },
+    },
   ];
 
   useEffect(() => {
@@ -164,6 +279,10 @@ const ProductDetails = () => {
     ].slice(0, 3); // Ensure we only get 3 products total
   };
 
+  const handleBack = (id)=>{()=>
+    id > 100 ? navigate("/free-energy-products") : navigate("/products")
+  }
+
   return (
     <>
       <Navbar />
@@ -172,7 +291,7 @@ const ProductDetails = () => {
           <div className="container">
             <button 
               className="back-button"
-              onClick={() => navigate('/products')}
+              onClick={()=>id > 100 ?navigate("/free-energy-products"):navigate("/products")}
             >
               <FaArrowLeft /> Back to Products
             </button>

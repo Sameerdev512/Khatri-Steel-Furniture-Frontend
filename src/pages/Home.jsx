@@ -12,6 +12,79 @@ const Button = ({ children, variant = "primary" }) => {
     </button>
   );
 };
+const freeEnergyProducts = [
+  {
+    id: 101,
+    name: "Self Balancing Bird",
+    price: 599,
+
+    category: "freeEnergy",
+    image:
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal bird perfectly balances on any point.",
+    features: [
+      "Perfect Balance Point",
+      "Durable Metal Construction",
+      "Educational Tool",
+      "Desk Decoration",
+      "Hand-crafted Design",
+    ],
+    specifications: {
+      material: "High-quality Steel",
+      height: "15 cm",
+      weight: "150g",
+      finish: "Premium Paint Coating",
+    },
+  },
+  {
+    id: 102,
+    name: "Perpetual Motion Wheel",
+    price: 1299,
+
+    category: "freeEnergy",
+    image:
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "An elegant demonstration of momentum and balance. This decorative wheel creates an illusion of perpetual motion.",
+    features: [
+      "Smooth Rotation",
+      "Precision Bearings",
+      "Artistic Design",
+      "Long-lasting Movement",
+      "Conversation Starter",
+    ],
+    specifications: {
+      material: "Steel and Brass",
+      diameter: "25 cm",
+      weight: "500g",
+      finish: "Polished Metal",
+    },
+  },
+  {
+    id: 103,
+    name: "Magnetic Levitation Display",
+    price: 2499,
+    category: "freeEnergy",
+    image:
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "A stunning display piece featuring magnetic levitation. Perfect for showcasing small items in mid-air.",
+    features: [
+      "Magnetic Levitation",
+      "LED Lighting",
+      "Rotating Display",
+      "Strong Electromagnet",
+      "Safety Features",
+    ],
+    specifications: {
+      material: "Mixed Materials",
+      height: "20 cm",
+      weight: "800g",
+      powerSource: "AC Adapter",
+    },
+  },
+];
 
 const products = [
   {
@@ -105,7 +178,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <Navbar   />
+      <Navbar />
       <div className="announcement-bar">
         <span>🌟 Explore Our Special Collection</span>
         <Link to="/free-energy-products" className="highlight-link">
@@ -117,16 +190,14 @@ const Home = () => {
       <section className="hero-section mt-5">
         <h1>Custom Furniture, Repairs & Welding Services</h1>
         <p>We craft almirahs, coolers, beds & more — tailored to your needs.</p>
-        <div className="button-group" >
+        <div className="button-group">
           <span>
-          <Link to="/products">
-            <Button >View Products</Button>
-          </Link>
+            <Link to="/products">
+              <Button>View Products</Button>
+            </Link>
           </span>
           <Link to="/contact">
-            <Button  variant="outline">
-              Contact Us
-            </Button>
+            <Button variant="outline">Contact Us</Button>
           </Link>
         </div>
         {/* <div className="gallery-cta">
@@ -163,8 +234,8 @@ const Home = () => {
         <h2>Our Products</h2>
         <div className="products-grid">
           {products.map((product) => (
-            <div 
-              key={product.id} 
+            <div
+              key={product.id}
               className="product-card"
               onClick={() => handleProductClick(product.id)}
             >
@@ -178,9 +249,7 @@ const Home = () => {
                 <div className="card-back">
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
-                  <button className="view-details-btn">
-                    View Details
-                  </button>
+                  <button className="view-details-btn">View Details</button>
                 </div>
               </div>
             </div>
@@ -261,7 +330,7 @@ const Home = () => {
         </div>
 
         <div className="featured-items">
-          <div className="featured-item">
+          {/* <div className="featured-item" >
             <img
               src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
               alt="Self Balancing Bird"
@@ -284,7 +353,14 @@ const Home = () => {
             />
             <h3>Magnetic Levitation Display</h3>
             <p>Stunning floating display piece</p>
-          </div>
+          </div> */}
+          {freeEnergyProducts.map((item, index) => (
+            <div className="featured-item" key={index} onClick={() => handleProductClick(item.id)}>
+              <img src={item.image} alt={item.title} />
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+            </div>
+          ))}
         </div>
 
         <div className="cta-container">
