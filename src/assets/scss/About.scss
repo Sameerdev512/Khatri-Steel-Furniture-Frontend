@@ -244,7 +244,26 @@
         }
       }
 
-            // Team Section
+            
+
+      .values-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        .value-card {
+          padding: 1.25rem;
+
+          h3 {
+            font-size: 1.1rem;
+          }
+
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+            // values Section
             .values-section {
               h2 {
                 color: #1e40af;
@@ -274,23 +293,6 @@
                 }
               }
             }
-
-      .values-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-
-        .value-card {
-          padding: 1.25rem;
-
-          h3 {
-            font-size: 1.1rem;
-          }
-
-          p {
-            font-size: 0.9rem;
-          }
-        }
-      }
 
       .team-grid {
         grid-template-columns: repeat(2, 1fr);

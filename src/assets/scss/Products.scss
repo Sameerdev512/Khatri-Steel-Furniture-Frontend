@@ -3,7 +3,7 @@
   left: 0;
   font-family: sans-serif;
   min-height: 100vh;
-  background-color: #f3f4f6;
+  background-color: #EBF8FF; // Light blue background
   padding: 5rem 1rem 0rem 1rem;
 
   .products-container {
@@ -20,13 +20,13 @@
         input {
           width: 100%;
           padding: 0.75rem;
-          border: 1px solid #d1d5db;
+          border: 1px solid #BEE3F8; // Light blue border
           border-radius: 0.5rem;
           font-size: 1rem;
 
           &:focus {
             outline: none;
-            border-color: #1f2937;
+            border-color: #4299E1; // Medium blue for focus
           }
         }
       }
@@ -38,20 +38,20 @@
 
         .category-btn {
           padding: 0.5rem 1rem;
-          border: 1px solid #d1d5db;
+          border: 1px solid #BEE3F8; // Light blue border
           border-radius: 0.5rem;
           background: white;
           cursor: pointer;
           transition: all 0.3s ease;
 
           &:hover {
-            background: #f3f4f6;
+            background: #EBF8FF; // Light blue background on hover
           }
 
           &.active {
-            background: #0d3163;
+            background: #4299E1; // Medium blue for active state
             color: white;
-            border-color: #1f2937;
+            border-color: #4299E1;
           }
         }
       }
@@ -59,73 +59,73 @@
 
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); // Reduced from likely 250px or higher
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 1.5rem;
       padding: 1rem;
 
       .product-card {
-        background: linear-gradient(to bottom, #ffffff, #f8f9fa);
-        border-radius: 15px; // Slightly reduced from 20px
+        background: linear-gradient(to bottom, #ffffff, #F7FAFC);
+        border-radius: 15px;
         overflow: hidden;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06); // Reduced shadow
+        box-shadow: 0 8px 16px rgba(66, 153, 225, 0.1); // Blue-tinted shadow
         transition: all 0.3s ease;
-        border: 1px solid rgba(0, 0, 0, 0.05);
+        border: 1px solid #BEE3F8; // Light blue border
         position: relative;
 
         &:hover {
-          transform: translateY(-5px); // Reduced from -10px
-          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+          transform: translateY(-5px);
+          box-shadow: 0 12px 20px rgba(66, 153, 225, 0.15); // Enhanced blue shadow
         }
 
         .product-image {
-          height: 200px; // Reduced from 300px
-          padding: 0.75rem; // Reduced from 1rem
+          height: 200px;
+          padding: 0.75rem;
           background: #ffffff;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          border-bottom: 1px solid #BEE3F8; // Light blue border
 
           img {
             width: 100%;
             height: 100%;
             object-fit: contain;
             transition: transform 0.5s ease;
-            border-radius: 8px; // Reduced from 10px
+            border-radius: 8px;
           }
         }
 
         .product-info {
-          padding: 1rem; // Reduced from 1.5rem
+          padding: 1rem;
           background: white;
 
           h3 {
-            font-size: 1rem; // Reduced from likely 1.25rem
+            font-size: 1rem;
             font-weight: 600;
             margin-bottom: 0.25rem;
-            color: #1a365d;
+            color: #2B6CB0; // Darker blue for headings
           }
 
           .category {
-            font-size: 0.8rem; // Reduced from likely 0.875rem
-            color: #666;
+            font-size: 0.8rem;
+            color: #4A5568;
             display: block;
             margin-bottom: 0.25rem;
           }
 
           .price {
-            font-size: 1.1rem; // Reduced from likely 1.25rem
+            font-size: 1.1rem;
             font-weight: 600;
-            color: #2d3748;
+            color: #2B6CB0; // Darker blue for price
             margin: 0.5rem 0;
           }
 
           .view-details-btn {
             width: 100%;
-            padding: 0.5rem 0.75rem; // Reduced padding
-            font-size: 0.875rem; // Reduced from 1rem
-            background: #2d3748;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.875rem;
+            background: #4299E1; // Medium blue for buttons
             color: white;
             border: none;
             border-radius: 6px;
@@ -133,19 +133,18 @@
             transition: background 0.3s ease;
 
             &:hover {
-              background: #1a365d;
+              background: #2B6CB0; // Darker blue on hover
             }
           }
         }
 
-        // Add a ribbon for special products (optional)
         &.featured::before {
           content: 'Featured';
           position: absolute;
           top: 20px;
           right: -30px;
           transform: rotate(45deg);
-          background: #ed8936;
+          background: #4299E1; // Medium blue for featured tag
           color: white;
           padding: 0.5rem 3rem;
           font-size: 0.875rem;
@@ -155,7 +154,7 @@
       }
     }
 
-    // Add responsive adjustments
+    // Keeping existing media queries and responsive styles
     @media (max-width: 768px) {
       .products-grid {
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -710,11 +709,5 @@
     }
   }
 }
-
-
-
-
-
-
 
 

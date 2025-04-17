@@ -202,6 +202,19 @@
     font-size: 1rem;
     line-height: 1.6;
   }
+  .about-page .about-container .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .about-page .about-container .values-grid .value-card {
+    padding: 1.25rem;
+  }
+  .about-page .about-container .values-grid .value-card h3 {
+    font-size: 1.1rem;
+  }
+  .about-page .about-container .values-grid .value-card p {
+    font-size: 0.9rem;
+  }
   .about-page .about-container .values-section h2 {
     color: #1e40af;
     font-size: 2rem;
@@ -228,19 +241,6 @@
   }
 }
 @media (max-width: 768px) {
-  .about-page .about-container .values-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .about-page .about-container .values-grid .value-card {
-    padding: 1.25rem;
-  }
-  .about-page .about-container .values-grid .value-card h3 {
-    font-size: 1.1rem;
-  }
-  .about-page .about-container .values-grid .value-card p {
-    font-size: 0.9rem;
-  }
   .about-page .about-container .team-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
