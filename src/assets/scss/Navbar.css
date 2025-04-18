@@ -92,6 +92,7 @@
     z-index: 1000;
   }
   .navbar .navbar-menu.active {
+    padding-top: 0rem;
     transform: translateX(0);
     opacity: 1;
     visibility: visible;

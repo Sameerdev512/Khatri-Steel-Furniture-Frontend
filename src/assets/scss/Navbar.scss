@@ -101,6 +101,7 @@
       z-index: 1000; // Ensure this is lower than dropdown z-index
 
       &.active {
+        padding-top:0rem;;
         transform: translateX(0);
         opacity: 1;
         visibility: visible;
