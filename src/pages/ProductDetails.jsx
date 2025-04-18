@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../assets/scss/ProductDetails.scss";
+import config from '../config/config';
 
 const ProductDetails = () => {
   const navigate = useNavigate();
@@ -15,7 +16,8 @@ const ProductDetails = () => {
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    productName: ''
   });
 
   // Move products array outside useEffect
@@ -225,17 +227,24 @@ const ProductDetails = () => {
     const foundProduct = products.find(p => p.id === parseInt(id));
     if (foundProduct) {
       setProduct(foundProduct);
+      // Set the product name in enquiry form when product is found
+      setEnquiryForm(prev => ({
+        ...prev,
+        productName: foundProduct.name
+      }));
     } else {
       navigate('/products'); // Redirect if product not found
     }
   }, [id, navigate]);
 
-  const handleEnquirySubmit = (e) => {
+  const handleEnquirySubmit = async(e) => {
     e.preventDefault();
-    if (!localStorage.getItem("role")) {
-      alert("Please login to submit an enquiry");
-      return;
-    }
+    
+    // can send enquiry without login
+    // if (!localStorage.getItem("role")) {
+    //   alert("Please login to submit an enquiry");
+    //   return;
+    // }
     // Handle enquiry submission
     console.log('Enquiry submitted:', enquiryForm);
     alert('Enquiry submitted successfully!');
@@ -244,8 +253,34 @@ const ProductDetails = () => {
       name: '',
       email: '',
       phone: '',
-      message: ''
+      message: '',
+      productName: product.name // Use product from state
     });
+
+    const response = fetch(`${config.apiUrl}/api/enquiries/add`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+      body: JSON.stringify(enquiryForm),
+    });
+
+    const result = await response.json();
+    console.log(result);
+    
+    if(response.ok)
+    {
+      alert("Enquiry submitted successfully!");
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setEnquiryForm(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   const handleShare = () => {
@@ -412,8 +447,10 @@ const ProductDetails = () => {
                   <label>Name</label>
                   <input
                     type="text"
+                    name="name"
                     value={enquiryForm.name}
-                    onChange={(e) => setEnquiryForm({...enquiryForm, name: e.target.value})}
+                    placeholder='your name here'
+                    onChange={handleInputChange}
                     required
                   />
                 </div>
@@ -421,8 +458,10 @@ const ProductDetails = () => {
                   <label>Email</label>
                   <input
                     type="email"
+                    name="email"
                     value={enquiryForm.email}
-                    onChange={(e) => setEnquiryForm({...enquiryForm, email: e.target.value})}
+                    placeholder="your email here"
+                    onChange={handleInputChange}
                     required
                   />
                 </div>
@@ -430,16 +469,19 @@ const ProductDetails = () => {
                   <label>Phone</label>
                   <input
                     type="tel"
+                    name="phone"
+                    placeholder='your phone here'
                     value={enquiryForm.phone}
-                    onChange={(e) => setEnquiryForm({...enquiryForm, phone: e.target.value})}
+                    onChange={handleInputChange}
                     required
                   />
                 </div>
                 <div className="form-group">
                   <label>Message</label>
                   <textarea
+                    name="message"
                     value={enquiryForm.message}
-                    onChange={(e) => setEnquiryForm({...enquiryForm, message: e.target.value})}
+                    onChange={handleInputChange}
                     required
                   />
                 </div>
