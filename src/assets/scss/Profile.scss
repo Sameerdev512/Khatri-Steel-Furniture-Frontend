@@ -75,8 +75,9 @@
         .detail-group {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 2rem;
+          gap: 1rem;
           margin-bottom: 1.5rem;
+          
 
           @media (max-width: 768px) {
             grid-template-columns: 1fr;
@@ -89,6 +90,9 @@
           }
 
           .detail-item {
+            // background: #5c5ce10d;
+            //   border-radius: 0.2rem;
+            //   padding: 1rem;
             label {
               display: block;
               color: #0d0347;
