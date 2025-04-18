@@ -1,35 +1,42 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import AdminLayout from '../../components/AdminLayout';
 import '../../assets/scss/admin/Enquiries.scss';
 import config from '../../config/config';
 
 const Enquiries = () => {
-  //to load the updated enquiries
   const [loading, setLoading] = useState(false);
-  const [enquiries, setEnquiries] = useState([
-    {
-      id: 1,
-      username: "John Doe",
-      email: "john@example.com",
-      productName: "almirah",
-      message: "I would like to know more about your steel almirahs.",
-      status: "New",
-      phone: "4545454545",
-      date: "2024-01-20",
-      responseMessage: "", 
-      lastUpdated: null
-    },
-    // Add more sample enquiries
-  ]);
-
+  const [enquiries, setEnquiries] = useState([]);
   const [selectedEnquiry, setSelectedEnquiry] = useState(null);
   const [showDetailsModal, setShowDetailsModal] = useState(false);
   const [response, setResponse] = useState("");
+  const [filterStatus, setFilterStatus] = useState("all");
+  
+  // Updated filtering logic
+  const filteredEnquiries = enquiries.filter(enquiry => {
+    switch (filterStatus) {
+      case "all":
+        return true;
+      case "pending":
+        return !enquiry.responseMessage; // Show enquiries without a response
+      case "resolved":
+        return enquiry.responseMessage !== null && enquiry.responseMessage !== undefined;
+      default:
+        return true;
+    }
+  });
 
-  // Update this to set the initial response when opening the modal
+  // Sort enquiries to show pending ones first
+  const sortedEnquiries = [...filteredEnquiries].sort((a, b) => {
+    // Sort by status (pending first)
+    if (!a.responseMessage && b.responseMessage) return -1;
+    if (a.responseMessage && !b.responseMessage) return 1;
+    // Then sort by date (newest first)
+    return new Date(b.enquiredAt) - new Date(a.enquiredAt);
+  });
+
   const handleViewDetails = (enquiry) => {
     setSelectedEnquiry(enquiry);
-    setResponse(enquiry.responseMessage || ""); // Set initial response from enquiry
+    setResponse(enquiry.responseMessage || "");
     setShowDetailsModal(true);
   };
 
@@ -40,7 +47,7 @@ const Enquiries = () => {
         { 
           ...enquiry, 
           status: newStatus,
-          // lastUpdated: new Date().toISOString()
+          lastUpdated: new Date().toISOString()
         } : enquiry
       )
     );
@@ -56,13 +63,12 @@ const Enquiries = () => {
       {
         ...enquiry,
         responseMessage: response,
-        // lastUpdated: new Date().toISOString()
+        lastUpdated: new Date().toISOString()
       } : enquiry
     );
 
     setEnquiries(updatedEnquiries);
     
-    // Log the updated enquiry
     const updatedEnquiry = updatedEnquiries.find(e => e.id === selectedEnquiry.id);
     console.log('Enquiry Updated:', {
       id: updatedEnquiry.id,
@@ -71,19 +77,21 @@ const Enquiries = () => {
       lastUpdated: updatedEnquiry.lastUpdated
     });
 
-    //send updated response to backend and alert saced successfully
-    handleResponse(updatedEnquiry)
-    alert("Enquiry Updated Successfully!");
-    // Close the modal
-    setShowDetailsModal(false);
-    setSelectedEnquiry(null);
-    setResponse("");
-
-    //load the updated enquiries
-    setLoading(true);
+    try {
+      await handleResponse(updatedEnquiry);
+      alert("Enquiry Updated Successfully!");
+      setShowDetailsModal(false);
+      setSelectedEnquiry(null);
+      setResponse("");
+      setLoading(prev => !prev); // Toggle loading to trigger refresh
+    } catch (error) {
+      alert("Failed to update enquiry. Please try again.");
+      console.error("Error updating enquiry:", error);
+    }
   };
 
-    const loadEnquiries = async () => {
+  const loadEnquiries = async () => {
+    try {
       const response = await fetch(
         `${config.apiUrl}/api/enquiries/getAllEnquiries`,
         {
@@ -95,35 +103,42 @@ const Enquiries = () => {
         }
       );
 
+      if (!response.ok) {
+        throw new Error('Failed to fetch enquiries');
+      }
+
       const result = await response.json();
-      console.log(result);
       setEnquiries(result);
-    };
+    } catch (error) {
+      console.error("Error loading enquiries:", error);
+      alert("Failed to load enquiries. Please refresh the page.");
+    }
+  };
 
-    const handleResponse =async(updatedEnquiry)=>{
-      //send updated data to backend to updated the enquiry
-      const response = await fetch(
-        `${config.apiUrl}/api/enquiries/respond/${updatedEnquiry.id}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-          body: JSON.stringify(updatedEnquiry),
-        }
-      );
+  const handleResponse = async(updatedEnquiry) => {
+    const response = await fetch(
+      `${config.apiUrl}/api/enquiries/respond/${updatedEnquiry.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify(updatedEnquiry),
+      }
+    );
 
-      const result = await response.json();
-      console.log(result);
-
-      return "Enquiry Updated Sucessfully!";
+    if (!response.ok) {
+      throw new Error('Failed to update enquiry');
     }
 
+    const result = await response.json();
+    return result;
+  };
 
-    useEffect(() => {
-      loadEnquiries();
-    }, [loading]);
+  useEffect(() => {
+    loadEnquiries();
+  }, [loading]);
 
   return (
     <AdminLayout>
@@ -131,10 +146,13 @@ const Enquiries = () => {
         <div className="header">
           <h1>Enquiry Management</h1>
           <div className="filters">
-            <select defaultValue="all">
+            <select 
+              value={filterStatus}
+              onChange={(e) => setFilterStatus(e.target.value)}
+            >
               <option value="all">All Enquiries</option>
-              <option value="new">Pending</option>
-              <option value="inProgress">Responded</option>
+              <option value="pending">Pending </option>
+              <option value="resolved">Resolved </option>
             </select>
           </div>
         </div>
@@ -153,28 +171,36 @@ const Enquiries = () => {
               </tr>
             </thead>
             <tbody>
-              {enquiries.map((enquiry) => (
-                <tr key={enquiry.id}>
-                  <td>{enquiry.id}</td>
-                  <td>{enquiry.username}</td>
-                  <td>{enquiry.email}</td>
-                  <td>{enquiry.productName}</td>
-                  <td>{new Date(enquiry.enquiredAt).toLocaleDateString()}</td>
-                  <td>
-                    <span className={`status-${enquiry.status.toLowerCase()}`}>
-                      {enquiry.status}
-                    </span>
-                  </td>
-                  <td>
-                    <button
-                      className="view-btn"
-                      onClick={() => handleViewDetails(enquiry)}
-                    >
-                      View Details
-                    </button>
+              {sortedEnquiries.length === 0 ? (
+                <tr>
+                  <td colSpan="7" style={{ textAlign: 'center', padding: '20px' }}>
+                    No {filterStatus === "all" ? "" : filterStatus} enquiries found
                   </td>
                 </tr>
-              ))}
+              ) : (
+                sortedEnquiries.map((enquiry) => (
+                  <tr key={enquiry.id} className={!enquiry.responseMessage ? 'pending-row' : ''}>
+                    <td>{enquiry.id}</td>
+                    <td>{enquiry.username}</td>
+                    <td>{enquiry.email}</td>
+                    <td>{enquiry.productName}</td>
+                    <td>{new Date(enquiry.enquiredAt).toLocaleDateString()}</td>
+                    <td>
+                      <span className={`status-${!enquiry.responseMessage ? 'pending' : 'resolved'}`}>
+                        {`${enquiry.status}`.charAt(0).toUpperCase() + enquiry.status.slice(1)}
+                      </span>
+                    </td>
+                    <td>
+                      <button
+                        className={`view-btn ${!enquiry.responseMessage ? 'pending-action' : ''}`}
+                        onClick={() => handleViewDetails(enquiry)}
+                      >
+                        {!enquiry.responseMessage ? 'Respond Now' : 'View Details'}
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              )}
             </tbody>
           </table>
         </div>
@@ -274,6 +300,8 @@ const Enquiries = () => {
 };
 
 export default Enquiries;
+
+
 
 
 

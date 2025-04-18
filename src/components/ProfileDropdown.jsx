@@ -17,9 +17,14 @@ const ProfileDropdown = ({ onLogout, userName }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const toggleDropdown = () => {
-    console.log('Toggle clicked, current state:', isOpen); // Debug log
-    setIsOpen(prevState => !prevState);
+  const toggleDropdown = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsOpen(!isOpen);
+  };
+
+  const handleItemClick = () => {
+    setIsOpen(false);
   };
 
   const role = localStorage.getItem("role");
@@ -30,43 +35,38 @@ const ProfileDropdown = ({ onLogout, userName }) => {
         type="button"
         className="profile-icon" 
         onClick={toggleDropdown}
+        aria-expanded={isOpen}
       >
         <i className="fas fa-user-circle"></i>
-        <span className="user-name">Profile</span>
+        <span className="user-name">{userName || "Profile"}</span>
       </button>
 
-      {isOpen && role === "USER" && (
+      {isOpen && (
         <div className="dropdown-menu">
           <div className="dropdown-header">
-            <span>Welcome, {userName || "User"}!</span>
+            <span>Welcome, {role === "ADMIN" ? "Admin" : (userName || "User")}!</span>
           </div>
           <div className="dropdown-content">
-            <Link to="/profile" className="dropdown-item">
+            <Link to="/profile" className="dropdown-item" onClick={handleItemClick}>
               <i className="fas fa-user"></i> Profile
             </Link>
-            <Link to="/my-enquiries" className="dropdown-item">
-              <i className="fas fa-envelope"></i> My Enquiries
-            </Link>
-            <button onClick={onLogout} className="dropdown-item logout-btn">
-              <i className="fas fa-sign-out-alt"></i> Logout
-            </button>
-          </div>
-        </div>
-      )}
-
-      {isOpen && role === "ADMIN" && (
-        <div className="dropdown-menu">
-          <div className="dropdown-header">
-            <span>Welcome, Admin!</span>
-          </div>
-          <div className="dropdown-content">
-            <Link to="/profile" className="dropdown-item">
-              <i className="fas fa-user"></i> Profile
-            </Link>
-            <Link to="/admin/dashboard" className="dropdown-item">
-              <i className="fas fa-envelope"></i> Dashboard
-            </Link>
-            <button onClick={onLogout} className="dropdown-item logout-btn">
+            {role === "ADMIN" ? (
+              <Link to="/admin/dashboard" className="dropdown-item" onClick={handleItemClick}>
+                <i className="fas fa-tachometer-alt"></i> Dashboard
+              </Link>
+            ) : (
+              <Link to="/my-enquiries" className="dropdown-item" onClick={handleItemClick}>
+                <i className="fas fa-envelope"></i> My Enquiries
+              </Link>
+            )}
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                handleItemClick();
+                onLogout();
+              }} 
+              className="dropdown-item logout-btn"
+            >
               <i className="fas fa-sign-out-alt"></i> Logout
             </button>
           </div>
@@ -77,3 +77,5 @@ const ProfileDropdown = ({ onLogout, userName }) => {
 };
 
 export default ProfileDropdown;
+
+

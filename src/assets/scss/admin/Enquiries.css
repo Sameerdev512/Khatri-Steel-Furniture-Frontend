@@ -129,7 +129,7 @@
 .admin-enquiries .modal .modal-content h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #0c499d;
   margin-bottom: 1.5rem;
 }
 .admin-enquiries .modal .modal-content .enquiry-details .detail-group {
@@ -138,11 +138,11 @@
 .admin-enquiries .modal .modal-content .enquiry-details .detail-group label {
   display: block;
   font-weight: 500;
-  color: #4b5563;
+  color: #041d3f;
   margin-bottom: 0.5rem;
 }
 .admin-enquiries .modal .modal-content .enquiry-details .detail-group p {
-  color: #1f2937;
+  color: #2e3237;
   line-height: 1.5;
 }
 .admin-enquiries .modal .modal-content .enquiry-details .detail-group select {
