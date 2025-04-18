@@ -9,44 +9,7 @@ const MyEnquiries = () => {
   const [error, setError] = useState(null);
   
   // Dummy data for enquiries
-  const [enquiries, setEnquiries] = useState([
-    {
-      id: 1,
-      productName: "Modern Steel Almirah",
-      status: "New",
-      createdAt: "2024-01-20T10:30:00",
-      message: "I'm interested in the 3-door steel almirah. Could you provide more details about its dimensions and color options?",
-      response: null,
-      respondedAt: null
-    },
-    {
-      id: 2,
-      productName: "Desert Air Cooler",
-      status: "In Progress",
-      createdAt: "2024-01-18T15:45:00",
-      message: "What is the water tank capacity and power consumption of this cooler?",
-      response: "Thank you for your interest. The Desert Air Cooler has an 85L water tank capacity and consumes 220W power. Would you like to know more specific details?",
-      respondedAt: "2024-01-19T09:20:00"
-    },
-    {
-      id: 3,
-      productName: "Metal Double Bed",
-      status: "Resolved",
-      createdAt: "2024-01-15T08:15:00",
-      message: "Do you provide installation service for the metal double bed?",
-      response: "Yes, we provide free installation service within city limits. Installation will be done by our expert team within 24 hours of delivery.",
-      respondedAt: "2024-01-16T11:30:00"
-    },
-    {
-      id: 4,
-      productName: "Steel Kitchen Rack",
-      status: "New",
-      createdAt: "2024-01-21T14:20:00",
-      message: "Is the kitchen rack adjustable? What's the maximum weight capacity per shelf?",
-      response: null,
-      respondedAt: null
-    }
-  ]);
+  const [enquiries, setEnquiries] = useState([]);
 
   if (loading) return <div className="loading">Loading...</div>;
   if (error) return <div className="error">{error}</div>;
