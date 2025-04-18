@@ -43,7 +43,7 @@ function App() {
         <Route path="/transformations" element={<TransformationGallery />} />
 
         {/* Admin Routes */}
-        <Route path="/admin/dashboard" element={role === "ADMIN" ? <AdminDashboard /> : <Home />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard /> } />
         <Route path="/admin/products" element={<AdminProducts />} />
         <Route path="/admin/services" element={<AdminServices />} />
         <Route path="/admin/orders" element={<AdminOrders />} />

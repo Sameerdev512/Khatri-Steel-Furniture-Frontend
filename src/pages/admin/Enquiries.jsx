@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import AdminLayout from '../../components/AdminLayout';
 import '../../assets/scss/admin/Enquiries.scss';
+import config from '../../config/config';
 
 const Enquiries = () => {
+  //to load the updated enquiries
+  const [loading, setLoading] = useState(false);
   const [enquiries, setEnquiries] = useState([
     {
       id: 1,
-      name: "John Doe",
+      username: "John Doe",
       email: "john@example.com",
       productName: "almirah",
-      subject: "Product Inquiry",
       message: "I would like to know more about your steel almirahs.",
       status: "New",
       phone: "4545454545",
       date: "2024-01-20",
-      response: "", 
+      responseMessage: "", 
       lastUpdated: null
     },
     // Add more sample enquiries
@@ -27,7 +29,7 @@ const Enquiries = () => {
   // Update this to set the initial response when opening the modal
   const handleViewDetails = (enquiry) => {
     setSelectedEnquiry(enquiry);
-    setResponse(enquiry.response || ""); // Set initial response from enquiry
+    setResponse(enquiry.responseMessage || ""); // Set initial response from enquiry
     setShowDetailsModal(true);
   };
 
@@ -38,7 +40,7 @@ const Enquiries = () => {
         { 
           ...enquiry, 
           status: newStatus,
-          lastUpdated: new Date().toISOString()
+          // lastUpdated: new Date().toISOString()
         } : enquiry
       )
     );
@@ -48,13 +50,13 @@ const Enquiries = () => {
     setResponse(e.target.value);
   };
 
-  const handleSaveChanges = () => {
+  const handleSaveChanges = async() => {
     const updatedEnquiries = enquiries.map(enquiry =>
       enquiry.id === selectedEnquiry.id ? 
       {
         ...enquiry,
-        response: response,
-        lastUpdated: new Date().toISOString()
+        responseMessage: response,
+        // lastUpdated: new Date().toISOString()
       } : enquiry
     );
 
@@ -65,15 +67,63 @@ const Enquiries = () => {
     console.log('Enquiry Updated:', {
       id: updatedEnquiry.id,
       status: updatedEnquiry.status,
-      response: updatedEnquiry.response,
+      responseMessage: updatedEnquiry.responseMessage,
       lastUpdated: updatedEnquiry.lastUpdated
     });
 
+    //send updated response to backend and alert saced successfully
+    handleResponse(updatedEnquiry)
+    alert("Enquiry Updated Successfully!");
     // Close the modal
     setShowDetailsModal(false);
     setSelectedEnquiry(null);
     setResponse("");
+
+    //load the updated enquiries
+    setLoading(true);
   };
+
+    const loadEnquiries = async () => {
+      const response = await fetch(
+        `${config.apiUrl}/api/enquiries/getAllEnquiries`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+
+      const result = await response.json();
+      console.log(result);
+      setEnquiries(result);
+    };
+
+    const handleResponse =async(updatedEnquiry)=>{
+      //send updated data to backend to updated the enquiry
+      const response = await fetch(
+        `${config.apiUrl}/api/enquiries/respond/${updatedEnquiry.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify(updatedEnquiry),
+        }
+      );
+
+      const result = await response.json();
+      console.log(result);
+
+      return "Enquiry Updated Sucessfully!";
+    }
+
+
+    useEffect(() => {
+      loadEnquiries();
+    }, [loading]);
 
   return (
     <AdminLayout>
@@ -83,9 +133,8 @@ const Enquiries = () => {
           <div className="filters">
             <select defaultValue="all">
               <option value="all">All Enquiries</option>
-              <option value="new">New</option>
-              <option value="inProgress">In Progress</option>
-              <option value="resolved">Resolved</option>
+              <option value="new">Pending</option>
+              <option value="inProgress">Responded</option>
             </select>
           </div>
         </div>
@@ -107,10 +156,10 @@ const Enquiries = () => {
               {enquiries.map((enquiry) => (
                 <tr key={enquiry.id}>
                   <td>{enquiry.id}</td>
-                  <td>{enquiry.name}</td>
+                  <td>{enquiry.username}</td>
                   <td>{enquiry.email}</td>
                   <td>{enquiry.productName}</td>
-                  <td>{enquiry.date}</td>
+                  <td>{new Date(enquiry.enquiredAt).toLocaleDateString()}</td>
                   <td>
                     <span className={`status-${enquiry.status.toLowerCase()}`}>
                       {enquiry.status}
@@ -147,7 +196,7 @@ const Enquiries = () => {
               <div className="enquiry-details">
                 <div className="detail-group">
                   <label>Name:</label>
-                  <p>{selectedEnquiry.name}</p>
+                  <p>{selectedEnquiry.username}</p>
                 </div>
                 <div className="detail-group">
                   <label>Email:</label>
@@ -167,7 +216,7 @@ const Enquiries = () => {
                 </div>
                 <div className="detail-group">
                   <label>Date:</label>
-                  <p>{selectedEnquiry.date}</p>
+                  <p>{new Date(selectedEnquiry.enquiredAt).toLocaleDateString()}</p>
                 </div>
                 <div className="detail-group">
                   <label>Status:</label>
@@ -178,15 +227,16 @@ const Enquiries = () => {
                     }
                     className={`status-${selectedEnquiry.status.toLowerCase()}`}
                   >
-                    <option value="New">New</option>
-                    <option value="In Progress">In Progress</option>
-                    <option value="Resolved">Resolved</option>
+                    <option value="New">Pending</option>
+                    <option value="Resolved">Responded</option>
                   </select>
                 </div>
                 <div className="detail-group">
                   <label>Previous Response:</label>
-                  {selectedEnquiry.response ? (
-                    <p className="previous-response">{selectedEnquiry.response}</p>
+                  {selectedEnquiry.responseMessage ? (
+                    <p className="previous-response">
+                      {selectedEnquiry.responseMessage}
+                    </p>
                   ) : (
                     <p className="no-response">No previous response</p>
                   )}
@@ -204,7 +254,9 @@ const Enquiries = () => {
                 {selectedEnquiry.lastUpdated && (
                   <div className="detail-group">
                     <label>Last Updated:</label>
-                    <p>{new Date(selectedEnquiry.lastUpdated).toLocaleString()}</p>
+                    <p>
+                      {new Date(selectedEnquiry.lastUpdated).toLocaleString()}
+                    </p>
                   </div>
                 )}
                 <div className="modal-actions">
@@ -222,5 +274,6 @@ const Enquiries = () => {
 };
 
 export default Enquiries;
+
 
 

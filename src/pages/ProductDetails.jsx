@@ -13,7 +13,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
   const [showEnquiryForm, setShowEnquiryForm] = useState(false);
   const [enquiryForm, setEnquiryForm] = useState({
-    name: '',
+    username: '',
     email: '',
     phone: '',
     message: '',
@@ -250,7 +250,7 @@ const ProductDetails = () => {
     alert('Enquiry submitted successfully!');
     setShowEnquiryForm(false);
     setEnquiryForm({
-      name: '',
+      username: '',
       email: '',
       phone: '',
       message: '',
@@ -447,7 +447,7 @@ const ProductDetails = () => {
                   <label>Name</label>
                   <input
                     type="text"
-                    name="name"
+                    name="username"
                     value={enquiryForm.name}
                     placeholder='your name here'
                     onChange={handleInputChange}

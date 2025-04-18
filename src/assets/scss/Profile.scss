@@ -5,11 +5,20 @@
   margin: 0 auto;
   margin-top: 2rem;
 
+  @media (max-width: 768px) {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
   .profile-card {
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
 
     .profile-header {
       display: flex;
@@ -19,30 +28,43 @@
       border-bottom: 1px solid #eee;
       padding-bottom: 1rem;
 
+      @media (max-width: 768px) {
+        margin-bottom: 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
       h1 {
         font-size: 1.8rem;
-        color: #333;
+        color: #113b68;
         margin: 0;
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
       }
 
       .edit-button {
-        background-color: #2563eb;
+        background: #2B6CB0;
         color: white;
         border: none;
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1.5rem;
         border-radius: 5px;
         cursor: pointer;
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        transition: background-color 0.2s;
+        font-size: 1rem;
 
         &:hover {
-          background-color: #1d4ed8;
+          background: #052552e0;
         }
 
-        i {
-          font-size: 0.9rem;
+        @media (max-width: 768px) {
+          width: 100%;
+          justify-content: center;
+          padding: 0.6rem 1rem;
         }
       }
     }
@@ -51,9 +73,15 @@
       .profile-details {
         .detail-group {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(2, 1fr);
           gap: 2rem;
           margin-bottom: 1.5rem;
+
+          @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+          }
 
           &.full-width {
             grid-template-columns: 1fr;
@@ -62,16 +90,23 @@
           .detail-item {
             label {
               display: block;
-              color: #666;
-              font-size: 0.9rem;
+              color: #0d0347;
               margin-bottom: 0.5rem;
+              font-size: 0.9rem;
             }
 
             p {
-              color: #333;
+              color: #333333;
               font-size: 1rem;
               margin: 0;
               padding: 0.5rem 0;
+            }
+
+            .email-note {
+              color: #666;
+              font-size: 0.8rem;
+              margin-top: 0.25rem;
+              font-style: italic;
             }
           }
         }
@@ -80,20 +115,32 @@
       .profile-form {
         .form-group {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(2, 1fr);
           gap: 2rem;
           margin-bottom: 1.5rem;
 
+          @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+          }
+
           &.full-width {
             grid-template-columns: 1fr;
+            
+            .form-item {
+              input, textarea {
+                width: 100%;
+              }
+            }
           }
 
           .form-item {
             label {
               display: block;
               color: #666;
-              font-size: 0.9rem;
               margin-bottom: 0.5rem;
+              font-size: 0.9rem;
             }
 
             input, textarea {
@@ -102,11 +149,17 @@
               border: 1px solid #ddd;
               border-radius: 5px;
               font-size: 1rem;
+              font-family: inherit;
 
               &:focus {
                 outline: none;
-                border-color: #2563eb;
-                box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+                border-color: #2B6CB0;
+                box-shadow: 0 0 0 2px rgba(43, 108, 176, 0.1);
+              }
+
+              &.readonly-input {
+                background-color: #f5f5f5;
+                cursor: not-allowed;
               }
             }
 
@@ -114,39 +167,54 @@
               min-height: 100px;
               resize: vertical;
             }
+
+            .email-note {
+              color: #666;
+              font-size: 0.8rem;
+              margin-top: 0.25rem;
+              font-style: italic;
+            }
           }
         }
 
         .form-actions {
           display: flex;
-          justify-content: flex-end;
           gap: 1rem;
+          justify-content: flex-end;
           margin-top: 2rem;
+
+          @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 0.75rem;
+          }
 
           button {
             padding: 0.75rem 1.5rem;
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            transition: all 0.2s;
+            border: none;
 
-            &.cancel-button {
-              background-color: white;
-              border: 1px solid #ddd;
-              color: #666;
-
-              &:hover {
-                background-color: #f5f5f5;
-              }
+            @media (max-width: 768px) {
+              width: 100%;
+              padding: 0.8rem;
             }
 
-            &.save-button {
-              background-color: #2563eb;
-              border: none;
+            &[type="submit"] {
+              background: #2B6CB0;
               color: white;
 
               &:hover {
-                background-color: #1d4ed8;
+                background: #052552e0;
+              }
+            }
+
+            &[type="button"] {
+              background: #e5e7eb;
+              color: #374151;
+
+              &:hover {
+                background: #d1d5db;
               }
             }
           }
@@ -155,3 +223,5 @@
     }
   }
 }
+
+

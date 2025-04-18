@@ -58,7 +58,7 @@
   font-size: 0.875rem;
   cursor: pointer;
 }
-.admin-enquiries .enquiries-table table td select.status-new {
+.admin-enquiries .enquiries-table table td select.status-pending {
   background-color: #fef3c7;
   color: #92400e;
   border-color: #f59e0b;
@@ -68,7 +68,7 @@
   color: #1e40af;
   border-color: #3b82f6;
 }
-.admin-enquiries .enquiries-table table td select.status-resolved {
+.admin-enquiries .enquiries-table table td select.status-responded {
   background-color: #d1fae5;
   color: #065f46;
   border-color: #10b981;

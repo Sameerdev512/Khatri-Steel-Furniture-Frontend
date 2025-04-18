@@ -8,6 +8,8 @@
   color: #1f2937;
   margin-bottom: 2rem;
   font-size: 2rem;
+  text-align: center;
+  margin-top: 6rem;
 }
 .my-enquiries-container .no-enquiries {
   text-align: center;
@@ -51,7 +53,7 @@
   border-bottom: 1px solid #e5e7eb;
 }
 .my-enquiries-container .enquiry-card .enquiry-header h3 {
-  color: #1f2937;
+  color: #032141;
   font-size: 1.25rem;
   margin: 0;
 }
@@ -61,7 +63,7 @@
   font-size: 0.875rem;
   font-weight: 500;
 }
-.my-enquiries-container .enquiry-card .enquiry-header .status.new {
+.my-enquiries-container .enquiry-card .enquiry-header .status.pending {
   background: #dbeafe;
   color: #1e40af;
 }
@@ -69,7 +71,7 @@
   background: #fef3c7;
   color: #92400e;
 }
-.my-enquiries-container .enquiry-card .enquiry-header .status.resolved {
+.my-enquiries-container .enquiry-card .enquiry-header .status.responded {
   background: #dcfce7;
   color: #166534;
 }
@@ -78,7 +80,7 @@
   color: #4b5563;
 }
 .my-enquiries-container .enquiry-card .enquiry-details p strong {
-  color: #1f2937;
+  color: #2B6CB0;
 }
 .my-enquiries-container .enquiry-card .enquiry-details .response-section {
   margin-top: 1rem;
@@ -108,7 +110,8 @@
   }
   .my-enquiries-container h1 {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 4.5rem;
   }
   .my-enquiries-container .enquiry-card {
     padding: 1rem;
