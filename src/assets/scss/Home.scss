@@ -142,7 +142,7 @@
       
       @media (max-width: 768px) {
         font-size: 1rem;
-        margin-bottom: 1.2rem;
+        margin: 1.2rem 0.5rem 0 0.5rem;
       }
     }
 
@@ -160,12 +160,13 @@
 
         span, a {
           width: auto; // Override previous full width
-          flex: 1;
-          max-width: 45%; // Prevent buttons from being too wide
+          flex: 0;
+          min-width: 35%; // Prevent buttons from being too wide
           
           .button {
-            width: 100%;
-            padding: 0.5rem 1rem;
+            width:100%;
+            margin:0;
+            padding: 0.5rem 0.5rem;
             font-size: 0.75rem;
             white-space: nowrap;
           }
@@ -630,7 +631,7 @@
       padding: 0 1rem;
       
       @media (max-width: 400px) {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 1rem;
         padding: 0 0.5rem;
       }
@@ -794,7 +795,7 @@
       
       @media (max-width: 768px) {
         font-size: 0.95rem;
-        margin-bottom: 2rem;
+        margin:0 0.5rem 2rem 0.5rem;
       }
     }
 

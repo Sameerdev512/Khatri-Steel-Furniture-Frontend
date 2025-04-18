@@ -240,11 +240,11 @@ const ProductDetails = () => {
   const handleEnquirySubmit = async(e) => {
     e.preventDefault();
     
-    // can send enquiry without login
-    // if (!localStorage.getItem("role")) {
-    //   alert("Please login to submit an enquiry");
-    //   return;
-    // }
+    // cannot send enquiry without login
+    if (!localStorage.getItem("role")) {
+      alert("Please login to submit an enquiry");
+      return;
+    }
     // Handle enquiry submission
     console.log('Enquiry submitted:', enquiryForm);
     alert('Enquiry submitted successfully!');

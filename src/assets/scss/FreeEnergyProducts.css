@@ -13,7 +13,7 @@
 .free-energy-page .hero-section h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #0c4da8;
   margin-bottom: 1rem;
 }
 .free-energy-page .hero-section p {
@@ -47,7 +47,7 @@
   background: white;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 .free-energy-page .products-container .products-grid .product-card:hover {
@@ -69,19 +69,19 @@
 .free-energy-page .products-container .products-grid .product-card .product-info h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #2B6CB0;
   margin-bottom: 0.5rem;
 }
 .free-energy-page .products-container .products-grid .product-card .product-info .price {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #051c3c;
   margin-bottom: 1rem;
 }
 .free-energy-page .products-container .products-grid .product-card .product-info .view-details-btn {
   width: 100%;
   padding: 0.75rem;
-  background: #1f2937;
+  background: #2B6CB0;
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -90,7 +90,7 @@
   transition: background-color 0.3s ease;
 }
 .free-energy-page .products-container .products-grid .product-card .product-info .view-details-btn:hover {
-  background: #374151;
+  background: #0f1010;
 }
 .free-energy-page .products-container .decorative-description {
   margin: 4rem auto;

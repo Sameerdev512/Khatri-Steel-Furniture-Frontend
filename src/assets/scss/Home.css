@@ -132,7 +132,7 @@
 @media (max-width: 768px) {
   .home-container .hero-section p {
     font-size: 1rem;
-    margin-bottom: 1.2rem;
+    margin: 1.2rem 0.5rem 0 0.5rem;
   }
 }
 .home-container .hero-section .button-group {
@@ -150,12 +150,13 @@
   }
   .home-container .hero-section .button-group span, .home-container .hero-section .button-group a {
     width: auto;
-    flex: 1;
-    max-width: 45%;
+    flex: 0;
+    min-width: 35%;
   }
   .home-container .hero-section .button-group span .button, .home-container .hero-section .button-group a .button {
     width: 100%;
-    padding: 0.5rem 1rem;
+    margin: 0;
+    padding: 0.5rem 0.5rem;
     font-size: 0.75rem;
     white-space: nowrap;
   }
@@ -588,7 +589,7 @@
 }
 @media (max-width: 400px) {
   .home-container .free-energy-section .featured-items {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1rem;
     padding: 0 0.5rem;
   }
@@ -748,7 +749,7 @@
 @media (max-width: 768px) {
   .home-container .transformation-gallery .section-description {
     font-size: 0.95rem;
-    margin-bottom: 2rem;
+    margin: 0 0.5rem 2rem 0.5rem;
   }
 }
 .home-container .transformation-gallery .transformations-grid {
