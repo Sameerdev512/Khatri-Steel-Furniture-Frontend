@@ -12,7 +12,7 @@ const TransformationGallery = () => {
   const categories = [
     {
       id: 1,
-      category: "Furniture Restoration",
+      category: "Almirah Repair",
       transformations: [
         {
           id: "f1",
@@ -34,15 +34,11 @@ const TransformationGallery = () => {
           images: [
             {
               type: "before",
-              url: "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
-            },
-            {
-              type: "before",
-              url: "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+              url: "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745064460/0005-removebg-preview_zrawja.png",
             },
             {
               type: "after",
-              url: "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+              url: "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745064460/0006-removebg-preview_dzfahb.png",
             },
           ],
         },
@@ -50,15 +46,15 @@ const TransformationGallery = () => {
     },
     {
       id: 2,
-      category: "Gate & Security",
+      category: "Double Bed Restoration",
       transformations: [
         {
           id: "g1",
-          title: "Steel Gate Transformation",
+          title: "Double Bed Transformation",
           description:
             "Complete overhaul of a weathered steel gate with reinforced hinges, rust protection, and elegant black finish.",
           repairInfo: {
-            title: "Gate Restoration Process",
+            title: "Bed Restoration Process",
             description:
               "Professional gate restoration for enhanced security and aesthetics.",
             steps: [
@@ -72,11 +68,11 @@ const TransformationGallery = () => {
           images: [
             {
               type: "before",
-              url: "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
+              url: "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745063285/06-removebg-preview_1_wxtnly.png",
             },
             {
               type: "after",
-              url: "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
             },
           ],
         },
@@ -106,11 +102,11 @@ const TransformationGallery = () => {
           images: [
             {
               type: "before",
-              url: "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
             },
             {
               type: "after",
-              url: "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
+              url: "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
             },
           ],
         },
@@ -118,7 +114,7 @@ const TransformationGallery = () => {
     },
     {
       id: 4,
-      category: "Storage Solutions",
+      category: "Almirah Decor & Repair",
       transformations: [
         {
           id: "s1",
@@ -126,7 +122,7 @@ const TransformationGallery = () => {
           description:
             "Restoration of vintage industrial shelving unit with structural reinforcement and modern finish.",
           repairInfo: {
-            title: "Shelf Restoration Process",
+            title: "Almirah Restoration Process",
             description:
               "Complete restoration process for industrial storage solutions.",
             steps: [
@@ -140,11 +136,11 @@ const TransformationGallery = () => {
           images: [
             {
               type: "before",
-              url: "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
+              url: "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745066701/21-removebg-preview_ptslsh.png",
             },
             {
               type: "after",
-              url: "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
+              url: "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745066700/2-removebg-preview_2_hly91e.png",
             },
           ],
         },

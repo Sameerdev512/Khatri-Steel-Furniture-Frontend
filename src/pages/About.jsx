@@ -63,7 +63,7 @@ const About = () => {
             <div className="team-member">
               <div className="member-image">
                 <img
-                  src="https://res.cloudinary.com/commonground/image/upload/v1744364266/pvsqjxugmksloqn36qiz.jpg"
+                  src="https://res.cloudinary.com/dcltfqtpb/image/upload/v1745067902/p2-removebg-preview_b2inrf.png"
                   alt="Team Member"
                 />
               </div>
@@ -73,7 +73,7 @@ const About = () => {
             <div className="team-member">
               <div className="member-image">
                 <img
-                  src="https://res.cloudinary.com/commonground/image/upload/v1744364266/pvsqjxugmksloqn36qiz.jpg"
+                  src="https://res.cloudinary.com/dcltfqtpb/image/upload/v1745068206/p1-removebg-preview_2_vwimde.png"
                   alt="Team Member"
                 />
               </div>

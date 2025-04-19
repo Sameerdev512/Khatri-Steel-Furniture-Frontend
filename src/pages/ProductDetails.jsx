@@ -179,6 +179,83 @@ const ProductDetails = () => {
       ],
     },
     {
+      id: 6,
+      name: "Locker",
+      category: "Other",
+      price: 18999,
+      image: [
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745061373/0001-removebg-preview_y4beyo.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745061373/0001-removebg-preview_y4beyo.png",
+      ],
+      description:
+        "Spacious wardrobe almirah with 4 doors and dedicated sections for clothes, accessories, and shoes. Features full-length mirror and premium finish.",
+      features: [
+        "4 Door Design",
+        "Full Mirror",
+        "Organized Sections",
+        "Premium Finish",
+        "Durable Hardware",
+      ],
+    },
+    {
+      id: 7,
+      name: "3 Door Almirah",
+      category: "Almirah",
+      price: 15999,
+      image: [
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745066088/10-removebg-preview_s5vvvh.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745066089/11-removebg-preview_1_yu628l.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745066506/00003-removebg-preview_m7enqs.png",
+      ],
+      description:
+        "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
+      features: [
+        "3 Door Design",
+        "Built-in Mirror",
+        "Adjustable Shelves",
+        "Premium Lock System",
+        "Anti-rust Coating",
+      ],
+    },
+    {
+      id: 8,
+      name: "Modern Blue Almirah",
+      category: "Almirah",
+      price: 15999,
+      image: [
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745067361/WhatsApp_Image_2025-04-19_at_17.56.19_c00d378b-removebg-preview_a2kjcg.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745067354/WhatsApp_Image_2025-04-19_at_17.56.19_a26f4ffa-removebg-preview_rrveld.png",
+      ],
+      description:
+        "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
+      features: [
+        "3 Door Design",
+        "Built-in Mirror",
+        "Adjustable Shelves",
+        "Premium Lock System",
+        "Anti-rust Coating",
+      ],
+    },
+    {
+      id: 9,
+      name: "Metal Two Single Bed",
+      category: "Beds",
+      price: 3999,
+      image: [
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745067353/WhatsApp_Image_2025-04-19_at_18.02.27_8f8b4e89-removebg-preview_iezppd.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745067354/WhatsApp_Image_2025-04-19_at_18.02.27_a3a241cf-removebg-preview_c0wrgg.png",
+      ],
+      description:
+        "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
+      features: [
+        "Adjustable Shelves",
+        "Wall Mounting",
+        "Anti-slip Feet",
+        "Stainless Steel",
+        "Easy Clean",
+      ],
+    },
+    {
       id: 101,
       name: "Hand Carft Dog",
       price: 599,

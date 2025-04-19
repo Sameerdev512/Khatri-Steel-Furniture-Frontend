@@ -136,19 +136,19 @@ const transformations = [
     description:
       "Complete restoration of a vintage steel almirah with modern finishing",
     beforeImage:
-      "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745063285/06-removebg-preview_1_wxtnly.png",
     afterImage:
-      "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+      "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
   },
   {
     id: 2,
-    title: "Steel Bed Frame Upgrade",
+    title: "Steel Almirah Repair",
     description:
       "Complete overhaul of an old steel bed frame with contemporary design elements",
     beforeImage:
-      "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745064460/0005-removebg-preview_zrawja.png",
     afterImage:
-      "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745064460/0006-removebg-preview_dzfahb.png",
   },
   {
     id: 3,
@@ -267,7 +267,7 @@ const Home = () => {
 
         <div className="transformations-grid">
           {transformations.map((item) => (
-            <div key={item.id} className="transformation-card">
+            <div key={item.id} className="transformation-card" onClick={()=>navigate("/transformations")}>
               <h3>{item.title}</h3>
               <div className="image-comparison">
                 <div className="before">

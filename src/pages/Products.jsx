@@ -41,6 +41,40 @@ const products = [
     ],
   },
   {
+    id: 8,
+    name: "Modern Blue Almirah",
+    category: "Almirah",
+    price: 15999,
+    image:
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745067361/WhatsApp_Image_2025-04-19_at_17.56.19_c00d378b-removebg-preview_a2kjcg.png",
+    description:
+      "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
+    features: [
+      "3 Door Design",
+      "Built-in Mirror",
+      "Adjustable Shelves",
+      "Premium Lock System",
+      "Anti-rust Coating",
+    ],
+  },
+  {
+    id: 7,
+    name: "3 Door Almirah",
+    category: "Almirah",
+    price: 15999,
+    image:
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745066088/10-removebg-preview_s5vvvh.png",
+    description:
+      "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
+    features: [
+      "3 Door Design",
+      "Built-in Mirror",
+      "Adjustable Shelves",
+      "Premium Lock System",
+      "Anti-rust Coating",
+    ],
+  },
+  {
     id: 2,
     name: "Desert Air Cooler",
     category: "Coolers",
@@ -92,6 +126,24 @@ const products = [
       "Easy Assembly",
     ],
   },
+
+  {
+    id: 9,
+    name: "Metal Two Single Bed",
+    category: "Beds",
+    price: 3999,
+    image:
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745067353/WhatsApp_Image_2025-04-19_at_18.02.27_8f8b4e89-removebg-preview_iezppd.png",
+    description:
+      "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
+    features: [
+      "Adjustable Shelves",
+      "Wall Mounting",
+      "Anti-slip Feet",
+      "Stainless Steel",
+      "Easy Clean",
+    ],
+  },
   {
     id: 4,
     name: "Metal Double Bed",
@@ -116,6 +168,23 @@ const products = [
     price: 18999,
     image:
       "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745061373/0002-removebg-preview_atgp31.png",
+    description:
+      "Spacious wardrobe almirah with 4 doors and dedicated sections for clothes, accessories, and shoes. Features full-length mirror and premium finish.",
+    features: [
+      "4 Door Design",
+      "Full Mirror",
+      "Organized Sections",
+      "Premium Finish",
+      "Durable Hardware",
+    ],
+  },
+  {
+    id: 6,
+    name: "Locker",
+    category: "Other",
+    price: 18999,
+    image:
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745061373/0001-removebg-preview_y4beyo.png",
     description:
       "Spacious wardrobe almirah with 4 doors and dedicated sections for clothes, accessories, and shoes. Features full-length mirror and premium finish.",
     features: [
@@ -184,7 +253,7 @@ const Products = () => {
     <>
       <Navbar />
       <div className="products-page">
-      {/* <center><h1>Explore Products</h1></center> */}
+        {/* <center><h1>Explore Products</h1></center> */}
         <div className="products-container">
           <div className="filters-section">
             <div className="search-bar">
@@ -212,7 +281,11 @@ const Products = () => {
 
           <div className="products-grid">
             {filteredProducts.map((product) => (
-              <div key={product.id} className="product-card">
+              <div
+                key={product.id}
+                className="product-card"
+                onClick={() => navigate(`/product/${product.id}`)}
+              >
                 <div className="product-image">
                   <img src={product.image} alt={product.name} />
                 </div>
