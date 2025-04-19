@@ -13,6 +13,8 @@ import MyEnquiries from './pages/MyEnquiries';
 import Profile from './pages/Profile';
 import ProductDetails from './pages/ProductDetails';
 import TransformationGallery from './pages/TransformationGallery';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/Dashboard';
@@ -41,6 +43,8 @@ function App() {
         <Route path="/profile" element={<Profile />}  />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/transformations" element={<TransformationGallery />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
 
         {/* Admin Routes */}
         <Route path="/admin/dashboard" element={<AdminDashboard /> } />

@@ -453,7 +453,7 @@
 }
 @media (max-width: 1024px) {
   .home-container .products-section {
-    padding: 3rem 1.5rem;
+    padding: 3rem 0rem;
   }
   .home-container .products-section .products-grid {
     grid-template-columns: repeat(2, 1fr);
