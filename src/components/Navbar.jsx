@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ProfileDropdown from './ProfileDropdown';
 import '../assets/scss/Navbar.scss';
 import config from '../config/config';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const token = localStorage.getItem("token");
@@ -12,7 +13,8 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.clear();
-    window.location.reload();
+    // window.location.reload();
+    navigate("/home");
   };
 
   const toggleMenu = () => {
