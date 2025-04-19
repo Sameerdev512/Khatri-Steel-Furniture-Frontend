@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "../assets/scss/Contact.scss";
 import Navbar from "../components/Navbar";
+import config from '../config/config';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
@@ -31,6 +32,19 @@ const Contact = () => {
       subject: '',
       message: ''
     });
+
+    //send data to backend
+    const response = await fetch(`${config.apiUrl}/api/contact-us/send`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    console.log(result);
+    alert("Message sent successfully!");
   };
 
   return (

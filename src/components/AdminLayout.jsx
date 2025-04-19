@@ -34,6 +34,9 @@ const AdminLayout = ({ children }) => {
           <Link to="/admin/enquiries" className={`admin-nav-item ${isActive('/admin/enquiries')}`}>
             Enquiries
           </Link>
+          <Link to="/admin/contact-messages" className={`admin-nav-item ${isActive('/admin/contact-messages')}`}>
+            Contact Messages
+          </Link>
         </nav>
       </div>
       <div className="admin-content">

@@ -23,6 +23,7 @@ import AdminServices from './pages/admin/Services';
 import AdminOrders from './pages/admin/Orders';
 import AdminUsers from './pages/admin/Users';
 import AdminEnquiries from './pages/admin/Enquiries';
+import ContactMessages from './pages/admin/ContactMessages';
 
 function App() {
   const role = localStorage.getItem("role");
@@ -53,6 +54,7 @@ function App() {
         <Route path="/admin/orders" element={<AdminOrders />} />
         <Route path="/admin/users" element={<AdminUsers />} />
         <Route path="/admin/enquiries" element={<AdminEnquiries />} />
+        <Route path="/admin/contact-messages" element={<ContactMessages />} />
       </Routes>
     </Router>
   );
