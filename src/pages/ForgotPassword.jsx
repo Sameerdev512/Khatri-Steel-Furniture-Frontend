@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import "../assets/scss/Auth.scss";
 import Navbar from "../components/Navbar";
 import config from '../config/config';
-import toast from 'react-hot-toast';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -28,9 +27,9 @@ const ForgotPassword = () => {
 
       if (response.ok) {
         setIsSuccess(true);
-        toast.success('Password reset instructions have been sent to your email. Also check your spam folder.');
+        setMessage('Password reset instructions have been sent to your email. Also check you spam folder.');
       } else {
-        toast.error(data || 'Failed to process request. Please try again.');
+        setMessage(data || 'Failed to process request. Please try again.');
       }
     } catch (error) {
       setMessage('An error occurred. Please try again later.');
