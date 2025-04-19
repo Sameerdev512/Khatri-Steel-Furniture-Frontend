@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AdminLayout from '../../components/AdminLayout';
 import '../../assets/scss/admin/ContactMessages.scss';
 import config from '../../config/config';
+import toast from 'react-hot-toast';
 
 const ContactMessages = () => {
   const [messages, setMessages] = useState([]);
@@ -36,7 +37,7 @@ const ContactMessages = () => {
       setMessages(data);
     } catch (error) {
       console.error('Error loading messages:', error);
-      alert('Failed to load messages. Please try again.');
+      toast.error('Failed to load messages. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -66,7 +67,7 @@ const ContactMessages = () => {
       );
     } catch (error) {
       console.error('Error updating message:', error);
-      alert('Failed to update message status. Please try again.');
+      toast.error('Failed to update message status.');
     }
   };
 
@@ -93,9 +94,10 @@ const ContactMessages = () => {
       setMessages(prevMessages => 
         prevMessages.filter(msg => msg.id !== messageId)
       );
+      toast.success('Message deleted successfully');
     } catch (error) {
       console.error('Error deleting message:', error);
-      alert('Failed to delete message. Please try again.');
+      toast.error('Failed to delete message.');
     }
   };
 
@@ -235,3 +237,4 @@ const ContactMessages = () => {
 };
 
 export default ContactMessages;
+

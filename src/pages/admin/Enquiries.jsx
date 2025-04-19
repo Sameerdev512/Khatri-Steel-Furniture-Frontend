@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AdminLayout from '../../components/AdminLayout';
 import '../../assets/scss/admin/Enquiries.scss';
 import config from '../../config/config';
+import toast from 'react-hot-toast';
 
 const Enquiries = () => {
   const [loading, setLoading] = useState(false);
@@ -79,14 +80,12 @@ const Enquiries = () => {
 
     try {
       await handleResponse(updatedEnquiry);
-      alert("Enquiry Updated Successfully!");
+      setEnquiries(updatedEnquiries);
+      toast.success('Response saved successfully');
       setShowDetailsModal(false);
-      setSelectedEnquiry(null);
-      setResponse("");
-      setLoading(prev => !prev); // Toggle loading to trigger refresh
     } catch (error) {
-      alert("Failed to update enquiry. Please try again.");
-      console.error("Error updating enquiry:", error);
+      console.error('Error saving response:', error);
+      toast.error('Failed to save response. Please try again.');
     }
   };
 
@@ -111,7 +110,7 @@ const Enquiries = () => {
       setEnquiries(result);
     } catch (error) {
       console.error("Error loading enquiries:", error);
-      alert("Failed to load enquiries. Please refresh the page.");
+      toast.error("Failed to load enquiries. Please refresh the page.");
     }
   };
 
@@ -300,6 +299,8 @@ const Enquiries = () => {
 };
 
 export default Enquiries;
+
+
 
 
 

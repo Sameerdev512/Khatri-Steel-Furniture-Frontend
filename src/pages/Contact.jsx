@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "../assets/scss/Contact.scss";
 import Navbar from "../components/Navbar";
 import config from '../config/config';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,8 +44,7 @@ const Contact = () => {
     });
 
     const result = await response.json();
-    console.log(result);
-    alert("Message sent successfully!");
+    toast.success("Message sent successfully!");
   };
 
   return (
@@ -159,3 +159,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

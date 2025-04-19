@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AdminLayout from '../../components/AdminLayout';
 import '../../assets/scss/admin/Services.scss';
+import toast from 'react-hot-toast';
 
 const Services = () => {
   const [services, setServices] = useState([
@@ -82,17 +83,21 @@ const Services = () => {
       } : null
     });
 
-    if (isEditing) {
-      setServices(services.map(service => 
-        service.id === selectedService.id ? serviceData : service
-      ));
-      console.log('Service Edited:', serviceData);
-    } else {
-      setServices([...services, serviceData]);
-      console.log('New Service Added:', serviceData);
+    try {
+      if (isEditing) {
+        setServices(services.map(service => 
+          service.id === selectedService.id ? serviceData : service
+        ));
+        toast.success('Service updated successfully!');
+      } else {
+        setServices([...services, serviceData]);
+        toast.success('Service added successfully!');
+      }
+      resetForm();
+    } catch (error) {
+      console.error('Error saving service:', error);
+      toast.error('Failed to save service. Please try again.');
     }
-
-    resetForm();
   };
 
   const resetForm = () => {
@@ -238,5 +243,6 @@ const Services = () => {
 };
 
 export default Services;
+
 
 

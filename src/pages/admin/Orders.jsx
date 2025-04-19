@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AdminLayout from '../../components/AdminLayout';
 import '../../assets/scss/admin/Orders.scss';
+import toast from 'react-hot-toast';
 
 const Orders = () => {
   const [orders, setOrders] = useState([
@@ -19,7 +20,18 @@ const Orders = () => {
   const [showDetailsModal, setShowDetailsModal] = useState(false);
 
   const handleStatusChange = (orderId, newStatus) => {
-    // Update order status logic here
+    try {
+      // Update order status logic here
+      setOrders(prevOrders =>
+        prevOrders.map(order =>
+          order.id === orderId ? { ...order, status: newStatus } : order
+        )
+      );
+      toast.success(`Order status updated to ${newStatus}`);
+    } catch (error) {
+      console.error('Error updating order status:', error);
+      toast.error('Failed to update order status.');
+    }
   };
 
   return (

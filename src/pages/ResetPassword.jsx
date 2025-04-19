@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import "../assets/scss/Auth.scss";
 import Navbar from "../components/Navbar";
 import config from '../config/config';
+import toast from 'react-hot-toast';
 
 const ResetPassword = () => {
   const navigate = useNavigate();
@@ -58,10 +59,10 @@ const ResetPassword = () => {
       const data = await response.text();
 
       if (response.ok) {
-        alert('Password has been reset successfully!');
+        toast.success('Password has been reset successfully!');
         navigate('/login');
       } else {
-        setError(data || 'Failed to reset password. Please try again.');
+        toast.error(data || 'Failed to reset password. Please try again.');
       }
     } catch (error) {
       setError('An error occurred. Please try again later.');

@@ -15,6 +15,7 @@ import ProductDetails from './pages/ProductDetails';
 import TransformationGallery from './pages/TransformationGallery';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
+import { Toaster } from 'react-hot-toast';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/Dashboard';
@@ -29,6 +30,7 @@ function App() {
   const role = localStorage.getItem("role");
   return (
     <Router>
+      <Toaster position="top-right" />
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
@@ -48,7 +50,7 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
 
         {/* Admin Routes */}
-        <Route path="/admin/dashboard" element={<AdminDashboard /> } />
+        <Route path="/admin/dashboard" element={localStorage.getItem("role") === "ADMIN" ? <AdminDashboard /> : <Home/> } />
         <Route path="/admin/products" element={<AdminProducts />} />
         <Route path="/admin/services" element={<AdminServices />} />
         <Route path="/admin/orders" element={<AdminOrders />} />

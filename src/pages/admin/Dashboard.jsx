@@ -2,6 +2,7 @@ import React from 'react';
 import AdminLayout from '../../components/AdminLayout';
 import '../../assets/scss/admin/Dashboard.scss';
 import Navbar from '../../components/Navbar';
+import toast from 'react-hot-toast';
 
 const Dashboard = () => {
   return (

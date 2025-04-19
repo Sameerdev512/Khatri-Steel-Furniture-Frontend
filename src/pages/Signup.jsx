@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import "../assets/scss/Auth.scss";
 import Navbar from "../components/Navbar";
 import config from '../config/config';
+import toast from 'react-hot-toast';
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -92,10 +93,10 @@ const Signup = () => {
       console.log(result);
       
       if (result === "User registered successfully!") {
-        alert("Account created successfully!");
+        toast.success("Account created successfully!");
         navigate("/login");
       } else {
-        alert(result);
+        toast.error(result);
         setErrors(prev => ({
           ...prev,
           general: result
@@ -198,5 +199,6 @@ const Signup = () => {
 };
 
 export default Signup;
+
 
 

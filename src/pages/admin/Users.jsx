@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AdminLayout from '../../components/AdminLayout';
 import '../../assets/scss/admin/Users.scss';
+import toast from 'react-hot-toast';
 
 const Users = () => {
   const [users, setUsers] = useState([
@@ -26,11 +27,32 @@ const Users = () => {
   const handleAddUser = (e) => {
     e.preventDefault();
     // Add user logic here
-    setShowAddModal(false);
+    try {
+      // ... user adding logic ...
+      toast.success('User added successfully!');
+      setShowAddModal(false);
+    } catch (error) {
+      console.error('Error adding user:', error);
+      toast.error('Failed to add user. Please try again.');
+    }
   };
 
   const handleStatusToggle = (userId) => {
     // Toggle user status logic here
+    try {
+      // ... status toggle logic ...
+      setUsers(prevUsers =>
+        prevUsers.map(user =>
+          user.id === userId
+            ? { ...user, status: user.status === 'Active' ? 'Inactive' : 'Active' }
+            : user
+        )
+      );
+      toast.success('User status updated successfully');
+    } catch (error) {
+      console.error('Error updating user status:', error);
+      toast.error('Failed to update user status.');
+    }
   };
 
   return (

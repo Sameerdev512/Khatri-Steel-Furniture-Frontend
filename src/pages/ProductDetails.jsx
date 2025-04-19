@@ -6,6 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../assets/scss/ProductDetails.scss";
 import config from '../config/config';
+import toast from 'react-hot-toast';
 
 const ProductDetails = () => {
   const navigate = useNavigate();
@@ -242,12 +243,12 @@ const ProductDetails = () => {
     
     // cannot send enquiry without login
     if (!localStorage.getItem("role")) {
-      alert("Please login to submit an enquiry");
+      toast.error("Please login to submit an enquiry");
       return;
     }
     // Handle enquiry submission
     console.log('Enquiry submitted:', enquiryForm);
-    alert('Enquiry submitted successfully!');
+    toast.success('Enquiry submitted successfully!');
     setShowEnquiryForm(false);
     setEnquiryForm({
       username: '',
@@ -269,9 +270,8 @@ const ProductDetails = () => {
     const result = await response.json();
     console.log(result);
     
-    if(response.ok)
-    {
-      alert("Enquiry submitted successfully!");
+    if(response.ok) {
+      toast.success("Enquiry submitted successfully!");
     }
   };
 

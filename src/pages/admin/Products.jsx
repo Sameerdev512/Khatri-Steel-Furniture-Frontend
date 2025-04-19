@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AdminLayout from '../../components/AdminLayout';
 import '../../assets/scss/admin/Products.scss';
+import toast from 'react-hot-toast';
 
 const Products = () => {
   const [products, setProducts] = useState([

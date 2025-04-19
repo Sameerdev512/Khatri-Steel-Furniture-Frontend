@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import "../assets/scss/Auth.scss";
 import Navbar from "../components/Navbar";
 import config from '../config/config';
+import toast from 'react-hot-toast';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -43,7 +44,7 @@ const Login = () => {
         localStorage.setItem('token', result.token);
         localStorage.setItem('role', result.role);
         localStorage.setItem('name', result.name);
-        alert("Login Successful");
+        toast.success("Login Successful");
 
         if(localStorage.getItem("role") === "ADMIN"){
           navigate('/admin/dashboard');
@@ -51,7 +52,7 @@ const Login = () => {
           navigate('/home');
         }
       }else{
-        setError("Invalid email or password");
+        toast.error("Invalid email or password");
       }
     } catch (err) {
       setError('Invalid email or password');
@@ -112,3 +113,4 @@ const Login = () => {
 };
 
 export default Login;
+
