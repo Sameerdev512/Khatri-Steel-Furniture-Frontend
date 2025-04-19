@@ -20,7 +20,7 @@ const freeEnergyProducts = [
 
     category: "freeEnergy",
     image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745055746/104-removebg-preview_kjzis0.png",
     description:
       "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal bird perfectly balances on any point.",
     features: [
@@ -39,14 +39,14 @@ const freeEnergyProducts = [
   },
   {
     id: 102,
-    name: "Perpetual Motion Wheel",
+    name: "Motionable Mon-Son stechue",
     price: 1299,
 
     category: "freeEnergy",
     image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745056965/107-removebg-preview_yd0koo.png",
     description:
-      "An elegant demonstration of momentum and balance. This decorative wheel creates an illusion of perpetual motion.",
+      "An elegant demonstration of momentum and balance. This decorative stechue creates an illusion of mom son.",
     features: [
       "Smooth Rotation",
       "Precision Bearings",
@@ -63,13 +63,13 @@ const freeEnergyProducts = [
   },
   {
     id: 103,
-    name: "Magnetic Levitation Display",
+    name: "Metal Archer",
     price: 2499,
     category: "freeEnergy",
     image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745057809/111-removebg-preview_n4psxk.png",
     description:
-      "A stunning display piece featuring magnetic levitation. Perfect for showcasing small items in mid-air.",
+      "A stunning display piece showing an archer. Perfect for showcasing small items for decoration.",
     features: [
       "Magnetic Levitation",
       "LED Lighting",
@@ -91,7 +91,7 @@ const products = [
     id: 1,
     name: "Modern Steel Almirah",
     image:
-      "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745053861/02-removebg-preview_eph9mp.png",
     description:
       "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
   },
@@ -120,10 +120,10 @@ const products = [
       "Multi-tier stainless steel kitchen rack with adjustable shelves. Perfect for organizing utensils and appliances, with anti-slip feet and wall-mounting option.",
   },
   {
-    id: 4,
-    name: "Stylish Double Bed",
+    id: 5,
+    name: "wardrobe Almirah",
     image:
-      "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745061389/0002-removebg-preview_1_uve3bl.png",
     description:
       "Multi-tier stainless steel kitchen rack with adjustable shelves. Perfect for organizing utensils and appliances, with anti-slip feet and wall-mounting option.",
   },

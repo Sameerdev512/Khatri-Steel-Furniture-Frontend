@@ -12,7 +12,7 @@ const products = [
     category: "Almirah",
     price: 15999,
     image:
-      "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745053861/02-removebg-preview_eph9mp.png",
     description:
       "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
     features: [
@@ -57,6 +57,24 @@ const products = [
       "Low Power Consumption",
     ],
   },
+
+  {
+    id: 21,
+    name: "Desert Air Cooler",
+    category: "Coolers",
+    price: 8999,
+    image:
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745060357/0021-removebg-preview_2_ccxaab.png",
+    description:
+      "High-capacity desert cooler with 85L water tank. Equipped with honeycomb cooling pads, powerful motor, and castor wheels for easy mobility.",
+    features: [
+      "85L Capacity",
+      "Honeycomb Pads",
+      "Powerful Motor",
+      "Mobile Design",
+      "Low Power Consumption",
+    ],
+  },
   {
     id: 3,
     name: "Metal Double Bed",
@@ -76,13 +94,13 @@ const products = [
   },
   {
     id: 4,
-    name: "Steel Kitchen Rack",
-    category: "Kitchen",
+    name: "Metal Double Bed",
+    category: "Beds",
     price: 3999,
     image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
     description:
-      "Multi-tier stainless steel kitchen rack with adjustable shelves. Perfect for organizing utensils and appliances, with anti-slip feet and wall-mounting option.",
+      "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
     features: [
       "Adjustable Shelves",
       "Wall Mounting",
@@ -97,7 +115,7 @@ const products = [
     category: "Almirah",
     price: 18999,
     image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745061373/0002-removebg-preview_atgp31.png",
     description:
       "Spacious wardrobe almirah with 4 doors and dedicated sections for clothes, accessories, and shoes. Features full-length mirror and premium finish.",
     features: [

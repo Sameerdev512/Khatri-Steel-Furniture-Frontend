@@ -9,44 +9,20 @@ const FreeEnergyProducts = () => {
   const freeEnergyProducts = [
     {
       id: 101,
-      name: "Self Balancing Bird",
+      name: "Hand Carft Dog",
       price: 599,
-
       category: "freeEnergy",
       image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description:
-        "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal bird perfectly balances on any point.",
-      features: [
-        "Perfect Balance Point",
-        "Durable Metal Construction",
-        "Educational Tool",
-        "Desk Decoration",
-        "Hand-crafted Design",
-      ],
-      specifications: {
-        material: "High-quality Steel",
-        height: "15 cm",
-        weight: "150g",
-        finish: "Premium Paint Coating",
-      },
-    },
-    {
-      id: 105,
-      name: "Self Balancing Bird",
-      price: 599,
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745055746/104-removebg-preview_kjzis0.png",
 
-      category: "freeEnergy",
-      image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       description:
-        "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal bird perfectly balances on any point.",
+        "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal dog perfectly balances on any point.",
       features: [
-        "Perfect Balance Point",
-        "Durable Metal Construction",
-        "Educational Tool",
+        "material: High-quality Steel",
+        "Weight : 100gm",
+        "height: 15 cm",
         "Desk Decoration",
-        "Hand-crafted Design",
+        "Metal Design Product",
       ],
       specifications: {
         material: "High-quality Steel",
@@ -57,12 +33,12 @@ const FreeEnergyProducts = () => {
     },
     {
       id: 102,
-      name: "Perpetual Motion Wheel",
+      name: "Motionable Mon-Son stechue",
       price: 1299,
 
       category: "freeEnergy",
       image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745056437/107-removebg-preview_esitwj.png",
       description:
         "An elegant demonstration of momentum and balance. This decorative wheel creates an illusion of perpetual motion.",
       features: [
@@ -81,13 +57,14 @@ const FreeEnergyProducts = () => {
     },
     {
       id: 103,
-      name: "Magnetic Levitation Display",
+      name: "Metal Archer",
       price: 2499,
       category: "freeEnergy",
-      image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: [
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745057809/111-removebg-preview_n4psxk.png",
+      ],
       description:
-        "A stunning display piece featuring magnetic levitation. Perfect for showcasing small items in mid-air.",
+        "A stunning display piece showing an archer. Perfect for showcasing small items for decoration.",
       features: [
         "Magnetic Levitation",
         "LED Lighting",

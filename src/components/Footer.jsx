@@ -32,8 +32,7 @@ const Footer = () => {
               <div className="contact-item">
                 <i className="fas fa-envelope"></i>
                 <div className="email-list">
-                  <a href="mailto:info@khatristeel.com">info@khatristeel.com</a>
-                  <a href="mailto:support@khatristeel.com">support@khatristeel.com</a>
+                  <a href="mailto:info@khatristeel.com">info.khatristeelfurniture@gmail.com</a>
                 </div>
               </div>
               <div className="contact-item">

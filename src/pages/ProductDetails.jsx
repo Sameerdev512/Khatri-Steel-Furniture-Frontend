@@ -28,8 +28,31 @@ const ProductDetails = () => {
       name: "Modern Steel Almirah",
       category: "Almirah",
       price: 15999,
-      image:
+      image: [
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745053861/02-removebg-preview_eph9mp.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745053861/01-removebg-preview_ljeply.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745053861/03-removebg-preview_bxr1gh.png",
+      ],
+      description:
+        "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
+      features: [
+        "3 Door Design",
+        "Built-in Mirror",
+        "Adjustable Shelves",
+        "Premium Lock System",
+        "Anti-rust Coating",
+      ],
+    },
+    {
+      id: 11,
+      name: "Modern Steel Almirah",
+      category: "Almirah",
+      price: 15999,
+      image: [
         "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+        "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+        "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+      ],
       description:
         "Contemporary 3-door steel almirah with advanced locking system. Features adjustable shelves, mirror, and premium finish that resists scratches and corrosion.",
       features: [
@@ -45,8 +68,11 @@ const ProductDetails = () => {
       name: "Desert Air Cooler",
       category: "Coolers",
       price: 8999,
-      image:
+      image: [
         "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
+        "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
+        "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
+      ],
       description:
         "High-capacity desert cooler with 85L water tank. Equipped with honeycomb cooling pads, powerful motor, and castor wheels for easy mobility.",
       features: [
@@ -57,12 +83,52 @@ const ProductDetails = () => {
       ],
     },
     {
+      id: 21,
+      name: "Desert Air Cooler",
+      category: "Coolers",
+      price: 8999,
+      image: [
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745060357/0021-removebg-preview_2_ccxaab.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745060580/0021-removebg-preview_2_adnt3w.png",
+      ],
+      description:
+        "High-capacity desert cooler with 85L water tank. Equipped with honeycomb cooling pads, powerful motor, and castor wheels for easy mobility.",
+      features: [
+        "85L Capacity",
+        "Honeycomb Pads",
+        "Powerful Motor",
+        "Mobile Design",
+        "Low Power Consumption",
+      ],
+    },
+    {
       id: 3,
       name: "Metal Double Bed",
       category: "Beds",
       price: 12999,
-      image:
+      image: [
         "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
+        "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
+        "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
+      ],
+      description:
+        "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
+      features: [
+        "Elegant Design",
+        "Powder Coating",
+        "400kg Capacity",
+        "Anti-rust Treatment",
+        "Easy Assembly",
+      ],
+    },
+    {
+      id: 3,
+      name: "Metal Double Bed",
+      category: "Beds",
+      price: 12999,
+      image: [
+        "https://res.cloudinary.com/commonground/image/upload/v1744786295/palang2_aboocr.png",
+      ],
       description:
         "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
       features: [
@@ -75,19 +141,22 @@ const ProductDetails = () => {
     },
     {
       id: 4,
-      name: "Steel Kitchen Rack",
+      name: "Metal Double Bed",
       category: "Kitchen",
       price: 3999,
-      image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: [
+        "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
+        "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
+        "https://res.cloudinary.com/commonground/image/upload/v1744787560/palang-peti-removebg-preview_zom6hj.png",
+      ],
       description:
-        "Multi-tier stainless steel kitchen rack with adjustable shelves. Perfect for organizing utensils and appliances, with anti-slip feet and wall-mounting option.",
+        "Sturdy metal double bed with elegant headboard design. Features powder-coated finish, anti-rust treatment, and supports up to 400kg weight.",
       features: [
-        "Adjustable Shelves",
-        "Wall Mounting",
-        "Anti-slip Feet",
-        "Stainless Steel",
-        "Easy Clean",
+        "Elegant Design",
+        "Powder Coating",
+        "400kg Capacity",
+        "Anti-rust Treatment",
+        "Easy Assembly",
       ],
     },
     {
@@ -95,8 +164,10 @@ const ProductDetails = () => {
       name: "Wardrobe Almirah",
       category: "Almirah",
       price: 18999,
-      image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: [
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745061373/0002-removebg-preview_atgp31.png ",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745061389/0002-removebg-preview_1_uve3bl.png",
+      ],
       description:
         "Spacious wardrobe almirah with 4 doors and dedicated sections for clothes, accessories, and shoes. Features full-length mirror and premium finish.",
       features: [
@@ -109,19 +180,22 @@ const ProductDetails = () => {
     },
     {
       id: 101,
-      name: "Self Balancing Bird",
+      name: "Hand Carft Dog",
       price: 599,
       category: "freeEnergy",
-      image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: [
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745055746/104-removebg-preview_kjzis0.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745055331/103-removebg-preview_k1xpqq.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745055943/103-removebg-preview-2_z1m0v7.png",
+      ],
       description:
-        "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal bird perfectly balances on any point.",
+        "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal dog perfectly balances on any point.",
       features: [
-        "Perfect Balance Point",
-        "Durable Metal Construction",
-        "Educational Tool",
+        "material: High-quality Steel",
+        "Weight : 100gm",
+        "height: 15 cm",
         "Desk Decoration",
-        "Hand-crafted Design",
+        "Metal Design Product",
       ],
       specifications: {
         material: "High-quality Steel",
@@ -132,19 +206,22 @@ const ProductDetails = () => {
     },
     {
       id: 102,
-      name: "Perpetual Motion Wheel",
+      name: "Motionable Mon-Son stechue",
       price: 1299,
       category: "freeEnergy",
-      image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: [
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745056965/107-removebg-preview_yd0koo.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745056965/106-removebg-preview_uepsdy.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745056839/108-removebg-preview_zbwddx.png",
+      ],
       description:
-        "An elegant demonstration of momentum and balance. This decorative wheel creates an illusion of perpetual motion.",
+        "An elegant demonstration of momentum and balance. This decorative stechue creates an illusion of mom son.",
       features: [
         "Smooth Rotation",
-        "Precision Bearings",
-        "Artistic Design",
-        "Long-lasting Movement",
-        "Conversation Starter",
+        "Artistic Metal Design",
+        "material: Steel and Brass",
+        "weight: 500g",
+        "diameter: 25 cm",
       ],
       specifications: {
         material: "Steel and Brass",
@@ -155,19 +232,22 @@ const ProductDetails = () => {
     },
     {
       id: 103,
-      name: "Magnetic Levitation Display",
+      name: "Metal Archer",
       price: 2499,
       category: "freeEnergy",
-      image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: [
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745057809/111-removebg-preview_n4psxk.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745057810/110-removebg-preview_w9pkif.png",
+        "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745057811/109-removebg-preview_gbqlis.png",
+      ],
       description:
-        "A stunning display piece featuring magnetic levitation. Perfect for showcasing small items in mid-air.",
+        "A stunning display piece showing an archer. Perfect for showcasing small items for decoration.",
       features: [
-        "Magnetic Levitation",
-        "LED Lighting",
-        "Rotating Display",
-        "Strong Electromagnet",
-        "Safety Features",
+        "Artistic Metal Design",
+        "material: Mixed Materials",
+        "Rotating Stechue",
+        "Sheight: 20 cm",
+        "weight: 800g",
       ],
       specifications: {
         material: "Mixed Materials",
@@ -176,52 +256,31 @@ const ProductDetails = () => {
         powerSource: "AC Adapter",
       },
     },
-    {
-      id: 105,
-      name: "Self Balancing Car",
-      price: 599,
-      category: "freeEnergy",
-      image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description:
-        "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal bird perfectly balances on any point.",
-      features: [
-        "Perfect Balance Point",
-        "Durable Metal Construction",
-        "Educational Tool",
-        "Desk Decoration",
-        "Hand-crafted Design",
-      ],
-      specifications: {
-        material: "High-quality Steel",
-        height: "15 cm",
-        weight: "150g",
-        finish: "Premium Paint Coating",
-      },
-    },
-    {
-      id: 108,
-      name: "Self Balancing Car",
-      price: 599,
-      category: "freeEnergy",
-      image:
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description:
-        "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal bird perfectly balances on any point.",
-      features: [
-        "Perfect Balance Point",
-        "Durable Metal Construction",
-        "Educational Tool",
-        "Desk Decoration",
-        "Hand-crafted Design",
-      ],
-      specifications: {
-        material: "High-quality Steel",
-        height: "15 cm",
-        weight: "150g",
-        finish: "Premium Paint Coating",
-      },
-    },
+    // {
+    //   id: 108,
+    //   name: "Self Balancing Car",
+    //   price: 599,
+    //   category: "freeEnergy",
+    //   image:[
+    //     "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+
+    //   ],
+    //   description:
+    //     "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal bird perfectly balances on any point.",
+    //   features: [
+    //     "Perfect Balance Point",
+    //     "Durable Metal Construction",
+    //     "Educational Tool",
+    //     "Desk Decoration",
+    //     "Hand-crafted Design",
+    //   ],
+    //   specifications: {
+    //     material: "High-quality Steel",
+    //     height: "15 cm",
+    //     weight: "150g",
+    //     finish: "Premium Paint Coating",
+    //   },
+    // },
   ];
 
   useEffect(() => {
@@ -344,14 +403,25 @@ const ProductDetails = () => {
                 autoPlay={true}
                 interval={3000}
               >
-                {[1, 2, 3, 4].map((_, index) => (
-                  <div key={index}>
+                {Array.isArray(product.image) ? (
+                  // Handle array of images
+                  product.image.map((imageUrl, index) => (
+                    <div key={index}>
+                      <img
+                        src={imageUrl}
+                        alt={`${product.name} - View ${index + 1}`}
+                      />
+                    </div>
+                  ))
+                ) : (
+                  // Handle single image
+                  <div>
                     <img
                       src={product.image}
-                      alt={`${product.name} - View ${index + 1}`}
+                      alt={product.name}
                     />
                   </div>
-                ))}
+                )}
               </Carousel>
             </div>
 
@@ -399,7 +469,7 @@ const ProductDetails = () => {
             <div className="products-grid">
               {getRelatedProducts().map((relatedProduct) => (
                 <div key={relatedProduct.id} className="product-card">
-                  <img src={relatedProduct.image} alt={relatedProduct.name} />
+                  <img src={relatedProduct.image[0]} alt={relatedProduct.name} />
                   <h3>{relatedProduct.name}</h3>
                   <p className="price">₹{relatedProduct.price.toLocaleString()}</p>
                   <button onClick={() => navigate(`/product/${relatedProduct.id}`)}>
