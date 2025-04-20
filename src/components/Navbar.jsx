@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.clear();
     // window.location.reload();
-    navigate("/home");
+    navigate("/");
   };
 
   const toggleMenu = () => {
