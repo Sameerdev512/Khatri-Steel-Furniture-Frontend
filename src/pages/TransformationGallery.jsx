@@ -26,9 +26,9 @@ const TransformationGallery = () => {
             steps: [
               "Complete disassembly and inspection",
               "Rust removal and treatment",
-              "Structural reinforcement",
-              "Premium coating application",
-              "Hardware replacement and upgrades",
+              "Reapaired structure ",
+              "Locks and mirror and handle replacement",
+              "Premium Custom Paint",
             ],
           },
           images: [
@@ -56,12 +56,12 @@ const TransformationGallery = () => {
           repairInfo: {
             title: "Bed Restoration Process",
             description:
-              "Professional gate restoration for enhanced security and aesthetics.",
+              "Professional Bed restoration for long-lasting durability.",
             steps: [
               "Structural assessment",
-              "Hinge reinforcement",
               "Rust treatment",
-              "Premium coating application",
+              "custom stuructural reinforcement",
+              "Premium color finish",
               "Hardware upgrade",
             ],
           },
@@ -84,19 +84,19 @@ const TransformationGallery = () => {
       transformations: [
         {
           id: "i1",
-          title: "Metal Cabinet Refinishing",
+          title: "Metal Cooler Refinishing",
           description:
             "Professional refinishing of an industrial metal cabinet with anti-rust treatment and premium coating.",
           repairInfo: {
-            title: "Cabinet Refinishing Process",
+            title: "Metal Cooler Process",
             description:
               "Expert metal cabinet restoration for lasting durability.",
             steps: [
-              "Surface preparation",
-              "Rust removal",
-              "Primer application",
-              "Premium finish coating",
-              "Quality inspection",
+              "Rust removal and treatment",
+              "Changed Water Tank ",
+              "Replacement of electric motor and parts",
+              "Ensure proper electric connection",
+              "Premium color finish",
             ],
           },
           images: [
@@ -118,19 +118,19 @@ const TransformationGallery = () => {
       transformations: [
         {
           id: "s1",
-          title: "Industrial Shelf Restoration",
+          title: "Almirah Decor & Repair",
           description:
             "Restoration of vintage industrial shelving unit with structural reinforcement and modern finish.",
           repairInfo: {
-            title: "Almirah Restoration Process",
+            title: "Almirah Reapir Process",
             description:
               "Complete restoration process for industrial storage solutions.",
             steps: [
-              "Structural analysis",
-              "Support reinforcement",
-              "Surface preparation",
-              "Industrial-grade coating",
-              "Load testing",
+              "Complete disassembly and inspection",
+              "Rust removal and treatment",
+              "Reapaired structure ",
+              "Locks and mirror and handle replacement",
+              "Premium Custom Paint",
             ],
           },
           images: [

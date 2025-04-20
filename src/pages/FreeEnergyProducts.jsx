@@ -45,8 +45,8 @@ const FreeEnergyProducts = () => {
         "Smooth Rotation",
         "Precision Bearings",
         "Artistic Design",
-        "Long-lasting Movement",
-        "Conversation Starter",
+        "diameter: 25 cm",
+        "weight: 500g",
       ],
       specifications: {
         material: "Steel and Brass",
@@ -66,11 +66,11 @@ const FreeEnergyProducts = () => {
       description:
         "A stunning display piece showing an archer. Perfect for showcasing small items for decoration.",
       features: [
-        "Magnetic Levitation",
-        "LED Lighting",
-        "Rotating Display",
-        "Strong Electromagnet",
-        "Safety Features",
+        "Artistic Metal Design",
+        "Stable base structure",
+        "Rotating Archer stechue",
+        "height: 20 cm",
+        "weight: 800g",
       ],
       specifications: {
         material: "Mixed Materials",

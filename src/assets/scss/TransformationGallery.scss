@@ -282,7 +282,7 @@
 
 .back-button {
     margin: 2rem 0 0 0;
-        // display: none;
+        display: none;
         align-items: center;
         gap: 0.5rem;
         background: none;
@@ -312,8 +312,11 @@
                 transform: translateX(-3px);
             }
 
-    @media (max-width: 768px) {
-        display: none;  // Hide back button on mobile
-    }
+   
 }
+ @media (max-width: 768px) {
+    .back-button{
+     display: none; // Hide back button on mobile
+    }
+ }
 }

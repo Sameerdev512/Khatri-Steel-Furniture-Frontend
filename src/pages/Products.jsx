@@ -195,6 +195,23 @@ const products = [
       "Durable Hardware",
     ],
   },
+  {
+    id: 10,
+    name: "Iron Rack",
+    category: "Other",
+    price: 18999,
+    image:
+      "https://res.cloudinary.com/commonground/image/upload/v1745149014/61UZnpV7mfL._SX679_-removebg-preview_ez8haa.png",
+    description:
+      "Spacious Iron Rack dedicated sections for clothes, accessories, and shoes. Features full-length and premium finish.",
+    features: [
+      "4 Door Design",
+      "Full Mirror",
+      "Organized Sections",
+      "Premium Finish",
+      "Durable Hardware",
+    ],
+  },
 ];
 
 const categories = ["All", ...new Set(products.map(product => product.category))];

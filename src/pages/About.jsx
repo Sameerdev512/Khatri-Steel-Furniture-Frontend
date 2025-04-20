@@ -24,7 +24,9 @@ const About = () => {
         </section>
 
         <section className="values-section">
-          <h2>Our Values</h2>
+          <h2 id="values" >
+            Our Values
+          </h2>
           <div className="values-grid">
             <div className="value-card">
               <h3>Quality</h3>

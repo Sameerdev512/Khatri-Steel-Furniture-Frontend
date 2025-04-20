@@ -19,6 +19,7 @@
 }
 .product-details-page .back-button {
   margin: 4rem 0 0 0;
+  display: block;
   align-items: center;
   gap: 0.5rem;
   background: none;
@@ -44,15 +45,12 @@
 .product-details-page .back-button:hover svg, .product-details-page .back-button:hover i {
   transform: translateX(-3px);
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .product-details-page .back-button {
     font-size: 0.875rem;
     padding: 0.4rem 0.6rem;
-  }
-}
-@media (max-width: 768px) {
-  .product-details-page .back-button {
-    margin-top: 5rem;
+    margin-top: 0;
+    display: none;
   }
 }
 .product-details-page .container {

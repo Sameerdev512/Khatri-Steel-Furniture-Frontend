@@ -27,13 +27,13 @@ const services = [
       "Expert repair and restoration services to bring your old furniture back to life.",
     features: [
       "Structural repairs",
-      "Surface restoration",
+      "Almirah locks, mirror replacing",
+      "cooler body replacement and other",
       "Paint refinishing",
-      "Hardware replacement",
       "Preventive maintenance",
     ],
     image:
-      "https://res.cloudinary.com/commonground/image/upload/v1744786296/al2_qletzo.png",
+      "https://res.cloudinary.com/commonground/image/upload/v1745149351/images_1_owwne3.jpg",
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const services = [
       "On-site welding",
     ],
     image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/commonground/image/upload/v1745148453/gasWelding_dyavqg.jpg",
   },
   {
     id: 4,
@@ -62,7 +62,7 @@ const services = [
       "Bulk orders",
     ],
     image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/commonground/image/upload/v1745148693/images_dsijap.jpg",
   },
 ];
 

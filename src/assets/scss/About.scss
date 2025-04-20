@@ -72,6 +72,36 @@
       }
     }
 
+        // values Section
+        .values-section {
+          h2 {
+            color: #1e40af;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+            margin: 2rem 2rem;
+          }
+    
+          h2:after {
+            content: "";
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #3b82f6;
+            border-radius: 2px;
+          }
+    
+          @media (max-width: 768px) {
+            h2 {
+    
+              font-size: 1.5rem;
+              margin-left: 1rem;
+            }
+          }
+        }
     // Values Section
     .values-grid {
       display: grid;
@@ -114,7 +144,7 @@
         font-weight: 700;
         margin-bottom: 1.5rem;
         position: relative;
-        margin: 2rem 2.5rem;
+        margin: 2rem 2rem;
         
         &:after {
           content: "";
@@ -270,36 +300,7 @@
         }
       }
 
-            // values Section
-            .values-section {
-              h2 {
-                color: #1e40af;
-                font-size: 2rem;
-                font-weight: 700;
-                margin-bottom: 1.5rem;
-                position: relative;
-                margin: 2rem 2.5rem;
-              }
-      
-              h2:after {
-                content: "";
-                position: absolute;
-                bottom: -0.5rem;
-                left: 0;
-                width: 60px;
-                height: 4px;
-                background: #3b82f6;
-                border-radius: 2px;
-              }
-      
-              @media (max-width: 768px) {
-                h2 {
-      
-                  font-size: 1.5rem;
-                  margin-left: 1rem;
-                }
-              }
-            }
+            
 
       .team-grid {
         grid-template-columns: repeat(2, 1fr);

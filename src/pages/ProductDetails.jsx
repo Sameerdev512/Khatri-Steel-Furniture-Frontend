@@ -255,6 +255,26 @@ const ProductDetails = () => {
         "Easy Clean",
       ],
     },
+
+    {
+      id: 10,
+      name: "Iron Rack",
+      category: "Other",
+      price: 18999,
+      image: [
+        "https://res.cloudinary.com/commonground/image/upload/v1745149014/61UZnpV7mfL._SX679_-removebg-preview_ez8haa.png",
+        "https://res.cloudinary.com/commonground/image/upload/v1745149014/61UZnpV7mfL._SX679_-removebg-preview_ez8haa.png",
+      ],
+      description:
+        "Spacious Iron Rack dedicated sections for clothes, accessories, and shoes. Features full-length and premium finish.",
+      features: [
+        "4 Door Design",
+        "Full Mirror",
+        "Organized Sections",
+        "Premium Finish",
+        "Durable Hardware",
+      ],
+    },
     {
       id: 101,
       name: "Hand Carft Dog",
@@ -269,10 +289,10 @@ const ProductDetails = () => {
         "A fascinating desk decoration that demonstrates the principle of center of gravity. This metal dog perfectly balances on any point.",
       features: [
         "material: High-quality Steel",
-        "Weight : 100gm",
-        "height: 15 cm",
         "Desk Decoration",
         "Metal Design Product",
+        "Weight : 100gm",
+        "height: 15 cm",
       ],
       specifications: {
         material: "High-quality Steel",
@@ -295,10 +315,10 @@ const ProductDetails = () => {
         "An elegant demonstration of momentum and balance. This decorative stechue creates an illusion of mom son.",
       features: [
         "Smooth Rotation",
-        "Artistic Metal Design",
-        "material: Steel and Brass",
-        "weight: 500g",
+        "Precision Bearings",
+        "Artistic Design",
         "diameter: 25 cm",
+        "weight: 500g",
       ],
       specifications: {
         material: "Steel and Brass",
@@ -321,9 +341,9 @@ const ProductDetails = () => {
         "A stunning display piece showing an archer. Perfect for showcasing small items for decoration.",
       features: [
         "Artistic Metal Design",
-        "material: Mixed Materials",
-        "Rotating Stechue",
-        "Sheight: 20 cm",
+        "Stable base structure",
+        "Rotating Archer stechue",
+        "height: 20 cm",
         "weight: 800g",
       ],
       specifications: {

@@ -134,7 +134,7 @@ const transformations = [
     id: 1,
     title: "Steel Almirah Restoration",
     description:
-      "Complete restoration of a vintage steel almirah with modern finishing",
+      "Complete repair of an old steel bed frame with contemporary design elements and custom coloring",
     beforeImage:
       "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745063285/06-removebg-preview_1_wxtnly.png",
     afterImage:
@@ -142,9 +142,9 @@ const transformations = [
   },
   {
     id: 2,
-    title: "Steel Almirah Repair",
+    title: "Bed Repair",
     description:
-      "Complete overhaul of an old steel bed frame with contemporary design elements",
+      "Transformation of an old almirah with custom coloring and hardware replacement", 
     beforeImage:
       "https://res.cloudinary.com/dcltfqtpb/image/upload/v1745064460/0005-removebg-preview_zrawja.png",
     afterImage:
@@ -154,7 +154,7 @@ const transformations = [
     id: 3,
     title: "Metal Cabinet Makeover",
     description:
-      "Transforming a worn-out metal cabinet into a modern storage solution",
+      "Transforming a worn-out metal cooler to a modern, functional, and visually appealing piece",
     beforeImage:
       "https://res.cloudinary.com/commonground/image/upload/v1744787114/cooler-removebg-preview_pi5fhw.png",
     afterImage:
