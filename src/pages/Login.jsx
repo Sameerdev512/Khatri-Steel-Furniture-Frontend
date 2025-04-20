@@ -49,7 +49,7 @@ const Login = () => {
         if(localStorage.getItem("role") === "ADMIN"){
           navigate('/admin/dashboard');
         }else{
-          navigate('/home');
+          navigate('/');
         }
       }else{
         toast.error("Invalid email or password");

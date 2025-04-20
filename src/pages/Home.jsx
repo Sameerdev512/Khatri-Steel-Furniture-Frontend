@@ -169,7 +169,7 @@ const Home = () => {
 
   const handleLogout = () => {
     localStorage.clear();
-    navigate("/home");
+    navigate("/");
   };
 
   const handleProductClick = (productId) => {
