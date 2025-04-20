@@ -127,7 +127,7 @@
   margin: 0 auto 1rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid rgb(251, 249, 249);
+  border: 1px solid rgb(30, 36, 218);
   transition: transform 0.3s ease;
   box-shadow: 0px 0px 8px grey;
 }

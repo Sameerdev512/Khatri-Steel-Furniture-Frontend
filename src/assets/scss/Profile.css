@@ -93,6 +93,11 @@
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
 }
+@media (max-width: 768px) {
+  .profile-container .profile-card .profile-content .profile-details .detail-group .detail-item label {
+    font-size: 1rem;
+  }
+}
 .profile-container .profile-card .profile-content .profile-details .detail-group .detail-item p {
   color: #333333;
   font-size: 1rem;
@@ -123,6 +128,11 @@
 }
 .profile-container .profile-card .profile-content .profile-form .form-group.full-width .form-item input, .profile-container .profile-card .profile-content .profile-form .form-group.full-width .form-item textarea {
   width: 100%;
+}
+@media (max-width: 768px) {
+  .profile-container .profile-card .profile-content .profile-form .form-group.full-width .form-item input, .profile-container .profile-card .profile-content .profile-form .form-group.full-width .form-item textarea {
+    width: 90%;
+  }
 }
 .profile-container .profile-card .profile-content .profile-form .form-group .form-item label {
   display: block;

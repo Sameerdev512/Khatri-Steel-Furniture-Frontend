@@ -52,6 +52,8 @@
   padding-bottom: 3rem;
   border-bottom: 1px solid black;
   margin-top: 0px;
+  width: 90%;
+  margin: auto;
 }
 @media (min-width: 768px) {
   .transformation-gallery-page .gallery-grid .gallery-row {
@@ -248,26 +250,36 @@
   }
 }
 .back-button {
-  background: none;
-  border: none;
-  color: #333;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 1rem 0;
-  margin-bottom: 1rem;
-  display: flex;
+  margin: 2rem 0 0 0;
   align-items: center;
   gap: 0.5rem;
-  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  color: #374151;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.1);
+}
+.back-button svg,
+.back-button i {
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
 }
 .back-button:hover {
   color: #2563eb;
+  background: rgba(37, 99, 235, 0.1);
 }
-.back-button i, .back-button svg {
-  font-size: 0.9rem;
+.back-button:hover svg,
+.back-button:hover i {
+  transform: translateX(-3px);
 }
 @media (max-width: 768px) {
-  .back-button {
+  .back-button:hover {
     display: none;
   }
 }/*# sourceMappingURL=TransformationGallery.css.map */
