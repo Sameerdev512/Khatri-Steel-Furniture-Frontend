@@ -48,7 +48,7 @@ function App() {
         />
         <Route
           path="/profile"
-          element={localStorage.getItem("role") === "USER" && <Profile />}
+          element={<Profile />}
         />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/transformations" element={<TransformationGallery />} />
