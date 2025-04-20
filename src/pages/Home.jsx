@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+import toast from "react-hot-toast";
+
 const Button = ({ children, variant = "primary" }) => {
   return (
     <button className={`button ${variant}`}>
@@ -169,6 +171,7 @@ const Home = () => {
 
   const handleLogout = () => {
     localStorage.clear();
+    toast.success("Logout!");
     navigate("/");
   };
 

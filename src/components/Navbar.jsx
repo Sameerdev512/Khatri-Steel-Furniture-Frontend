@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ProfileDropdown from './ProfileDropdown';
 import '../assets/scss/Navbar.scss';
 import config from '../config/config';
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.clear();
     // window.location.reload();
+    toast.success("Logout!");
     navigate("/");
   };
 

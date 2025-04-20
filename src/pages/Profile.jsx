@@ -1,20 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import '../assets/scss/Profile.scss';
+import config from '../config/config';
+import { showToast } from '../utils/toast';
 
 const Profile = () => {
+  const navigate = useNavigate();
   const [isEditing, setIsEditing] = useState(false);
   const [userData, setUserData] = useState({
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'john.doe@example.com', // This will be fetched from backend/auth state
-    phone: '+91 98765 43210',
-    city: 'Mumbai',
-    address: '123 Main Street, Andheri West',
-    pincode: '400053'
+    firstName: 'Sameer',
+    lastName: 'Khatri',
+    email: 'sameer@gmail.com',
+    phone: '999999999',
+    city: 'Indore',
+    address: '59/3 Shiv Bagh Colony behind velocity cinema,near agrawal home, Khajrana, Indore, M.P.',
+    pincode: '452010'
   });
 
   const [formData, setFormData] = useState(userData);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+      return;
+    }
+
+    // Fetch user data
+    const fetchUserData = async () => {
+      try {
+        const response = await fetch(`${config.apiUrl}/api/users/profile`, {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          setUserData(data);
+          setFormData(data);
+        } else {
+          toast.error('Failed to load profile data');
+        }
+      } catch (error) {
+        toast.error('Error loading profile');
+        console.error('Error:', error);
+      }
+    };
+
+    fetchUserData();
+  }, [navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,11 +60,35 @@ const Profile = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically make an API call to update the user data
-    setUserData(formData);
-    setIsEditing(false);
+    const token = localStorage.getItem('token');
+    const loadingToast = showToast.loading('Updating profile...');
+
+    try {
+      const response = await fetch(`${config.apiUrl}/api/users/profile`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setUserData(formData);
+        setIsEditing(false);
+        showToast.dismiss(loadingToast);
+        showToast.success('Profile updated successfully');
+      } else {
+        showToast.dismiss(loadingToast);
+        showToast.error('Failed to update profile');
+      }
+    } catch (error) {
+      showToast.dismiss(loadingToast);
+      showToast.error('Error updating profile');
+      console.error('Error:', error);
+    }
   };
 
   const handleCancel = () => {
@@ -200,3 +260,4 @@ const Profile = () => {
 };
 
 export default Profile;
+

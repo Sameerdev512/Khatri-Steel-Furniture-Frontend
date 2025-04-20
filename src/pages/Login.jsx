@@ -46,6 +46,10 @@ const Login = () => {
         localStorage.setItem('name', result.name);
         toast.success("Login Successful");
 
+        setTimeout(() => {
+          
+        }, 1000);
+
         if(localStorage.getItem("role") === "ADMIN"){
           navigate('/admin/dashboard');
         }else{
