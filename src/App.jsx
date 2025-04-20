@@ -42,15 +42,30 @@ function App() {
         <Route path="/free-energy-products" element={<FreeEnergyProducts />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/my-enquiries" element={<MyEnquiries />} />
-        <Route path="/profile" element={<Profile />}  />
+        <Route
+          path="/my-enquiries"
+          element={localStorage.getItem("role") === "USER" && <MyEnquiries />}
+        />
+        <Route
+          path="/profile"
+          element={localStorage.getItem("role") === "USER" && <Profile />}
+        />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/transformations" element={<TransformationGallery />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
 
         {/* Admin Routes */}
-        <Route path="/admin/dashboard" element={localStorage.getItem("role") === "ADMIN" ? <AdminDashboard /> : <Home/> } />
+        <Route
+          path="/admin/dashboard"
+          element={
+            localStorage.getItem("role") === "ADMIN" ? (
+              <AdminDashboard />
+            ) : (
+              <Home />
+            )
+          }
+        />
         <Route path="/admin/products" element={<AdminProducts />} />
         <Route path="/admin/services" element={<AdminServices />} />
         <Route path="/admin/orders" element={<AdminOrders />} />
