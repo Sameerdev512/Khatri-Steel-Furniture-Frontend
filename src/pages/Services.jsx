@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import "../assets/scss/Services.scss";
-
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -68,12 +68,16 @@ const services = [
 
 
 
+
 const Services = () => {
+  // useEffect(() => {window.scrollTo(0, 0)});
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="services-page">
       <Navbar />
       <div className="services-container">
-        
         <section className="hero-section">
           <h1>Our Services</h1>
           <p>Professional Steel Furniture Solutions for Every Need</p>
@@ -86,11 +90,15 @@ const Services = () => {
                 <img src={service.image} alt={service.title} />
               </div>
               <div className="service-content">
-                <center><h2>{service.title}</h2></center>
+                <center>
+                  <h2>{service.title}</h2>
+                </center>
                 <p>{service.description}</p>
                 <ul className="features-list ">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="list-style-none">{feature}</li>
+                    <li key={index} className="list-style-none">
+                      {feature}
+                    </li>
                   ))}
                 </ul>
               </div>

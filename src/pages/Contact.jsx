@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../assets/scss/Contact.scss";
 import Navbar from "../components/Navbar";
 import config from '../config/config';
@@ -46,6 +46,10 @@ const Contact = () => {
     const result = await response.json();
     toast.success("Message sent successfully!");
   };
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  })
 
   return (
     <div className="contact-page">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 import "../assets/scss/FreeEnergyProducts.scss";
@@ -81,7 +81,11 @@ const FreeEnergyProducts = () => {
     },
   ];
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
+    
     <>
       <Navbar />
       <div className="free-energy-page">

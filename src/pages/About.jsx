@@ -1,8 +1,13 @@
 import React from 'react';
 import Navbar from "../components/Navbar";
 import "../assets/scss/About.scss";
+import { useEffect } from 'react';
 
 const About = () => {
+    // useEffect(() => {window.scrollTo(0, 0)});
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <div className="about-page">
       <Navbar />

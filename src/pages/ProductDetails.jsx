@@ -389,6 +389,8 @@ const ProductDetails = () => {
         ...prev,
         productName: foundProduct.name
       }));
+
+      window.scrollTo(0, 0);
     } else {
       navigate('/products'); // Redirect if product not found
     }
@@ -480,9 +482,13 @@ const ProductDetails = () => {
       <div className="product-details-page">
         <div className="back-nav">
           <div className="container">
-            <button 
+            <button
               className="back-button"
-              onClick={()=>id > 100 ?navigate("/free-energy-products"):navigate("/products")}
+              onClick={() =>
+                id > 100
+                  ? navigate("/free-energy-products")
+                  : navigate("/products")
+              }
             >
               <FaArrowLeft /> Back to Products
             </button>
@@ -490,7 +496,7 @@ const ProductDetails = () => {
         </div>
 
         <div className="container">
-          <div className="product-details-grid">
+          <div id ="1" className="product-details-grid"> 
             <div className="product-images">
               <Carousel
                 showArrows={true}
@@ -513,10 +519,7 @@ const ProductDetails = () => {
                 ) : (
                   // Handle single image
                   <div>
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                    />
+                    <img src={product.image} alt={product.name} />
                   </div>
                 )}
               </Carousel>
@@ -528,7 +531,7 @@ const ProductDetails = () => {
                 <h2>{product.name}</h2>
                 <div className="price">₹{product.price.toLocaleString()}</div>
               </div>
-              
+
               <div className="description">
                 <h3>Description</h3>
                 <p>{product.description}</p>
@@ -547,7 +550,7 @@ const ProductDetails = () => {
               </div>
 
               <div className="action-buttons">
-                <button 
+                <button
                   className="enquire-button primary"
                   onClick={() => setShowEnquiryForm(true)}
                 >
@@ -565,11 +568,23 @@ const ProductDetails = () => {
             <h2>Related Products</h2>
             <div className="products-grid">
               {getRelatedProducts().map((relatedProduct) => (
-                <div key={relatedProduct.id} className="product-card">
-                  <img src={relatedProduct.image[0]} alt={relatedProduct.name} />
+                <div
+                  key={relatedProduct.id}
+                  className="product-card"
+                  on
+                  onClick={() => navigate(`/product/${relatedProduct.id}`)}
+                >
+                  <img
+                    src={relatedProduct.image[0]}
+                    alt={relatedProduct.name}
+                  />
                   <h3>{relatedProduct.name}</h3>
-                  <p className="price">₹{relatedProduct.price.toLocaleString()}</p>
-                  <button onClick={() => navigate(`/product/${relatedProduct.id}`)}>
+                  <p className="price">
+                    ₹{relatedProduct.price.toLocaleString()}
+                  </p>
+                  <button
+                    onClick={() => navigate(`/product/${relatedProduct.id}`)}
+                  >
                     View Details
                   </button>
                 </div>
@@ -616,7 +631,7 @@ const ProductDetails = () => {
                     type="text"
                     name="username"
                     value={enquiryForm.name}
-                    placeholder='your name here'
+                    placeholder="your name here"
                     onChange={handleInputChange}
                     required
                   />
@@ -637,7 +652,7 @@ const ProductDetails = () => {
                   <input
                     type="tel"
                     name="phone"
-                    placeholder='your phone here'
+                    placeholder="your phone here"
                     value={enquiryForm.phone}
                     onChange={handleInputChange}
                     required
@@ -654,8 +669,8 @@ const ProductDetails = () => {
                 </div>
                 <div className="form-actions">
                   <button type="submit">Submit Enquiry</button>
-                  <button 
-                    type="button" 
+                  <button
+                    type="button"
                     className="cancel"
                     onClick={() => setShowEnquiryForm(false)}
                   >
